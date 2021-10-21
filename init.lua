@@ -1,0 +1,90 @@
+--
+--  ▄▄▄▄▄  ▄▄   ▄ ▄▄▄▄▄ ▄▄▄▄▄▄▄        ▄      ▄    ▄   ▄▄
+--    █    █▀▄  █   █      █           █      █    █   ██
+--    █    █ █▄ █   █      █           █      █    █  █  █
+--    █    █  █ █   █      █           █      █    █  █▄▄█
+--  ▄▄█▄▄  █   ██ ▄▄█▄▄    █      █    █▄▄▄▄▄ ▀▄▄▄▄▀ █    █
+--
+--  Michael Espeña (https://github.com/Arcendian/nvim)
+
+-- Plugins installed via packer.nvim
+require('plugins')
+
+-- colorscheme
+require('nordbuddy').colorscheme({
+    underline_option = 'none',
+    italic = true,
+    italic_comments = true,
+    minimal_mode = false
+})
+
+-- statusline
+require('archline')
+
+-- general settings
+require('settings')
+
+-- remaps and keybindings
+require('remaps')
+
+-- builtin terminal
+require('floaterm')
+
+-- icons
+require'nvim-web-devicons'.setup {
+ default = true;
+}
+
+-- setup tree sitter
+require'nvim-treesitter.configs'.setup{
+	highlight = {
+    enable = true,
+    additional_vim_regex_highlighting = false,
+  },
+}
+
+-- setup nvim-cmp
+local cmp = require'cmp'
+
+cmp.setup({
+  snippet = {
+    expand = function(args)
+      vim.fn["vsnip#anonymous"](args.body)
+    end,
+  },
+  mapping = {
+    ['<C-d>'] = cmp.mapping.scroll_docs(-4),
+    ['<C-f>'] = cmp.mapping.scroll_docs(4),
+    ['<C-Space>'] = cmp.mapping.complete(),
+    ['<C-e>'] = cmp.mapping.close(),
+    ['<CR>'] = cmp.mapping.confirm({ select = true }),
+  },
+  sources = {
+    { name = 'nvim_lsp' },
+    { name = 'vsnip' },
+    { name = 'buffer' },
+  }
+})
+
+-- setup lspconfig 
+require('lspconfig').clangd.setup {
+  capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
+}
+require('lspconfig').rust_analyzer.setup {
+  capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
+}
+require('lspconfig').pyright.setup {
+  capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
+}
+require('lspconfig').tsserver.setup {
+  capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
+}
+require('lspconfig').cssls.setup {
+  capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
+}
+require('lspconfig').html.setup {
+  capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
+}
+require('lspconfig').bashls.setup {
+  capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
+}
