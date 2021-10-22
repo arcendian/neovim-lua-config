@@ -17,10 +17,14 @@ vim.opt.swapfile = false
 vim.opt.backup = false
 vim.opt.undofile = true
 vim.opt.termguicolors = true
-vim.opt.showmode = true
+vim.opt.showmode = false
+vim.opt.signcolumn = "yes"
 
 -- highlight yanked text
 vim.highlight.on_yank {higroup="IncSearch", timeout=150}
+
+-- ignore files
+vim.opt.path:append{ I = "**/.git/*"}
 
 -- remove the annoying tilde characters in empty lines (EOB)
 vim.cmd([[
@@ -94,7 +98,6 @@ vim.cmd([[
 -- source settings I still don't know how to translate to lua
 vim.cmd([[
 	set undodir=~/.local/share/undodir/nvim
-	set signcolumn=yes
 	
 	filetype plugin indent on
 	filetype plugin on

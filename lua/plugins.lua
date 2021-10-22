@@ -51,4 +51,7 @@ return require('packer').startup(function()
 
   -- distraction free mode for neovim
   use 'junegunn/goyo.vim'
+
+  -- auto-pairing brackets
+  use 'windwp/nvim-autopairs'
 end)
