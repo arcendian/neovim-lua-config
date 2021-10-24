@@ -11,20 +11,21 @@
 require('plugins')
 
 -- colorscheme
-require('nordbuddy').colorscheme({
-    underline_option = 'none',
-    italic = true,
-    italic_comments = true,
-    minimal_mode = false
-})
+-- require('nordbuddy').colorscheme({
+--     underline_option = 'none',
+--     italic = true,
+--     italic_comments = true,
+--     minimal_mode = false
+-- })
+require('colo')
 
 -- statusline
-require'lualine'.setup {
-	options = { 
-		theme = 'nord', 
-    },
-}
--- require('archline')
+-- require'lualine'.setup {
+-- 	options = { 
+-- 		theme = 'nord', 
+--     },
+-- }
+require('archline')
 
 -- general settings
 require('settings')
@@ -56,13 +57,12 @@ npairs.setup({
         lua = {'string'},-- it will not add a pair on that treesitter node
         javascript = {'template_string'},
         java = false,-- don't check treesitter on java
-    }
+    },
+    map_cr = true
 })
 
 local ts_conds = require('nvim-autopairs.ts-conds')
 
--- add option map_cr
-npairs.setup({ map_cr = true })
 
 ---- press % => %% is only inside comment or string
 --npairs.add_rules({
