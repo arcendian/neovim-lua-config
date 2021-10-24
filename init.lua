@@ -11,20 +11,9 @@
 require('plugins')
 
 -- colorscheme
--- require('nordbuddy').colorscheme({
---     underline_option = 'none',
---     italic = true,
---     italic_comments = true,
---     minimal_mode = false
--- })
 require('colo')
 
 -- statusline
--- require'lualine'.setup {
--- 	options = { 
--- 		theme = 'nord', 
---     },
--- }
 require('archline')
 
 -- general settings
