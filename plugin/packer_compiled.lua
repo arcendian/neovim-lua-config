@@ -93,9 +93,9 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/mice/.local/share/nvim/site/pack/packer/start/lualine.nvim"
   },
-  ["nord.nvim"] = {
+  ["markdown-preview.nvim"] = {
     loaded = true,
-    path = "/home/mice/.local/share/nvim/site/pack/packer/start/nord.nvim"
+    path = "/home/mice/.local/share/nvim/site/pack/packer/start/markdown-preview.nvim"
   },
   nordbuddy = {
     loaded = true,

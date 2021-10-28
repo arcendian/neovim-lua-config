@@ -4,4 +4,3 @@ require('nordbuddy').colorscheme({
     italic_comments = true,
     minimal_mode = false
 })
-

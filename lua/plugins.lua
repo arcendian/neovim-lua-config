@@ -54,4 +54,7 @@ return require('packer').startup(function()
 
   -- auto-pairing brackets
   use 'windwp/nvim-autopairs'
+
+  -- markdown preview in browser
+  use { 'iamcco/markdown-preview.nvim',  run = 'cd app && yarn install' }
 end)
