@@ -137,6 +137,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/mice/.local/share/nvim/site/pack/packer/start/vim-floaterm"
   },
+  ["vim-fugitive"] = {
+    loaded = true,
+    path = "/home/mice/.local/share/nvim/site/pack/packer/start/vim-fugitive"
+  },
   ["vim-hexokinase"] = {
     loaded = true,
     path = "/home/mice/.local/share/nvim/site/pack/packer/start/vim-hexokinase"
