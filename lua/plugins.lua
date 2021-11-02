@@ -60,4 +60,7 @@ return require('packer').startup(function()
 
 	-- git wrapper
 	use 'tpope/vim-fugitive'
+
+	-- ARM assembly syntax hightlighting
+	use 'ARM9/arm-syntax-vim'
 end)
