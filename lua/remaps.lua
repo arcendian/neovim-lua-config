@@ -8,12 +8,6 @@ vim.api.nvim_set_keymap('n', '<Leader>h', ':set hlsearch!<CR>', { noremap = true
 -- toggle distraction free buffer using Goyo plugin
 vim.api.nvim_set_keymap('n', '<Leader>g', ':Goyo<CR>', { noremap = true, silent = true})
 
--- Remap splits navigation to just CTRL + hjkl
-vim.api.nvim_set_keymap('n', '<C-h>', '<C-w>h', { noremap = true, silent = true})
-vim.api.nvim_set_keymap('n', '<C-j>', '<C-w>j', { noremap = true, silent = true})
-vim.api.nvim_set_keymap('n', '<C-k>', '<C-w>k', { noremap = true, silent = true})
-vim.api.nvim_set_keymap('n', '<C-l>', '<C-w>l', { noremap = true, silent = true})
-
 -- Remap resizing splits to simple keybindings 
 -- to avoid using command mode
 vim.api.nvim_set_keymap('n', '<C-Right>', ':vertical resize +3<CR>', { noremap = true, silent = true}) 
@@ -73,4 +67,3 @@ vim.cmd ([[
     let g:vsnip_filetypes.javascriptreact = ['javascript']
     let g:vsnip_filetypes.typescriptreact = ['typescript']
 ]])
-
