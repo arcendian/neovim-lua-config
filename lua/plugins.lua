@@ -63,4 +63,7 @@ return require('packer').startup(function()
 
 	-- ARM assembly syntax hightlighting
 	use 'ARM9/arm-syntax-vim'
+
+    -- dashboard
+    use 'glepnir/dashboard-nvim'
 end)

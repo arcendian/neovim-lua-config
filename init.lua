@@ -19,7 +19,6 @@ require'lualine'.setup {
 		theme = 'nord', 
     },
 }
--- require('archline')
 
 -- general settings
 require('settings')
@@ -112,5 +111,9 @@ require('lspconfig').html.setup {
 require('lspconfig').bashls.setup {
   capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
 }
+-- require('lspconfig').hls.setup {
+--   capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
+-- }
 
 require('md-preview')
+require('dashboard')
