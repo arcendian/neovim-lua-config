@@ -116,4 +116,3 @@ require('lspconfig').bashls.setup {
 -- }
 
 require('md-preview')
-require('dashboard')
