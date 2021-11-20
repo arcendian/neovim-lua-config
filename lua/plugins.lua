@@ -76,9 +76,6 @@ return require('packer').startup(function()
       requires = "nvim-lua/plenary.nvim",
     }
 
-    -- dashboard
-    use 'glepnir/dashboard-nvim'
-
     -- keybindings
     use 'folke/which-key.nvim'
 end)
