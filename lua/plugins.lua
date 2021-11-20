@@ -11,7 +11,7 @@ return require('packer').startup(function()
   use 'wbthomason/packer.nvim'
 
   -- colorscheme
-  use 'maaslalani/nordbuddy'
+  use 'EdenEast/nightfox.nvim'
 
   -- lsp configurations
   use 'neovim/nvim-lspconfig'
@@ -45,8 +45,8 @@ return require('packer').startup(function()
 
   -- fancy statusline
   use {
-	'hoob3rt/lualine.nvim',
-  	requires = {'kyazdani42/nvim-web-devicons', opt = true}
+    'nvim-lualine/lualine.nvim',
+    requires = {'kyazdani42/nvim-web-devicons', opt = true}
   }
 
   -- distraction free mode for neovim

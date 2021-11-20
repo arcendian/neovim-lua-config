@@ -89,11 +89,6 @@ _G.packer_plugins = {
     path = "/home/mice/.local/share/nvim/site/pack/packer/start/cmp-vsnip",
     url = "https://github.com/hrsh7th/cmp-vsnip"
   },
-  ["dashboard-nvim"] = {
-    loaded = true,
-    path = "/home/mice/.local/share/nvim/site/pack/packer/start/dashboard-nvim",
-    url = "https://github.com/glepnir/dashboard-nvim"
-  },
   ["friendly-snippets"] = {
     loaded = true,
     path = "/home/mice/.local/share/nvim/site/pack/packer/start/friendly-snippets",

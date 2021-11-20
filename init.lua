@@ -11,14 +11,25 @@
 require('plugins')
 
 -- colorscheme
-require('colo')
+-- require('colo')
+require('nightfox').setup({
+  fox = "nordfox",
+  styles = {
+    comments = "italic",
+    keywords = "bold",
+    functions = "italic,bold"
+  }
+})
+
+require('nightfox').load()
 
 -- statusline
-require'lualine'.setup {
-	options = { 
-		theme = 'nord', 
-    },
-}
+-- require'lualine'.setup {
+-- 	options = { 
+-- 		theme = 'nightfox', 
+--     },
+-- }
+require('lualine-bubbles')
 
 -- general settings
 require('settings')
