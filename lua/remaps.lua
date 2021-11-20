@@ -36,8 +36,14 @@ vim.api.nvim_set_keymap('n', '<leader>fg', '<cmd>Telescope live_grep<CR>', { nor
 vim.api.nvim_set_keymap('n', '<leader>fb', '<cmd>Telescope buffers<CR>', { noremap = true, silent = true}) 
 vim.api.nvim_set_keymap('n', '<leader>fh', '<cmd>Telescope help_tags<CR>', { noremap = true, silent = true}) 
 
+-- Nvim-tree keybindings
+vim.api.nvim_set_keymap('n', '<leader>fh', '<cmd>Telescope help_tags<CR>', { noremap = true, silent = true}) 
+
 -- markdown preview
-vim.api.nvim_set_keymap('n', '<leader>m', '<cmd>MarkdownPreview<CR>', { noremap = true, silent = true}) 
+-- NvimTreeOpen, NvimTreeClose, NvimTreeFocus, NvimTreeFindFileToggle, and NvimTreeResize are also available if you need them
+vim.api.nvim_set_keymap('n', '<leader>nt', '<cmd>NvimTreeToggle<CR>', { noremap = true, silent = true}) 
+vim.api.nvim_set_keymap('n', '<leader>nr', '<cmd>NvimTreeRefresh<CR>', { noremap = true, silent = true}) 
+vim.api.nvim_set_keymap('n', '<leader>nf', '<cmd>NvimTreeFindFile<CR>', { noremap = true, silent = true}) 
 
 vim.cmd ([[
 	" NOTE: You can use other key to expand snippet.
@@ -67,3 +73,4 @@ vim.cmd ([[
     let g:vsnip_filetypes.javascriptreact = ['javascript']
     let g:vsnip_filetypes.typescriptreact = ['typescript']
 ]])
+

@@ -10,8 +10,17 @@ return require('packer').startup(function()
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
 
+  -- prerequisites
+  use 'kyazdani42/nvim-web-devicons'
+
+  -- nvim-tree
+  use {
+    'kyazdani42/nvim-tree.lua',
+    requires = 'kyazdani42/nvim-web-devicons',
+  }
+
   -- colorscheme
-  use 'EdenEast/nightfox.nvim'
+  use 'maaslalani/nordbuddy'
 
   -- lsp configurations
   use 'neovim/nvim-lspconfig'
@@ -36,9 +45,6 @@ return require('packer').startup(function()
 
   -- colors
   use { 'rrethy/vim-hexokinase', run = 'make hexokinase'}
-
-  -- prerequisites
-  use 'kyazdani42/nvim-web-devicons'
 
   -- terminal inside neovim -- floating
   use 'voldikss/vim-floaterm'

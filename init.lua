@@ -10,19 +10,12 @@
 -- Plugins installed via packer.nvim
 require('plugins')
 
--- colorscheme
-require('nightfox').setup({
-  fox = "nordfox",
-  styles = {
-    comments = "italic",
-    keywords = "bold",
-    functions = "italic,bold"
-  },
-  colors = {
-    red = "#bf616a", 
-  },
+require('nordbuddy').colorscheme({
+  underline_option = 'none',
+  italic = true,
+  italic_comments = true,
+  minimal_mode = false
 })
-require('nightfox').load()
 
 -- lualine 
 require('lualine-bubbles')
@@ -32,6 +25,9 @@ require('settings')
 
 -- remaps and keybindings
 require('remaps')
+
+-- nvim-tree.lua
+require'nvim-tree'.setup {}
 
 -- builtin terminal
 require('floaterm')
