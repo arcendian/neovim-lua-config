@@ -75,4 +75,10 @@ return require('packer').startup(function()
       "folke/todo-comments.nvim",
       requires = "nvim-lua/plenary.nvim",
     }
+
+    -- dashboard
+    use 'glepnir/dashboard-nvim'
+
+    -- keybindings
+    use 'folke/which-key.nvim'
 end)

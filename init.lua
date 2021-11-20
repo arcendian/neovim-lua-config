@@ -37,6 +37,7 @@ require'nvim-web-devicons'.setup {
  default = true;
 }
 
+-- todo comments
 require("todo-comments").setup{}
 
 -- setup tree sitter
@@ -60,7 +61,6 @@ npairs.setup({
 })
 
 local ts_conds = require('nvim-autopairs.ts-conds')
-
 
 ---- press % => %% is only inside comment or string
 --npairs.add_rules({
@@ -121,3 +121,5 @@ require('lspconfig').bashls.setup {
 -- }
 
 require('md-preview')
+require('dashboard')
+require("which-key").setup {}
