@@ -69,4 +69,10 @@ return require('packer').startup(function()
 
 	-- ARM assembly syntax hightlighting
 	use 'ARM9/arm-syntax-vim'
+
+    -- todo comments
+    use {
+      "folke/todo-comments.nvim",
+      requires = "nvim-lua/plenary.nvim",
+    }
 end)

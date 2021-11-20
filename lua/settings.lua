@@ -63,7 +63,7 @@ vim.opt.wildmenu = true
 
 -- The following configuration removes the pipes that
 -- acts as separators on splits
--- WARNING: There is a SPACE typed in after the backslash
+-- NOTE: There is a SPACE typed in after the backslash
 -- otherwise the pipes will just be replaced with
 -- backlashes instead
 -- vim.opt.fillchars:append { I = "vert:\ " }
@@ -86,20 +86,22 @@ vim.g.netrw_liststyle = 3			-- tree view
 vim.g.netrw_list_hide = 'netrw_gitignore#Hide()'
 -- vim.g.netrw_list_hide.=',\(^\|\s\s\)\zs\.\S\+'
 
--- Highlight TODO, FIXME, NOTE, etc.
-vim.cmd([[
-  if has('autocmd') && v:version > 701
-      augroup todo
-          autocmd!
-          autocmd Syntax * call matchadd(
-                      \ 'Debug',
-                      \ '\v\W\zs<(NOTE|WARNING|INFO|IDEA|TODO|FIXME|CHANGED|XXX|BUG|HACK|TRICKY|HIGHLIGHT|ERROR)>'
-                      \ )
-      augroup END
-  endif
-]])
-                                                        
+-- Customize LSP diagnostics UI
+vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
+  virtual_text = {
+    prefix = '●', -- Could be '●', '▎', 'x'
+  }
+})
+
+local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }
+
+for type, icon in pairs(signs) do
+  local hl = "DiagnosticSign" .. type
+  vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
+end
+
 -- source settings I still don't know how to translate to lua
+-- TODO: Translate to Lua
 vim.cmd([[
 	set undodir=~/.local/share/undodir/nvim
 	
@@ -120,3 +122,4 @@ vim.cmd([[
 
 	au BufNewFile,BufRead *.s,*.S set filetype=arm " arm = armv6/7
 ]])
+

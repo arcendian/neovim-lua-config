@@ -159,6 +159,11 @@ _G.packer_plugins = {
     path = "/home/mice/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
+  ["todo-comments.nvim"] = {
+    loaded = true,
+    path = "/home/mice/.local/share/nvim/site/pack/packer/start/todo-comments.nvim",
+    url = "https://github.com/folke/todo-comments.nvim"
+  },
   ["vim-floaterm"] = {
     loaded = true,
     path = "/home/mice/.local/share/nvim/site/pack/packer/start/vim-floaterm",

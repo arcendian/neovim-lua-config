@@ -27,7 +27,7 @@ require('settings')
 require('remaps')
 
 -- nvim-tree.lua
-require'nvim-tree'.setup {}
+require'nvim-tree'.setup{}
 
 -- builtin terminal
 require('floaterm')
@@ -36,6 +36,8 @@ require('floaterm')
 require'nvim-web-devicons'.setup {
  default = true;
 }
+
+require("todo-comments").setup{}
 
 -- setup tree sitter
 require'nvim-treesitter.configs'.setup{
