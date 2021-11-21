@@ -20,7 +20,7 @@ return require('packer').startup(function()
   }
 
   -- colorscheme
-  use 'maaslalani/nordbuddy'
+  use 'rmehri01/onenord.nvim'
 
   -- lsp configurations
   use 'neovim/nvim-lspconfig'
