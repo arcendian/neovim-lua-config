@@ -1,3 +1,5 @@
+local colors = require("onenord.colors")
+
 require('onenord').setup {
   borders = true, 
   italics = {
@@ -12,7 +14,10 @@ require('onenord').setup {
     cursorline = false, 
     eob_lines = true, 
   },
-  custom_highlights = {}, 
+  custom_highlights = {
+    TSNamespace = { fg = colors.cyan },
+    TSType = { fg = colors.cyan },
+  }, 
 }
 
 vim.cmd [[colorscheme onenord]]
