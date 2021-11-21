@@ -106,11 +106,6 @@ end
 vim.cmd([[
 	set undodir=~/.local/share/undodir/nvim
 	
-	filetype plugin indent on
-	filetype plugin on
-	syntax on
-	syntax enable
-	
 	let g:netrw_list_hide.=',\(^\|\s\s\)\zs\.\S\+'
 
 	" ---------- FIXME FIXME FIXME ---------- "
