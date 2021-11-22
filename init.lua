@@ -18,6 +18,8 @@ require'nvim-web-devicons'.setup { default = true; }
 require("todo-comments").setup { }
 require('tree-sitter-config')
 require('autopairs')
+require('completion')
 require('lsp-configuration')
 require('md-preview')
 require("which-key").setup { }
+require('writing')
