@@ -114,7 +114,7 @@ vim.cmd([[
 	" WARNING: There is a SPACE typed in after the backslash
 	" otherwise the pipes will just be replaced with
 	" backlashes instead
-	set fillchars+=vert:\ 
+	" set fillchars+=vert:\ 
 
 	au BufNewFile,BufRead *.s,*.S set filetype=arm " arm = armv6/7
 ]])
