@@ -1,5 +1,7 @@
 require('lualine').setup {
   options = {
-    theme = 'onenord'
+    theme = 'onenord',
+    component_separators = '|',
+    section_separators = { left = '', right = '' },
   }
 }
