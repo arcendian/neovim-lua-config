@@ -79,4 +79,7 @@ return require('packer').startup(function()
 
     -- keybindings
     use 'folke/which-key.nvim'
+
+    -- lsp signatures
+    use "ray-x/lsp_signature.nvim"
 end)
