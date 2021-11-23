@@ -10,7 +10,7 @@ require('onenord').setup {
     variables = false, 
   },
   disable = {
-    background = true, 
+    background = false, 
     cursorline = false, 
     eob_lines = true, 
   },
