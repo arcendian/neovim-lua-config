@@ -21,6 +21,7 @@ require('autopairs')
 require('completion')
 require('conf-lspconfig')
 require('conf-telescope')
+require('conf-gitgutter')
 require('md-preview')
 require('which-key').setup { }
 require('writing')
