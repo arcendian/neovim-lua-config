@@ -30,12 +30,6 @@ vim.cmd ([[
 -- void register which is just like /dev/null
 vim.api.nvim_set_keymap('v', '<leader>p', '"_d', { noremap = true, silent = true }) 
 
--- Telescope keybindings
-vim.api.nvim_set_keymap('n', '<leader>ff', '<cmd>Telescope find_files<CR>', { noremap = true, silent = true}) 
-vim.api.nvim_set_keymap('n', '<leader>fg', '<cmd>Telescope live_grep<CR>', { noremap = true, silent = true}) 
-vim.api.nvim_set_keymap('n', '<leader>fb', '<cmd>Telescope buffers<CR>', { noremap = true, silent = true}) 
-vim.api.nvim_set_keymap('n', '<leader>fh', '<cmd>Telescope help_tags<CR>', { noremap = true, silent = true}) 
-
 vim.cmd ([[
 	" NOTE: You can use other key to expand snippet.
     " Expand
