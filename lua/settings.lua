@@ -87,20 +87,6 @@ vim.g.netrw_liststyle = 3			-- tree view
 vim.g.netrw_list_hide = 'netrw_gitignore#Hide()'
 -- vim.g.netrw_list_hide.=',\(^\|\s\s\)\zs\.\S\+'
 
--- Customize LSP diagnostics UI
-vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
-  virtual_text = {
-    prefix = '●', -- Could be '●', '▎', 'x'
-  }
-})
-
-local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }
-
-for type, icon in pairs(signs) do
-  local hl = "DiagnosticSign" .. type
-  vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
-end
-
 -- source settings I still don't know how to translate to lua
 -- TODO: Translate to Lua
 vim.cmd([[
