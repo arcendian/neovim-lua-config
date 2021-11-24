@@ -19,6 +19,8 @@ cmp.setup({
     { name = 'tree-sitter' },
     { name = 'vsnip' },
     { name = 'buffer' },
+    { name = 'path' },
+    { name = 'cmdline' },
   },
   formatting = {
       format = lspkind.cmp_format({with_text = false, maxwidth = 50})
