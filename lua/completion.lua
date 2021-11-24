@@ -23,6 +23,16 @@ cmp.setup({
     { name = 'cmdline' },
   },
   formatting = {
-      format = lspkind.cmp_format({with_text = false, maxwidth = 50})
+      format = lspkind.cmp_format({with_text = true, maxwidth = 50,
+         menu = ({
+           buffer = "[Buffer]",
+           nvim_lsp = "[LSP]",
+           vsnip = "[Vsnip]",
+           nvim_lua = "[Lua]",
+           latex_symbols = "[Latex]",
+        })
+      })
   }
 })
+
+
