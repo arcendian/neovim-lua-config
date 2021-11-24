@@ -43,6 +43,7 @@ return require('packer').startup(function()
     'nvim-telescope/telescope.nvim',
     requires = { {'nvim-lua/plenary.nvim'} }
   }
+  use 'nvim-telescope/telescope-fzy-native.nvim'
 
   -- better syntax highlighting with tree-sitter
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
@@ -83,4 +84,7 @@ return require('packer').startup(function()
 
     -- keybindings
     use 'folke/which-key.nvim'
+
+    -- dashboard
+    use 'glepnir/dashboard-nvim'
 end)
