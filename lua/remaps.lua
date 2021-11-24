@@ -3,7 +3,7 @@ vim.api.nvim_set_keymap('n', '<Space>', '<NOP>', { noremap = true, silent = true
 vim.g.mapleader = ' '
 
 -- toggle highlighting when searching in buffer
-vim.api.nvim_set_keymap('n', '<Leader>h', ':set hlsearch!<CR>', { noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<Leader>nh', ':set hlsearch!<CR>', { noremap = true, silent = true})
 
 -- toggle distraction free buffer using Goyo plugin
 vim.api.nvim_set_keymap('n', '<Leader>g', ':Goyo<CR>', { noremap = true, silent = true})

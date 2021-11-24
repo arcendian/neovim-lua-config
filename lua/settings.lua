@@ -49,15 +49,15 @@ vim.cmd([[
 --
 -- Things to consider:
 -- * This doesn't help if you want a visual list of tags
-vim.cmd([[
-  command! MakeTags !ctags -R .
-]])
+-- vim.cmd([[
+--   command! MakeTags !ctags -R .
+-- ]])
 
 
 -- FINDING FILES
 -- Search down into subfolders
 -- Provides tab-completion for all file-related tasks
-vim.opt.path:append{ I = "**"}
+-- vim.opt.path:append{ I = "**"}
 
 -- Display all matching files when we tab-complete
 vim.opt.wildmenu = true
@@ -80,11 +80,11 @@ vim.opt.wildmenu = true
 -- * :edit a folder to open a file browser
 -- * <CR>/v/t to open in an h-split/v-split/tab
 -- * check |netrw-browse-maps| for more mappings
-vim.g.netrw_banner = 0				-- disable banner
-vim.g.netrw_browse_split = 4		-- open in prior window
-vim.g.netrw_altv = 1				-- open spilts to the right
-vim.g.netrw_liststyle = 3			-- tree view
-vim.g.netrw_list_hide = 'netrw_gitignore#Hide()'
+-- vim.g.netrw_banner = 0				-- disable banner
+-- vim.g.netrw_browse_split = 4		-- open in prior window
+-- vim.g.netrw_altv = 1				-- open spilts to the right
+-- vim.g.netrw_liststyle = 3			-- tree view
+-- vim.g.netrw_list_hide = 'netrw_gitignore#Hide()'
 -- vim.g.netrw_list_hide.=',\(^\|\s\s\)\zs\.\S\+'
 
 -- source settings I still don't know how to translate to lua
@@ -92,7 +92,7 @@ vim.g.netrw_list_hide = 'netrw_gitignore#Hide()'
 vim.cmd([[
 	set undodir=~/.local/share/undodir/nvim
 	
-	let g:netrw_list_hide.=',\(^\|\s\s\)\zs\.\S\+'
+	"let g:netrw_list_hide.=',\(^\|\s\s\)\zs\.\S\+'
 
 	" ---------- FIXME FIXME FIXME ---------- "
 	" The following configuration removes the pipes that
@@ -104,4 +104,3 @@ vim.cmd([[
 
 	au BufNewFile,BufRead *.s,*.S set filetype=arm " arm = armv6/7
 ]])
-

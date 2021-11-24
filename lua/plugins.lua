@@ -70,8 +70,9 @@ return require('packer').startup(function()
   -- markdown preview in browser
   use { 'iamcco/markdown-preview.nvim',  run = 'cd app && yarn install' }
 
-	-- git wrapper
+	-- git stuff
 	use 'tpope/vim-fugitive'
+    use 'airblade/vim-gitgutter'
 
 	-- ARM assembly syntax hightlighting
 	use 'ARM9/arm-syntax-vim'
