@@ -1,4 +1,5 @@
 local cmp = require'cmp'
+local lspkind = require('lspkind')
 
 cmp.setup({
   snippet = {
@@ -18,5 +19,8 @@ cmp.setup({
     { name = 'tree-sitter' },
     { name = 'vsnip' },
     { name = 'buffer' },
+  },
+  formatting = {
+      format = lspkind.cmp_format({with_text = false, maxwidth = 50})
   }
 })

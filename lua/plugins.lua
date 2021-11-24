@@ -27,12 +27,14 @@ return require('packer').startup(function()
   use 'hrsh7th/cmp-nvim-lsp'
   use 'hrsh7th/cmp-buffer'
   use 'hrsh7th/nvim-cmp'
+  use 'ray-x/lsp_signature.nvim'
+  use 'onsails/lspkind-nvim'
 
   -- snippets
   use 'hrsh7th/vim-vsnip'
   use 'hrsh7th/vim-vsnip-integ'
   use 'hrsh7th/cmp-vsnip'
-  use "rafamadriz/friendly-snippets"
+  use 'rafamadriz/friendly-snippets'
 
   -- telescope
   use {
@@ -73,13 +75,10 @@ return require('packer').startup(function()
 
     -- todo comments
     use {
-      "folke/todo-comments.nvim",
-      requires = "nvim-lua/plenary.nvim",
+      'folke/todo-comments.nvim',
+      requires = 'nvim-lua/plenary.nvim',
     }
 
     -- keybindings
     use 'folke/which-key.nvim'
-
-    -- lsp signatures
-    use "ray-x/lsp_signature.nvim"
 end)
