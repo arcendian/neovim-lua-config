@@ -22,5 +22,4 @@ require('completion')
 require('lsp-configuration')
 require('md-preview')
 require("which-key").setup { }
-require "lsp_signature".setup { } 
 require('writing')
