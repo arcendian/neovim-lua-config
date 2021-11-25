@@ -27,4 +27,6 @@ vim.g.nvim_tree_icons = {
     }
 }
 
-require'nvim-tree'.setup { }
+require'nvim-tree'.setup {
+    auto_close = true,
+}
