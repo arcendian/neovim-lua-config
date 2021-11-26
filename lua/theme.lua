@@ -19,5 +19,3 @@ require('onenord').setup {
     -- TSType = { fg = colors.cyan },
   }, 
 }
-
-vim.cmd [[colorscheme onenord]]
