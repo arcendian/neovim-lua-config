@@ -17,5 +17,5 @@ require('onenord').setup {
   custom_highlights = {
     TSNamespace = { fg = colors.cyan },
     -- TSType = { fg = colors.cyan },
-  }, 
+  },
 }
