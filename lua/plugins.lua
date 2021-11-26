@@ -88,4 +88,7 @@ return require('packer').startup(function()
 
     -- dashboard
     use 'glepnir/dashboard-nvim'
+
+    -- essential web dev tool I just want to try out
+    use 'mattn/emmet-vim'
 end)
