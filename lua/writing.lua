@@ -1,23 +1,32 @@
-vim.g.limelight_conceal_ctermfg = 'gray'
-vim.g.limelight_conceal_guifg = '#4c566a'
+require('zen-mode').setup({
+    window = {
+        options = {
+            signcolumn = 'no',
+            number = false,
+            relativenumber = false,
+            cursorline = false,
+            cursorcolumn = false,
+            foldcolumn = "0",
+            list = false,
+        },
+    },
+    plugins = {
+        options = {
+            enabled = true,
+            ruler = false,
+            showcmd = false,
+        },
+    },
+    on_open = function(win)
+        vim.opt.colorcolumn = '0'
+    end,
+    on_close = function()
+        vim.opt.colorcolumn = "80"
+    end,
+})
 
--- Default: 0.5
-vim.g.limelight_default_coefficient = 0.7
-
--- Number of preceding/following paragraphs to include (default: 0)
-vim.g.limelight_paragraph_span = 1
-
--- Beginning/end of paragraph
---   When there's no empty line between the paragraphs
---   and each paragraph starts with indentation
---vim.g.limelight_bop = '^\s'
---vim.g.limelight_eop = '\ze\n^\s'
-
--- Highlighting priority (default: 10)
---   Set it to -1 not to overrule hlsearch
-vim.g.limelight_priority = -1
-
-vim.cmd([[
-    autocmd! User GoyoEnter Limelight
-    autocmd! User GoyoLeave Limelight!
-]])
+-- Toggle zen-mode on and off
+vim.api.nvim_set_keymap('n', '<Leader>wz', ':ZenMode<CR>', { noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<Leader>wt', ':Twilight<CR>', { noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<Leader>we', ':TwilightEnable<CR>', { noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<Leader>wd', ':TwilightDisable<CR>', { noremap = true, silent = true})

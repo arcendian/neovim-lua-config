@@ -5,9 +5,6 @@ vim.g.mapleader = ' '
 -- toggle highlighting when searching in buffer
 vim.api.nvim_set_keymap('n', '<Leader>nh', ':set hlsearch!<CR>', { noremap = true, silent = true})
 
--- toggle distraction free buffer using Goyo plugin
-vim.api.nvim_set_keymap('n', '<Leader>g', ':Goyo<CR>', { noremap = true, silent = true})
-
 -- Remap resizing splits to simple keybindings 
 -- to avoid using command mode
 vim.api.nvim_set_keymap('n', '<C-Right>', ':vertical resize +3<CR>', { noremap = true, silent = true}) 
