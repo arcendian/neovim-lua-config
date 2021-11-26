@@ -23,6 +23,7 @@ require('conf-lspconfig')
 require('conf-telescope')
 require('conf-gitgutter')
 require('conf-emmet')
+require('conf-indent-blankline')
 require('md-preview')
 require('which-key').setup { }
 require('writing')

@@ -7,68 +7,83 @@ if fn.empty(fn.glob(install_path)) > 0 then
 end
 
 return require('packer').startup(function()
-  -- Packer can manage itself
-  use 'wbthomason/packer.nvim'
+    -- Packer can manage itself
+    use 'wbthomason/packer.nvim'
+ 
+    -- prerequisites
+    use 'kyazdani42/nvim-web-devicons'
+ 
+    -- nvim-tree
+    use {
+      'kyazdani42/nvim-tree.lua',
+      requires = 'kyazdani42/nvim-web-devicons',
+    }
+ 
+    -- colorscheme
+    use 'rmehri01/onenord.nvim'
+ 
+    -- lsp configurations
+    use 'neovim/nvim-lspconfig'
+    use 'hrsh7th/cmp-nvim-lsp'
+    use 'hrsh7th/cmp-buffer'
+    use 'hrsh7th/cmp-path'
+    use 'hrsh7th/cmp-cmdline'
+    use 'hrsh7th/nvim-cmp'
+    use 'ray-x/lsp_signature.nvim'
+    use 'onsails/lspkind-nvim'
+ 
+    -- snippets
+    use 'hrsh7th/vim-vsnip'
+    use 'hrsh7th/vim-vsnip-integ'
+    use 'hrsh7th/cmp-vsnip'
+    use 'rafamadriz/friendly-snippets'
+ 
+    -- telescope
+    use {
+        'nvim-telescope/telescope.nvim',
+        requires = { {'nvim-lua/plenary.nvim'} }
+    }
+    use {
+        'nvim-telescope/telescope-fzf-native.nvim',
+        run = 'make'
+    }
 
-  -- prerequisites
-  use 'kyazdani42/nvim-web-devicons'
-
-  -- nvim-tree
-  use {
-    'kyazdani42/nvim-tree.lua',
-    requires = 'kyazdani42/nvim-web-devicons',
-  }
-
-  -- colorscheme
-  use 'rmehri01/onenord.nvim'
-
-  -- lsp configurations
-  use 'neovim/nvim-lspconfig'
-  use 'hrsh7th/cmp-nvim-lsp'
-  use 'hrsh7th/cmp-buffer'
-  use 'hrsh7th/cmp-path'
-  use 'hrsh7th/cmp-cmdline'
-  use 'hrsh7th/nvim-cmp'
-  use 'ray-x/lsp_signature.nvim'
-  use 'onsails/lspkind-nvim'
-
-  -- snippets
-  use 'hrsh7th/vim-vsnip'
-  use 'hrsh7th/vim-vsnip-integ'
-  use 'hrsh7th/cmp-vsnip'
-  use 'rafamadriz/friendly-snippets'
-
-  -- telescope
-  use {
-    'nvim-telescope/telescope.nvim',
-    requires = { {'nvim-lua/plenary.nvim'} }
-  }
-  use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
-
-  -- better syntax highlighting with tree-sitter
-  use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
-
-  -- colors
-  use { 'rrethy/vim-hexokinase', run = 'make hexokinase'}
-
-  -- terminal inside neovim -- floating
-  use 'voldikss/vim-floaterm'
-
-  -- fancy statusline
-  use {
-    'nvim-lualine/lualine.nvim',
-    requires = {'kyazdani42/nvim-web-devicons', opt = true}
-  }
-
-  -- distraction free mode for neovim
-  use 'junegunn/goyo.vim'
-  use 'junegunn/limelight.vim'
-
-  -- auto-pairing brackets
-  use 'windwp/nvim-autopairs'
-
-  -- markdown preview in browser
-  use { 'iamcco/markdown-preview.nvim',  run = 'cd app && yarn install' }
+    -- better syntax highlighting with tree-sitter and more
+    use {
+        'nvim-treesitter/nvim-treesitter',
+        run = ':TSUpdate'
+    }
+ 
+    -- colors
+    use {
+        'rrethy/vim-hexokinase',
+        run = 'make hexokinase'
+    }
+ 
+    -- terminal inside neovim -- floating
+    use 'voldikss/vim-floaterm'
+ 
+    -- fancy statusline
+    use {
+        'nvim-lualine/lualine.nvim',
+        requires = {
+            'kyazdani42/nvim-web-devicons',
+            opt = true
+        }
+    }
+ 
+    -- distraction free mode for neovim
+    use 'folke/zen-mode.nvim'
+    use 'folke/twilight.nvim'
+ 
+    -- auto-pairing brackets
+    use 'windwp/nvim-autopairs'
+ 
+    -- markdown preview in browser
+    use { 
+        'iamcco/markdown-preview.nvim',
+        run = 'cd app && yarn install'
+    }
 
 	-- git stuff
 	use 'tpope/vim-fugitive'
@@ -79,8 +94,8 @@ return require('packer').startup(function()
 
     -- todo comments
     use {
-      'folke/todo-comments.nvim',
-      requires = 'nvim-lua/plenary.nvim',
+        'folke/todo-comments.nvim',
+        requires = 'nvim-lua/plenary.nvim',
     }
 
     -- keybindings
@@ -91,4 +106,7 @@ return require('packer').startup(function()
 
     -- essential web dev tool I just want to try out
     use 'mattn/emmet-vim'
+
+    -- indentline
+    use 'lukas-reineke/indent-blankline.nvim'
 end)

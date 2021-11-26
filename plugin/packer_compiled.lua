@@ -114,15 +114,10 @@ _G.packer_plugins = {
     path = "/home/mice/.local/share/nvim/site/pack/packer/start/friendly-snippets",
     url = "https://github.com/rafamadriz/friendly-snippets"
   },
-  ["goyo.vim"] = {
+  ["indent-blankline.nvim"] = {
     loaded = true,
-    path = "/home/mice/.local/share/nvim/site/pack/packer/start/goyo.vim",
-    url = "https://github.com/junegunn/goyo.vim"
-  },
-  ["limelight.vim"] = {
-    loaded = true,
-    path = "/home/mice/.local/share/nvim/site/pack/packer/start/limelight.vim",
-    url = "https://github.com/junegunn/limelight.vim"
+    path = "/home/mice/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
+    url = "https://github.com/lukas-reineke/indent-blankline.nvim"
   },
   ["lsp_signature.nvim"] = {
     loaded = true,
@@ -204,6 +199,11 @@ _G.packer_plugins = {
     path = "/home/mice/.local/share/nvim/site/pack/packer/start/todo-comments.nvim",
     url = "https://github.com/folke/todo-comments.nvim"
   },
+  ["twilight.nvim"] = {
+    loaded = true,
+    path = "/home/mice/.local/share/nvim/site/pack/packer/start/twilight.nvim",
+    url = "https://github.com/folke/twilight.nvim"
+  },
   ["vim-floaterm"] = {
     loaded = true,
     path = "/home/mice/.local/share/nvim/site/pack/packer/start/vim-floaterm",
@@ -238,6 +238,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/mice/.local/share/nvim/site/pack/packer/start/which-key.nvim",
     url = "https://github.com/folke/which-key.nvim"
+  },
+  ["zen-mode.nvim"] = {
+    loaded = true,
+    path = "/home/mice/.local/share/nvim/site/pack/packer/start/zen-mode.nvim",
+    url = "https://github.com/folke/zen-mode.nvim"
   }
 }
 
