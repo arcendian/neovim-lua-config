@@ -1,27 +1,46 @@
-require('lspconfig').clangd.setup {
+local lspconfig = require('lspconfig')
+
+lspconfig.clangd.setup {
   capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
 }
-require('lspconfig').rust_analyzer.setup {
+
+lspconfig.rust_analyzer.setup {
   capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
 }
-require('lspconfig').pyright.setup {
+
+lspconfig.pyright.setup {
   capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
 }
-require('lspconfig').tsserver.setup {
+
+lspconfig.tsserver.setup {
   capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
 }
-require('lspconfig').cssls.setup {
+
+lspconfig.cssls.setup {
   capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
 }
-require('lspconfig').html.setup {
+
+lspconfig.html.setup {
   capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
 }
-require('lspconfig').bashls.setup {
+
+lspconfig.bashls.setup {
   capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
 }
-require('lspconfig').texlab.setup {
+
+lspconfig.texlab.setup {
   capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
 }
+
+lspconfig.arduino_language_server.setup({
+	cmd =  {
+		"arduino-language-server",
+		"-cli-config", "/home/mice/.arduino15/arduino-cli.yaml",
+		"-cli", "/usr/bin/arduino-cli",
+		"-clangd", "/usr/bin/clangd"
+	},
+    capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
+})
 
 require('lsp_signature').setup {  hint_prefix = '💡 ' } 
 
