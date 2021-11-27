@@ -7,7 +7,8 @@ vim.cmd([[
     	\ 'path_podcasts': '~/Documents/VimWiki/Podcasts/',
     	\ 'path_random': '~/Documents/VimWiki/Random/',
     	\ 'path_review': '~/Documents/VimWiki/Review/',
-    	\ 'path_worldbuilding': '~/Documents/VimWiki/Worldbuilding/'
+    	\ 'path_worldbuilding': '~/Documents/VimWiki/Worldbuilding/',
+    	\ 'path_journal': '~/Documents/VimWiki/Journal/'
 	\ }]
 ]])
 
