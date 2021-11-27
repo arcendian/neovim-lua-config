@@ -25,6 +25,7 @@ require('conf-gitgutter')
 require('conf-emmet')
 require('conf-indent-blankline')
 require('conf-neoformat')
+require('conf-vimwiki')
 require('md-preview')
 require('which-key').setup {}
 require('writing')
