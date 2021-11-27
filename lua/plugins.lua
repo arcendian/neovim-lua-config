@@ -91,4 +91,7 @@ return require('packer').startup(function()
 
     -- indentline
     use 'lukas-reineke/indent-blankline.nvim'
+
+    -- autoformatting -- trying out this plugin for now
+    use 'sbdchd/neoformat'
 end)
