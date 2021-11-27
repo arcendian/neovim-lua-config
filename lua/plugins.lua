@@ -10,17 +10,9 @@ if fn.empty(fn.glob(install_path)) > 0 then
 end
 
 return require('packer').startup(function()
+    -- ======================= UTILITIES ================================== --
     -- Packer can manage itself
     use 'wbthomason/packer.nvim'
-
-    -- prerequisites
-    use 'kyazdani42/nvim-web-devicons'
-
-    -- nvim-tree
-    use {'kyazdani42/nvim-tree.lua', requires = 'kyazdani42/nvim-web-devicons'}
-
-    -- colorscheme
-    use 'rmehri01/onenord.nvim'
 
     -- lsp configurations
     use 'neovim/nvim-lspconfig'
@@ -38,34 +30,27 @@ return require('packer').startup(function()
     use 'hrsh7th/cmp-vsnip'
     use 'rafamadriz/friendly-snippets'
 
-    -- telescope
+    -- telescope - fuzzy finder and more
     use {
         'nvim-telescope/telescope.nvim',
         requires = {{'nvim-lua/plenary.nvim'}}
     }
     use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make'}
 
-    -- better syntax highlighting with tree-sitter and more
-    use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
+    -- auto-pairing brackets
+    use 'windwp/nvim-autopairs'
 
-    -- colors
-    use {'rrethy/vim-hexokinase', run = 'make hexokinase'}
+    -- keybindings
+    use 'folke/which-key.nvim'
+
+    -- essential web dev tool I just want to try out
+    use 'mattn/emmet-vim'
+
+    -- autoformatting -- trying out this plugin for now
+    use 'sbdchd/neoformat'
 
     -- terminal inside neovim -- floating
     use 'voldikss/vim-floaterm'
-
-    -- fancy statusline
-    use {
-        'nvim-lualine/lualine.nvim',
-        requires = {'kyazdani42/nvim-web-devicons', opt = true}
-    }
-
-    -- distraction free mode for neovim
-    use 'folke/zen-mode.nvim'
-    use 'folke/twilight.nvim'
-
-    -- auto-pairing brackets
-    use 'windwp/nvim-autopairs'
 
     -- markdown preview in browser
     use {'iamcco/markdown-preview.nvim', run = 'cd app && yarn install'}
@@ -77,21 +62,40 @@ return require('packer').startup(function()
     -- ARM assembly syntax hightlighting
     use 'ARM9/arm-syntax-vim'
 
+    -- ========================== UI ====================================== --
+    -- better syntax highlighting with tree-sitter and more
+    use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
+
+    -- colorscheme
+    use 'rmehri01/onenord.nvim'
+
+    -- fancy statusline
+    use {
+        'nvim-lualine/lualine.nvim',
+        requires = {'kyazdani42/nvim-web-devicons', opt = true}
+    }
+
     -- todo comments
     use {'folke/todo-comments.nvim', requires = 'nvim-lua/plenary.nvim'}
-
-    -- keybindings
-    use 'folke/which-key.nvim'
 
     -- dashboard
     use 'glepnir/dashboard-nvim'
 
-    -- essential web dev tool I just want to try out
-    use 'mattn/emmet-vim'
-
-    -- indentline
+    -- add indentation guides to all lines (including empty lines).
     use 'lukas-reineke/indent-blankline.nvim'
 
-    -- autoformatting -- trying out this plugin for now
-    use 'sbdchd/neoformat'
+    -- colors for hex color values
+    use {'rrethy/vim-hexokinase', run = 'make hexokinase'}
+
+    -- icons/glyphs
+    use 'kyazdani42/nvim-web-devicons'
+
+    -- file-explorer (netrw is nice but this looks nicer)
+    use {'kyazdani42/nvim-tree.lua', requires = 'kyazdani42/nvim-web-devicons'}
+
+    -- ======================= WRITING ================================== --
+    --  plugins for writing
+    use 'folke/zen-mode.nvim'
+    use 'folke/twilight.nvim'
+    use 'vimwiki/vimwiki'
 end)
