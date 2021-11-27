@@ -25,6 +25,10 @@ vim.opt.showmode = false
 vim.opt.signcolumn = "yes"
 vim.opt.timeoutlen = 500
 
+vim.cmd([[
+    set wildignore=*.git/*,*.tags,tags,*.o,*.class,*.ccls-cache
+]])
+
 -- highlight yanked text
 vim.highlight.on_yank {higroup = "IncSearch", timeout = 150}
 
