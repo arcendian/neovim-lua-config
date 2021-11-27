@@ -7,9 +7,8 @@ vim.cmd([[
     	\ 'path_podcasts': '~/Documents/VimWiki/Podcasts/',
     	\ 'path_random': '~/Documents/VimWiki/Random/',
     	\ 'path_review': '~/Documents/VimWiki/Review/',
-    	\ 'path_worldbuilding': '~/Documents/VimWiki/Worldbuilding/',
-		\ 'syntax': 'markdown',
-		\ 'ext': '.md' }]
+    	\ 'path_worldbuilding': '~/Documents/VimWiki/Worldbuilding/'
+	\ }]
 ]])
 
 -- TODO: How to translate the above to Lua. Too lazy to search for now.
