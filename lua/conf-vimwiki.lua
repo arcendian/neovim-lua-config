@@ -12,6 +12,8 @@ vim.cmd([[
 	\ }]
 ]])
 
+vim.g.vimwiki_global_ext = 0
+
 -- TODO: How to translate the above to Lua. Too lazy to search for now.
 -- vim.g.vimwiki_list = ({
 --     path = '~/Documents/VimWiki/Default/',
