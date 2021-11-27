@@ -29,6 +29,6 @@ vim.api.nvim_set_keymap('n', '<Leader>wd', ':TwilightDisable<CR>',
 vim.opt.spelllang = 'en'
 
 -- Toggle spell checking on and off
-vim.api.nvim_set_keymap('n', '<Leader>ws', ':set spell!<CR>',
+vim.api.nvim_set_keymap('n', '<Leader>wc', ':set spell!<CR>',
                         {noremap = true, silent = true})
 
