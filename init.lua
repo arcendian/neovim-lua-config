@@ -13,9 +13,9 @@ require('statusline')
 require('settings')
 require('remaps')
 require('floaterm')
-require'nvim-web-devicons'.setup { default = true; }
+require'nvim-web-devicons'.setup {default = true}
 require('file-explorer')
-require('todo-comments').setup { }
+require('todo-comments').setup {}
 require('conf-tree-sitter')
 require('autopairs')
 require('completion')
@@ -25,6 +25,6 @@ require('conf-gitgutter')
 require('conf-emmet')
 require('conf-indent-blankline')
 require('md-preview')
-require('which-key').setup { }
+require('which-key').setup {}
 require('writing')
 require('dashboard')
