@@ -12,11 +12,6 @@ vim.api.nvim_set_keymap('n', '<C-Left>', ':vertical resize -3<CR>', { noremap = 
 vim.api.nvim_set_keymap('n', '<C-Up>', ':resize +3<CR>', { noremap = true, silent = true}) 
 vim.api.nvim_set_keymap('n', '<C-Down>', ':resize -3<CR>', { noremap = true, silent = true}) 
 
--- Change 2 split windows form vertical to horizontal
--- and vice versa
-vim.api.nvim_set_keymap('n', '<leader>th', '<C-w>t<C-w>H', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<leader>tk', '<C-w>t<C-w>K', { noremap = true, silent = true })
-
 -- fold and unfold
 vim.cmd ([[
   nnoremap <expr> <f2> &foldlevel ? 'zM' :'zR'
@@ -56,4 +51,5 @@ vim.cmd ([[
     let g:vsnip_filetypes.typescriptreact = ['typescript']
 ]])
 
-
+-- write and format current buffer
+vim.api.nvim_set_keymap('n', '<leader>bf', 'gg:w<CR><ESC>gqG', { noremap = true, silent = true }) 
