@@ -26,10 +26,10 @@ vim.opt.signcolumn = "yes"
 vim.opt.timeoutlen = 500
 
 -- highlight yanked text
-vim.highlight.on_yank {higroup="IncSearch", timeout=150}
+vim.highlight.on_yank {higroup = "IncSearch", timeout = 150}
 
 -- ignore files
-vim.opt.path:append{ I = "**/.git/*"}
+vim.opt.path:append{I = "**/.git/*"}
 
 -- remove the annoying tilde characters in empty lines (EOB)
 vim.cmd([[
@@ -52,7 +52,6 @@ vim.cmd([[
 -- vim.cmd([[
 --   command! MakeTags !ctags -R .
 -- ]])
-
 
 -- FINDING FILES
 -- Search down into subfolders

@@ -1,28 +1,35 @@
 -- set Space key as Leader key
-vim.api.nvim_set_keymap('n', '<Space>', '<NOP>', { noremap = true, silent = true})
+vim.api
+    .nvim_set_keymap('n', '<Space>', '<NOP>', {noremap = true, silent = true})
 vim.g.mapleader = ' '
 
 -- toggle highlighting when searching in buffer
-vim.api.nvim_set_keymap('n', '<Leader>nh', ':set hlsearch!<CR>', { noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<Leader>nh', ':set hlsearch!<CR>',
+                        {noremap = true, silent = true})
 
 -- Remap resizing splits to simple keybindings 
 -- to avoid using command mode
-vim.api.nvim_set_keymap('n', '<C-Right>', ':vertical resize +3<CR>', { noremap = true, silent = true}) 
-vim.api.nvim_set_keymap('n', '<C-Left>', ':vertical resize -3<CR>', { noremap = true, silent = true}) 
-vim.api.nvim_set_keymap('n', '<C-Up>', ':resize +3<CR>', { noremap = true, silent = true}) 
-vim.api.nvim_set_keymap('n', '<C-Down>', ':resize -3<CR>', { noremap = true, silent = true}) 
+vim.api.nvim_set_keymap('n', '<C-Right>', ':vertical resize +3<CR>',
+                        {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<C-Left>', ':vertical resize -3<CR>',
+                        {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<C-Up>', ':resize +3<CR>',
+                        {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<C-Down>', ':resize -3<CR>',
+                        {noremap = true, silent = true})
 
 -- fold and unfold
-vim.cmd ([[
+vim.cmd([[
   nnoremap <expr> <f2> &foldlevel ? 'zM' :'zR'
 ]])
 
 -- greatest remap ever according to the Primeagen
 -- send the visually highlighted text to the
 -- void register which is just like /dev/null
-vim.api.nvim_set_keymap('v', '<leader>p', '"_d', { noremap = true, silent = true }) 
+vim.api
+    .nvim_set_keymap('v', '<leader>p', '"_d', {noremap = true, silent = true})
 
-vim.cmd ([[
+vim.cmd([[
 	" NOTE: You can use other key to expand snippet.
     " Expand
     imap <expr> <C-s>   vsnip#expandable()  ? '<Plug>(vsnip-expand)'         : '<C-s>'
@@ -52,4 +59,5 @@ vim.cmd ([[
 ]])
 
 -- write and format current buffer
-vim.api.nvim_set_keymap('n', '<leader>bf', 'gg:w<CR><ESC>gqG', { noremap = true, silent = true }) 
+vim.api.nvim_set_keymap('n', '<leader>bf', 'gg:w<CR><ESC>gqG:w<CR>',
+                        {noremap = true, silent = true})

@@ -94,6 +94,9 @@ vim.cmd([[
 ]])
 
 -- keybindings
-vim.api.nvim_set_keymap('n', '<leader>md', '<cmd>MarkdownPreview<CR>', { noremap = true, silent = true}) 
-vim.api.nvim_set_keymap('n', '<leader>ms', '<cmd>MarkdownPreviewStop<CR>', { noremap = true, silent = true}) 
-vim.api.nvim_set_keymap('n', '<leader>mt', '<cmd>MarkdownPreviewToggle<CR>', { noremap = true, silent = true}) 
+vim.api.nvim_set_keymap('n', '<leader>md', '<cmd>MarkdownPreview<CR>',
+                        {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<leader>ms', '<cmd>MarkdownPreviewStop<CR>',
+                        {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<leader>mt', '<cmd>MarkdownPreviewToggle<CR>',
+                        {noremap = true, silent = true})
