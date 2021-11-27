@@ -6,7 +6,7 @@
 --  ▄▄█▄▄  █   ██ ▄▄█▄▄    █      █    █▄▄▄▄▄ ▀▄▄▄▄▀ █    █
 --
 --  Michael Espeña (https://github.com/Arcendian/nvim)
-
+--
 require('plugins')
 require('theme')
 require('statusline')
