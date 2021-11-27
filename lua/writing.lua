@@ -24,3 +24,11 @@ vim.api.nvim_set_keymap('n', '<Leader>we', ':TwilightEnable<CR>',
                         {noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', '<Leader>wd', ':TwilightDisable<CR>',
                         {noremap = true, silent = true})
+
+-- Spell checking
+vim.opt.spelllang = 'en'
+
+-- Toggle spell checking on and off
+vim.api.nvim_set_keymap('n', '<Leader>ws', ':set spell!<CR>',
+                        {noremap = true, silent = true})
+
