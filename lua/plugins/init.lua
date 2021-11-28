@@ -48,8 +48,8 @@ return require('packer').startup(function()
     -- autoformatting -- trying out this plugin for now
     use 'sbdchd/neoformat'
 
-    -- terminal inside neovim -- floating
-    use 'voldikss/vim-floaterm'
+    -- plugin for easier use of builtin terminal
+    use 'akinsho/toggleterm.nvim'
 
     -- markdown preview in browser
     use {'iamcco/markdown-preview.nvim', run = 'cd app && yarn install'}

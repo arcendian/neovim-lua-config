@@ -12,7 +12,7 @@ require('theme')
 require('statusline')
 require('settings')
 require('remaps')
-require('floaterm')
+require('terminal')
 require'nvim-web-devicons'.setup {default = true}
 require('file-explorer')
 require('todo-comments').setup {}
