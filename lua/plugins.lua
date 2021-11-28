@@ -98,4 +98,8 @@ return require('packer').startup(function()
     use 'folke/zen-mode.nvim'
     use 'folke/twilight.nvim'
     use 'vimwiki/vimwiki'
+
+	-- installing org.vim so I can view org files in vim with syntax
+	-- highlighting in case Doom Emacs breaks on me.
+	use 'axvr/org.vim'
 end)
