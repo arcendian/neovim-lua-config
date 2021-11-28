@@ -99,7 +99,7 @@ return require('packer').startup(function()
     use 'folke/twilight.nvim'
     use 'vimwiki/vimwiki'
 
-	-- installing org.vim so I can view org files in vim with syntax
-	-- highlighting in case Doom Emacs breaks on me.
-	use 'axvr/org.vim'
+    -- installing org.vim so I can view org files in vim with syntax
+    -- highlighting in case Doom Emacs breaks on me.
+    use 'axvr/org.vim'
 end)

@@ -1,3 +1,18 @@
+require('telescope').setup {
+    extensions = {
+        fzf = {
+            fuzzy = true,
+            override_generic_sorter = true,
+            override_file_sorter = true,
+            case_mode = "smart_case"
+        }
+    }
+}
+
+require('telescope').load_extension('fzf')
+require('arcendian.mod-telescope')
+
+-- keybindings for builtin functions
 vim.api.nvim_set_keymap('n', '<leader>ff', '<cmd>Telescope find_files<CR>',
                         {noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', '<leader>fg', '<cmd>Telescope live_grep<CR>',
@@ -9,14 +24,8 @@ vim.api.nvim_set_keymap('n', '<leader>fh', '<cmd>Telescope help_tags<CR>',
 vim.api.nvim_set_keymap('n', '<leader>fo', '<cmd>Telescope oldfiles<CR>',
                         {noremap = true, silent = true})
 
-require('telescope').setup {
-    extensions = {
-        fzf = {
-            fuzzy = true,
-            override_generic_sorter = true,
-            override_file_sorter = true,
-            case_mode = "smart_case"
-        }
-    }
-}
-require('telescope').load_extension('fzf')
+-- keybinding for custom functions
+vim.api.nvim_set_keymap('n', '<leader>vrc',
+                        '<cmd>lua require("arcendian.mod-telescope").search_dotfiles()<CR>',
+                        {noremap = true, silent = true})
+
