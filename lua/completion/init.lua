@@ -58,7 +58,3 @@ cmp.setup({
         end
     }
 })
-
--- lsp signature
-require"lsp_signature".setup({cfg = {hint_prefix = "💡 "}})
-
