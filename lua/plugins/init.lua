@@ -22,7 +22,6 @@ return require('packer').startup(function()
     use 'hrsh7th/cmp-cmdline'
     use 'hrsh7th/nvim-cmp'
     use 'ray-x/lsp_signature.nvim'
-    use 'onsails/lspkind-nvim'
 
     -- snippets
     use 'hrsh7th/vim-vsnip'
