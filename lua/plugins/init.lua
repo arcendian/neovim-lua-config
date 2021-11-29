@@ -46,7 +46,7 @@ return require('packer').startup(function()
     use 'mattn/emmet-vim'
 
     -- autoformatting -- trying out this plugin for now
-    use 'sbdchd/neoformat'
+    use 'mhartington/formatter.nvim'
 
     -- plugin for easier use of builtin terminal
     use 'akinsho/toggleterm.nvim'
