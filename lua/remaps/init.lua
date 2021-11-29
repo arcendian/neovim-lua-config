@@ -1,3 +1,6 @@
+-- ====== WHICH-KEY ====== --
+require('which-key').setup {}
+
 -- set Space key as Leader key
 vim.api
     .nvim_set_keymap('n', '<Space>', '<NOP>', {noremap = true, silent = true})
@@ -52,7 +55,3 @@ vim.cmd([[
     let g:vsnip_filetypes.javascriptreact = ['javascript']
     let g:vsnip_filetypes.typescriptreact = ['typescript']
 ]])
-
--- write and format current buffer
-vim.api.nvim_set_keymap('n', '<leader>bf', 'gg:w<CR><ESC>gqG:w<CR>',
-                        {noremap = true, silent = true})
