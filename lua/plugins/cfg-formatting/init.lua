@@ -65,5 +65,7 @@ vim.api.nvim_exec([[
 	  autocmd!
 	  autocmd BufWritePost *.js,*.rs,*.lua,*.c,*.cpp FormatWrite
 	  autocmd BufWritePost *.md,*.tex,*.latex,*.h,*.hpp FormatWrite
+	  autocmd BufWritePost *.py,*.toml,*.yaml,*.yml FormatWrite
+	  autocmd BufWritePost *.html,*.css FormatWrite
 	augroup END
 ]], true)
