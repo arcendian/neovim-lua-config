@@ -24,6 +24,10 @@ vim.opt.termguicolors = true
 vim.opt.showmode = false
 vim.opt.signcolumn = "yes"
 vim.opt.timeoutlen = 500
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
+vim.opt.list = true
+vim.opt.mouse = 'a'
 
 vim.g.wildignore = {
     '*.git/*', '*.tags', 'tags', '*.o', '*.class', '*.ccls-cache'
