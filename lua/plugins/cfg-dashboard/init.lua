@@ -20,14 +20,14 @@ vim.g.dashboard_custom_section = {
     },
     f = {
         description = {'  Edit Config          SPC r c'},
-        command = '<cmd>lua require("arcendian.mod-telescope").search_dotfiles()<CR>'
+        command = '<cmd>lua require("plugins.cfg-custom/telescope").search_dotfiles()<CR>'
     },
     g = {description = {''}, command = ''},
     h = {description = {''}, command = ''}
 }
 
 vim.api.nvim_set_keymap('n', '<leader>rc',
-                        '<cmd>lua require("arcendian.mod-telescope").search_dotfiles()<CR>',
+                        '<cmd>lua require("plugins.cfg-custom.telescope").search_dotfiles()<CR>',
                         {noremap = true, silent = true})
 
 vim.g.dashboard_custom_header = {

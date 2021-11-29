@@ -10,7 +10,6 @@ require('telescope').setup {
 }
 
 require('telescope').load_extension('fzf')
-require('arcendian.mod-telescope')
 
 -- keybindings for builtin functions
 vim.api.nvim_set_keymap('n', '<leader>ff', '<cmd>Telescope find_files<CR>',
