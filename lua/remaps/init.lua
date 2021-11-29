@@ -18,11 +18,6 @@ vim.api.nvim_set_keymap('n', '<C-Up>', ':resize +3<CR>',
 vim.api.nvim_set_keymap('n', '<C-Down>', ':resize -3<CR>',
                         {noremap = true, silent = true})
 
--- fold and unfold
-vim.cmd([[
-  nnoremap <expr> <f2> &foldlevel ? 'zM' :'zR'
-]])
-
 -- greatest remap ever according to the Primeagen
 -- send the visually highlighted text to the
 -- void register which is just like /dev/null
