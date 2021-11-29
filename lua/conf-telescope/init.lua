@@ -23,9 +23,3 @@ vim.api.nvim_set_keymap('n', '<leader>fh', '<cmd>Telescope help_tags<CR>',
                         {noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', '<leader>fo', '<cmd>Telescope oldfiles<CR>',
                         {noremap = true, silent = true})
-
--- keybinding for custom functions
-vim.api.nvim_set_keymap('n', '<leader>vrc',
-                        '<cmd>lua require("arcendian.mod-telescope").search_dotfiles()<CR>',
-                        {noremap = true, silent = true})
-

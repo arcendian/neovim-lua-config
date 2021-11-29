@@ -19,34 +19,25 @@ vim.g.dashboard_custom_section = {
         command = ':Telescope oldfiles<CR>'
     },
     f = {
-        description = {'  Edit config          SPC f c'},
-        command = ':edit ~/.config/nvim/init.lua<CR>'
+        description = {'  Edit Config          SPC r c'},
+        command = '<cmd>lua require("arcendian.mod-telescope").search_dotfiles()<CR>'
     },
     g = {description = {''}, command = ''},
-    h = {description = {''}, command = ''},
-    i = {description = {''}, command = ''}
+    h = {description = {''}, command = ''}
 }
 
-vim.api.nvim_set_keymap('n', '<leader>fc', ':edit ~/.config/nvim/init.lua<CR>',
+vim.api.nvim_set_keymap('n', '<leader>rc',
+                        '<cmd>lua require("arcendian.mod-telescope").search_dotfiles()<CR>',
                         {noremap = true, silent = true})
 
 vim.g.dashboard_custom_header = {
-    [[         ___           ]],
-    [[     . -^   `--,       ]],
-    [[    /# =========`-_    ]],
-    [[   /# (--====___====\  ]],
-    [[  /#   .- --.  . --.|  ]],
-    [[ /##   |  * ) (   * ), ]],
-    [[ |##   \    /\ \   / | ]],
-    [[ |###   ---   \ ---  | ]],
-    [[ |####      ___)    #| ]],
-    [[ |######           ##| ]],
-    [[  \##### ---------- /  ]],
-    [[   \####           (   ]],
-    [[    `\###          |   ]],
-    [[      \###         |   ]],
-    [[       \##        |    ]],
-    [[        \###.    .)    ]],
-    [[         `======/      ]],
-    [[                       ]]
+    [[         ___           ]], [[     . -^   `--,       ]],
+    [[    /# =========`-_    ]], [[   /# (--====___====\  ]],
+    [[  /#   .- --.  . --.|  ]], [[ /##   |  * ) (   * ), ]],
+    [[ |##   \    /\ \   / | ]], [[ |###   ---   \ ---  | ]],
+    [[ |####      ___)    #| ]], [[ |######           ##| ]],
+    [[  \##### ---------- /  ]], [[   \####           (   ]],
+    [[    `\###          |   ]], [[      \###         |   ]],
+    [[       \##        |    ]], [[        \###.    .)    ]],
+    [[         `======/      ]], [[                       ]]
 }
