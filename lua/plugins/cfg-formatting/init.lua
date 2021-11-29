@@ -63,6 +63,7 @@ formatter.setup({logging = false, filetype = formatterConfig})
 vim.api.nvim_exec([[
 	augroup FormatAutogroup
 	  autocmd!
-	  autocmd BufWritePost *.js,*.rs,*.lua,*.c,*.cpp,*.md,*.tex,*.latex,*.h,*.hpp FormatWrite
+	  autocmd BufWritePost *.js,*.rs,*.lua,*.c,*.cpp FormatWrite
+	  autocmd BufWritePost *.md,*.tex,*.latex,*.h,*.hpp FormatWrite
 	augroup END
 ]], true)
