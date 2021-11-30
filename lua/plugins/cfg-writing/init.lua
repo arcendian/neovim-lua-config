@@ -21,14 +21,16 @@ require("zen-mode").setup({
 	end,
 })
 
+local opts = { noremap = true, silent = true }
+
 -- Toggle zen-mode on and off
-vim.api.nvim_set_keymap("n", "<Leader>wz", ":ZenMode<CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "<Leader>wt", ":Twilight<CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "<Leader>we", ":TwilightEnable<CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "<Leader>wd", ":TwilightDisable<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<Leader>wz", ":ZenMode<CR>", opts)
+vim.api.nvim_set_keymap("n", "<Leader>wt", ":Twilight<CR>", opts)
+vim.api.nvim_set_keymap("n", "<Leader>we", ":TwilightEnable<CR>", opts)
+vim.api.nvim_set_keymap("n", "<Leader>wd", ":TwilightDisable<CR>", opts)
 
 -- Spell checking
 vim.opt.spelllang = "en"
 
 -- Toggle spell checking on and off
-vim.api.nvim_set_keymap("n", "<Leader>wc", ":set spell!<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<Leader>wc", ":set spell!<CR>", opts)
