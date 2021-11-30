@@ -33,6 +33,17 @@ local formatterConfig = {
         end
     },
 
+    arduino = {
+        function()
+            return {
+                exe = "clang-format",
+                args = {"--assume-filename", vim.api.nvim_buf_get_name(0)},
+                stdin = true,
+                cwd = vim.fn.expand('%:p:h') -- Run clang-format in cwd of the file.
+            }
+        end
+    },
+
     python = {function() return {exe = "black", args = {'-'}, stdin = true} end},
 
     tex = {function() return {exe = "latexindent", stdin = true} end}
@@ -66,6 +77,6 @@ vim.api.nvim_exec([[
 	  autocmd BufWritePost *.js,*.rs,*.lua,*.c,*.cpp FormatWrite
 	  autocmd BufWritePost *.md,*.tex,*.latex,*.h,*.hpp FormatWrite
 	  autocmd BufWritePost *.py,*.toml,*.yaml,*.yml FormatWrite
-	  autocmd BufWritePost *.html,*.css FormatWrite
+	  autocmd BufWritePost *.html,*.css,*.ino FormatWrite
 	augroup END
 ]], true)
