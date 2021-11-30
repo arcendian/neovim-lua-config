@@ -5,6 +5,10 @@ vim.opt.list = true
 -- TODO: documentations show what the terminal buffer is called but I don't
 -- know how to put the name properly here for the moment
 vim.g.indentLine_fileTypeExclude = {
-    'dashboard', 'packer', 'help', 'ToggleTerm', ''
+	"dashboard",
+	"packer",
+	"help",
+	"ToggleTerm",
+	"",
 }
-require('indent_blankline').setup {}
+require("indent_blankline").setup({})

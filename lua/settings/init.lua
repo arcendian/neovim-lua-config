@@ -27,17 +27,22 @@ vim.opt.timeoutlen = 500
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
 vim.opt.list = true
-vim.opt.mouse = 'a'
+vim.opt.mouse = "a"
 
 vim.g.wildignore = {
-    '*.git/*', '*.tags', 'tags', '*.o', '*.class', '*.ccls-cache'
+	"*.git/*",
+	"*.tags",
+	"tags",
+	"*.o",
+	"*.class",
+	"*.ccls-cache",
 }
 
 -- highlight yanked text
-vim.highlight.on_yank {higroup = "IncSearch", timeout = 150}
+vim.highlight.on_yank({ higroup = "IncSearch", timeout = 150 })
 
 -- ignore files
-vim.opt.path:append{I = "**/.git/*"}
+vim.opt.path:append({ I = "**/.git/*" })
 
 -- remove the annoying tilde characters in empty lines (EOB)
 vim.cmd([[

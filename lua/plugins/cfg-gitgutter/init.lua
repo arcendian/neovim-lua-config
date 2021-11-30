@@ -7,15 +7,9 @@ vim.g.gitgutter_map_keys = 0
 -- vim.g.gitgutter_sign_modified_removed = ''
 
 vim.g.gitgutter_enabled = 1
-vim.api.nvim_set_keymap('n', '<leader>he', ':GitGutterEnable<CR>',
-                        {noremap = true, silent = true})
-vim.api.nvim_set_keymap('n', '<leader>hd', ':GitGutterDisable<CR>',
-                        {noremap = true, silent = true})
-vim.api.nvim_set_keymap('n', '<leader>ht', ':GitGutterToggle<CR>',
-                        {noremap = true, silent = true})
-vim.api.nvim_set_keymap('n', '<leader>hp', ':GitGutterPreviewHunk<CR>',
-                        {noremap = true, silent = true})
-vim.api.nvim_set_keymap('n', '<leader>hs', ':GitGutterStageHunk<CR>',
-                        {noremap = true, silent = true})
-vim.api.nvim_set_keymap('n', '<leader>hu', ':GitGutterUndoHunk<CR>',
-                        {noremap = true, silent = true})
+vim.api.nvim_set_keymap("n", "<leader>he", ":GitGutterEnable<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<leader>hd", ":GitGutterDisable<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<leader>ht", ":GitGutterToggle<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<leader>hp", ":GitGutterPreviewHunk<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<leader>hs", ":GitGutterStageHunk<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<leader>hu", ":GitGutterUndoHunk<CR>", { noremap = true, silent = true })
