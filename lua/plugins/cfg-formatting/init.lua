@@ -6,6 +6,7 @@ local formatterConfig = {
 			return { exe = "rustfmt", args = { "--emit=stdout" }, stdin = true }
 		end,
 	},
+
 	sh = {
 		function()
 			return { exe = "shfmt", args = { "-i", 2 }, stdin = true }
@@ -28,6 +29,7 @@ local formatterConfig = {
 			}
 		end,
 	},
+
 	c = {
 		function()
 			return {
@@ -38,6 +40,7 @@ local formatterConfig = {
 			}
 		end,
 	},
+
 	arduino = {
 		function()
 			return {
@@ -48,11 +51,13 @@ local formatterConfig = {
 			}
 		end,
 	},
+
 	python = {
 		function()
 			return { exe = "black", args = { "-" }, stdin = true }
 		end,
 	},
+
 	tex = {
 		function()
 			return { exe = "latexindent", stdin = true }
