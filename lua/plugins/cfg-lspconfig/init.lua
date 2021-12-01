@@ -1,81 +1,110 @@
-local lspconfig = require("lspconfig")
+-- ===================== LSP config ======================================== --
+local nvim_lsp = require("lspconfig")
 
--- ========================= Setup LSPs ==================================== --
-lspconfig.clangd.setup({
-	capabilities = require("cmp_nvim_lsp").update_capabilities(vim.lsp.protocol.make_client_capabilities()),
-})
+-- Use an on_attach function to only map the following keys
+-- after the language server attaches to the current buffer
+local on_attach = function(client, bufnr)
+	local function buf_set_keymap(...)
+		vim.api.nvim_buf_set_keymap(bufnr, ...)
+	end
+	local function buf_set_option(...)
+		vim.api.nvim_buf_set_option(bufnr, ...)
+	end
 
-lspconfig.rust_analyzer.setup({
-	capabilities = require("cmp_nvim_lsp").update_capabilities(vim.lsp.protocol.make_client_capabilities()),
-})
+	-- Enable completion triggered by <c-x><c-o>
+	buf_set_option("omnifunc", "v:lua.vim.lsp.omnifunc")
 
-lspconfig.pyright.setup({
-	capabilities = require("cmp_nvim_lsp").update_capabilities(vim.lsp.protocol.make_client_capabilities()),
-})
+	-- Mappings.
+	local opts = { noremap = true, silent = true }
 
-lspconfig.tsserver.setup({
-	capabilities = require("cmp_nvim_lsp").update_capabilities(vim.lsp.protocol.make_client_capabilities()),
-})
+	-- See `:help vim.lsp.*` for documentation on any of the below functions
+	buf_set_keymap("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", opts)
+	buf_set_keymap("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", opts)
+	buf_set_keymap("n", "K", "<cmd>lua vim.lsp.buf.hover()<CR>", opts)
+	buf_set_keymap("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts)
+	buf_set_keymap("n", "<C-k>", "<cmd>lua vim.lsp.buf.signature_help()<CR>", opts)
+	buf_set_keymap("n", "<space>wa", "<cmd>lua vim.lsp.buf.add_workspace_folder()<CR>", opts)
+	buf_set_keymap("n", "<space>wr", "<cmd>lua vim.lsp.buf.remove_workspace_folder()<CR>", opts)
+	buf_set_keymap("n", "<space>wl", "<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>", opts)
+	buf_set_keymap("n", "<space>D", "<cmd>lua vim.lsp.buf.type_definition()<CR>", opts)
+	buf_set_keymap("n", "<space>rn", "<cmd>lua vim.lsp.buf.rename()<CR>", opts)
+	buf_set_keymap("n", "<space>ca", "<cmd>lua vim.lsp.buf.code_action()<CR>", opts)
+	buf_set_keymap("n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>", opts)
+	buf_set_keymap("n", "<space>e", "<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>", opts)
+	buf_set_keymap("n", "[d", "<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>", opts)
+	buf_set_keymap("n", "]d", "<cmd>lua vim.lsp.diagnostic.goto_next()<CR>", opts)
+	buf_set_keymap("n", "<space>q", "<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>", opts)
+	buf_set_keymap("n", "<space>f", "<cmd>lua vim.lsp.buf.formatting()<CR>", opts)
+end
 
-lspconfig.cssls.setup({
-	capabilities = require("cmp_nvim_lsp").update_capabilities(vim.lsp.protocol.make_client_capabilities()),
-})
+-- Use a loop to conveniently call 'setup' on multiple servers and
+-- map buffer local keybindings when the language server attaches
+local servers = {
+	"pyright",
+	"rust_analyzer",
+	"tsserver",
+	"clangd",
+	"vimls",
+	"cssls",
+	"html",
+	"bashls",
+	"texlab",
+	"vimls",
+	"hls",
+	"arduino_language_server",
+	"sumneko_lua",
+}
+local cmp_capabilities = require("cmp_nvim_lsp").update_capabilities(vim.lsp.protocol.make_client_capabilities())
 
-lspconfig.html.setup({
-	capabilities = require("cmp_nvim_lsp").update_capabilities(vim.lsp.protocol.make_client_capabilities()),
-})
-
-lspconfig.bashls.setup({
-	capabilities = require("cmp_nvim_lsp").update_capabilities(vim.lsp.protocol.make_client_capabilities()),
-})
-
-lspconfig.texlab.setup({
-	capabilities = require("cmp_nvim_lsp").update_capabilities(vim.lsp.protocol.make_client_capabilities()),
-})
-
-lspconfig.vimls.setup({
-	capabilities = require("cmp_nvim_lsp").update_capabilities(vim.lsp.protocol.make_client_capabilities()),
-})
-
-lspconfig.arduino_language_server.setup({
-	cmd = {
-		"arduino-language-server",
-		"-cli-config",
-		"/home/mice/.arduino15/arduino-cli.yaml",
-	},
-	capabilities = require("cmp_nvim_lsp").update_capabilities(vim.lsp.protocol.make_client_capabilities()),
-})
-
-local runtime_path = vim.split(package.path, ";")
-table.insert(runtime_path, "lua/?.lua")
-table.insert(runtime_path, "lua/?/init.lua")
-
-require("lspconfig").sumneko_lua.setup({
-	cmd = { "lua-language-server" },
-	settings = {
-		Lua = {
-			runtime = {
-				-- Tell the language server which version of Lua is used
-				-- (most likely LuaJIT in the case of Neovim)
-				version = "LuaJIT",
-				-- Setup lua path
-				path = runtime_path,
+for _, lsp in ipairs(servers) do
+	if lsp == "arduino_language_server" then
+		nvim_lsp[lsp].setup({
+			on_attach = on_attach,
+			cmd = {
+				"arduino-language-server",
+				"-cli-config",
+				"/home/mice/.arduino15/arduino-cli.yaml",
 			},
-			diagnostics = {
-				-- Get the language server to recognize the `vim` global
-				globals = { "vim" },
+			flags = {
+				debounce_text_changes = 150,
 			},
-			workspace = {
-				-- Make the server aware of Neovim runtime files
-				library = vim.api.nvim_get_runtime_file("", true),
+			capabilities = cmp_capabilities,
+		})
+	elseif lsp == "sumneko_lua" then
+		local runtime_path = vim.split(package.path, ";")
+		table.insert(runtime_path, "lua/?.lua")
+		table.insert(runtime_path, "lua/?/init.lua")
+
+		nvim_lsp[lsp].setup({
+			on_attach = on_attach,
+			cmd = { "lua-language-server" },
+			settings = {
+				Lua = {
+					runtime = {
+						version = "LuaJIT",
+						path = runtime_path,
+					},
+					diagnostics = {
+						globals = { "vim" },
+					},
+					workspace = {
+						library = vim.api.nvim_get_runtime_file("", true),
+					},
+					telemetry = { enable = false },
+				},
 			},
-			-- Do not send telemetry data containing a randomized but
-			-- unique identifier
-			telemetry = { enable = false },
-		},
-	},
-	capabilities = require("cmp_nvim_lsp").update_capabilities(vim.lsp.protocol.make_client_capabilities()),
-})
+			flags = {
+				debounce_text_changes = 150,
+			},
+			capabilities = cmp_capabilities,
+		})
+	else
+		nvim_lsp[lsp].setup({
+			on_attach = on_attach,
+			capabilities = cmp_capabilities,
+		})
+	end
+end
 
 -- =================== LSP diagnostics customization ======================= --
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
