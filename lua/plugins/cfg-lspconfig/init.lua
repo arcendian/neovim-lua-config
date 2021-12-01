@@ -42,10 +42,6 @@ lspconfig.arduino_language_server.setup({
 		"arduino-language-server",
 		"-cli-config",
 		"/home/mice/.arduino15/arduino-cli.yaml",
-		"-cli",
-		"/usr/bin/arduino-cli",
-		"-clangd",
-		"/usr/bin/clangd",
 	},
 	capabilities = require("cmp_nvim_lsp").update_capabilities(vim.lsp.protocol.make_client_capabilities()),
 })
