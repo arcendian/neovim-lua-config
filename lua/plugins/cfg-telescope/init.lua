@@ -1,4 +1,17 @@
 require("telescope").setup({
+	defaults = {
+		file_ignore_patterns = {
+			"node_modules",
+			"__pycache__",
+			"%.png",
+			"%.jpg",
+			"%.svg",
+			"%.cat",
+			"%.pdf",
+			"%.epub",
+			"%.djvu",
+		},
+	},
 	extensions = {
 		fzf = {
 			fuzzy = true,
