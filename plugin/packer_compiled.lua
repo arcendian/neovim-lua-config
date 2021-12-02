@@ -179,10 +179,10 @@ _G.packer_plugins = {
     path = "/home/mice/.local/share/nvim/site/pack/packer/start/onenord.nvim",
     url = "https://github.com/rmehri01/onenord.nvim"
   },
-  ["org.vim"] = {
+  orgmode = {
     loaded = true,
-    path = "/home/mice/.local/share/nvim/site/pack/packer/start/org.vim",
-    url = "https://github.com/axvr/org.vim"
+    path = "/home/mice/.local/share/nvim/site/pack/packer/start/orgmode",
+    url = "https://github.com/nvim-orgmode/orgmode"
   },
   ["packer.nvim"] = {
     loaded = true,
