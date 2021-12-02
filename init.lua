@@ -11,28 +11,29 @@ require("plugins")
 require("settings")
 require("remaps")
 
-local plugins = {
-	"plugins.cfg-theme",
-	"plugins.cfg-statusline",
-	"plugins.cfg-terminal",
-	"plugins.cfg-autopairs",
-	"plugins.cfg-completion",
-	"plugins.cfg-md-preview",
-	"plugins.cfg-writing",
-	"plugins.cfg-dashboard",
-	"plugins.cfg-file-explorer",
-	"plugins.cfg-devicons",
-	"plugins.cfg-comment",
-	"plugins.cfg-tree-sitter",
-	"plugins.cfg-lspconfig",
-	"plugins.cfg-telescope",
-	"plugins.cfg-gitgutter",
-	"plugins.cfg-emmet",
-	"plugins.cfg-indent-blankline",
-	"plugins.cfg-formatting",
-	"plugins.cfg-vimwiki",
+local prefix = "plugins."
+local cfg_plugins = {
+	"cfg-theme",
+	"cfg-statusline",
+	"cfg-terminal",
+	"cfg-autopairs",
+	"cfg-completion",
+	"cfg-md-preview",
+	"cfg-writing",
+	"cfg-dashboard",
+	"cfg-file-explorer",
+	"cfg-devicons",
+	"cfg-comment",
+	"cfg-tree-sitter",
+	"cfg-lspconfig",
+	"cfg-telescope",
+	"cfg-gitgutter",
+	"cfg-emmet",
+	"cfg-indent-blankline",
+	"cfg-formatting",
+	"cfg-vimwiki",
 }
 
-for _, plugin in ipairs(plugins) do
-	require(plugin)
+for _, plugin in ipairs(cfg_plugins) do
+	require(prefix .. plugin)
 end
