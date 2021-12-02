@@ -57,6 +57,7 @@ return require("packer").startup(function()
 
 	-- markdown preview in browser
 	use({ "iamcco/markdown-preview.nvim", run = "cd app && yarn install" })
+	use({ "mzlogin/vim-markdown-toc" })
 
 	-- git stuff
 	use({ "tpope/vim-fugitive" })
@@ -102,8 +103,8 @@ return require("packer").startup(function()
 	use({ "folke/twilight.nvim" })
 	use({ "vimwiki/vimwiki" })
 
-	-- installing org.vim so I can view org files in vim with syntax
-	-- highlighting in case Doom Emacs breaks on me.
+	-- installing orgmode nvim plugins so I can view org files in vim with
+	-- syntax highlighting in case Doom Emacs breaks on me.
 	use({ "nvim-orgmode/orgmode" })
 	use({ "akinsho/org-bullets.nvim" })
 	use({ "lukas-reineke/headlines.nvim" })

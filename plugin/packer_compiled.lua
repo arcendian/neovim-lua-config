@@ -239,6 +239,11 @@ _G.packer_plugins = {
     path = "/home/mice/.local/share/nvim/site/pack/packer/start/vim-hexokinase",
     url = "https://github.com/rrethy/vim-hexokinase"
   },
+  ["vim-markdown-toc"] = {
+    loaded = true,
+    path = "/home/mice/.local/share/nvim/site/pack/packer/start/vim-markdown-toc",
+    url = "https://github.com/mzlogin/vim-markdown-toc"
+  },
   ["vim-vsnip"] = {
     loaded = true,
     path = "/home/mice/.local/share/nvim/site/pack/packer/start/vim-vsnip",
