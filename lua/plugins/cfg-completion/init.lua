@@ -48,6 +48,7 @@ cmp.setup({
 		{ name = "buffer" },
 		{ name = "path" },
 		{ name = "cmdline" },
+		{ name = "orgmode" },
 	},
 	formatting = {
 		format = function(entry, vim_item)

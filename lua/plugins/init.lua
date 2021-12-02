@@ -105,4 +105,6 @@ return require("packer").startup(function()
 	-- installing org.vim so I can view org files in vim with syntax
 	-- highlighting in case Doom Emacs breaks on me.
 	use({ "nvim-orgmode/orgmode" })
+	use({ "akinsho/org-bullets.nvim" })
+	use({ "lukas-reineke/headlines.nvim" })
 end)
