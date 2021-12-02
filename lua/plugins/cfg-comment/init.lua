@@ -1,5 +1,3 @@
-require("todo-comments").setup({})
-
 require("nvim_comment").setup({
 	comment_empty = false,
 	create_mappings = true,

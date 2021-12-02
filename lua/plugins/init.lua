@@ -79,7 +79,6 @@ return require("packer").startup(function()
 	})
 
 	-- comments plugins
-	use({ "folke/todo-comments.nvim", requires = "nvim-lua/plenary.nvim" })
 	use("terrortylor/nvim-comment") -- maybe I don't need this but ...
 
 	-- dashboard
