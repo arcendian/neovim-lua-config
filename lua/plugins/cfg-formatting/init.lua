@@ -100,15 +100,20 @@ end
 formatter.setup({ logging = false, filetype = formatterConfig })
 
 -- format on save
-vim.api.nvim_exec(
-	[[
-	augroup FormatAutogroup
-	  autocmd!
-	  autocmd BufWritePost *.js,*.rs,*.lua,*.c,*.cpp FormatWrite
-	  autocmd BufWritePost *.md,*.tex,*.latex,*.h,*.hpp FormatWrite
-	  autocmd BufWritePost *.py,*.toml,*.yaml,*.yml FormatWrite
-	  autocmd BufWritePost *.html,*.css,*.ino FormatWrite
-	augroup END
-]],
-	true
-)
+-- vim.api.nvim_exec(
+-- 	[[
+-- 	augroup FormatAutogroup
+-- 	  autocmd!
+-- 	  autocmd BufWritePost *.js,*.rs,*.lua,*.c,*.cpp FormatWrite
+-- 	  autocmd BufWritePost *.md,*.tex,*.latex,*.h,*.hpp FormatWrite
+-- 	  autocmd BufWritePost *.py,*.toml,*.yaml,*.yml FormatWrite
+-- 	  autocmd BufWritePost *.html,*.css,*.ino FormatWrite
+-- 	augroup END
+-- ]],
+-- 	true
+-- )
+
+-- remaps
+local opts = { noremap = true, silent = true }
+vim.api.nvim_set_keymap("n", "<leader>bf", "<cmd>Format<CR>", opts)
+vim.api.nvim_set_keymap("n", "<leader>bw", "<cmd>FormatWrite<CR>", opts)
