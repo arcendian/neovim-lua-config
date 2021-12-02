@@ -10,6 +10,13 @@ require("telescope").setup({
 			"%.pdf",
 			"%.epub",
 			"%.djvu",
+			"%.mkv",
+			"%.mp4",
+			"%.mp3",
+			"%.m4a",
+			"%.webm",
+			"%.wav",
+			"%.ttf",
 		},
 	},
 	extensions = {
