@@ -10,22 +10,29 @@
 require("plugins")
 require("settings")
 require("remaps")
-require("plugins.cfg-theme")
-require("plugins.cfg-statusline")
-require("plugins.cfg-terminal")
-require("plugins.cfg-autopairs")
-require("plugins.cfg-completion")
-require("plugins.cfg-md-preview")
-require("plugins.cfg-writing")
-require("plugins.cfg-dashboard")
-require("plugins.cfg-file-explorer")
-require("plugins.cfg-devicons")
-require("plugins.cfg-comment")
-require("plugins.cfg-tree-sitter")
-require("plugins.cfg-lspconfig")
-require("plugins.cfg-telescope")
-require("plugins.cfg-gitgutter")
-require("plugins.cfg-emmet")
-require("plugins.cfg-indent-blankline")
-require("plugins.cfg-formatting")
-require("plugins.cfg-vimwiki")
+
+local plugins = {
+	"plugins.cfg-theme",
+	"plugins.cfg-statusline",
+	"plugins.cfg-terminal",
+	"plugins.cfg-autopairs",
+	"plugins.cfg-completion",
+	"plugins.cfg-md-preview",
+	"plugins.cfg-writing",
+	"plugins.cfg-dashboard",
+	"plugins.cfg-file-explorer",
+	"plugins.cfg-devicons",
+	"plugins.cfg-comment",
+	"plugins.cfg-tree-sitter",
+	"plugins.cfg-lspconfig",
+	"plugins.cfg-telescope",
+	"plugins.cfg-gitgutter",
+	"plugins.cfg-emmet",
+	"plugins.cfg-indent-blankline",
+	"plugins.cfg-formatting",
+	"plugins.cfg-vimwiki",
+}
+
+for _, plugin in ipairs(plugins) do
+	require(plugin)
+end
