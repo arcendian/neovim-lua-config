@@ -111,5 +111,8 @@ return require("packer").startup(function()
 	-- to be resolved.
 	-- use({ "nvim-orgmode/orgmode" })
 	-- use({ "akinsho/org-bullets.nvim" })
+
+	-- horizontal highlights for text filetypes, like markdown, rmd,
+	-- vimwiki and orgmode
 	use({ "lukas-reineke/headlines.nvim" })
 end)
