@@ -37,7 +37,7 @@ Thank you plugin creators for a mostly hassle free neovim setup.
 │  │  ├── 📂cfg-emmet
 │  │  ├── 📂cfg-file-explorer
 │  │  ├── 📂cfg-formatting
-│  │  ├── 📂cfg-gitgutter
+│  │  ├── 📂cfg-gitsigns
 │  │  ├── 📂cfg-indent-blankline
 │  │  ├── 📂cfg-lspconfig
 │  │  ├── 📂cfg-md-preview
