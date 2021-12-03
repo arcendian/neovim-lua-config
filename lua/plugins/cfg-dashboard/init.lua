@@ -19,16 +19,25 @@ vim.g.dashboard_custom_section = {
 		command = ":Telescope oldfiles<CR>",
 	},
 	f = {
-		description = { "  Edit Config          SPC r c" },
+		description = { "  Edit Config          SPC s n" },
+		command = '<cmd>lua require("plugins.cfg-custom/telescope").search_nvimrc()<CR>',
+	},
+	g = {
+		description = { "  Edit Dotfiles        SPC s d" },
 		command = '<cmd>lua require("plugins.cfg-custom/telescope").search_dotfiles()<CR>',
 	},
-	g = { description = { "" }, command = "" },
 	h = { description = { "" }, command = "" },
 }
 
 vim.api.nvim_set_keymap(
 	"n",
-	"<leader>rc",
+	"<leader>sn",
+	'<cmd>lua require("plugins.cfg-custom.telescope").search_nvimrc()<CR>',
+	{ noremap = true, silent = true }
+)
+vim.api.nvim_set_keymap(
+	"n",
+	"<leader>sd",
 	'<cmd>lua require("plugins.cfg-custom.telescope").search_dotfiles()<CR>',
 	{ noremap = true, silent = true }
 )
