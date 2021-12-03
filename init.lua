@@ -27,7 +27,7 @@ local cfg_plugins = {
 	"cfg-tree-sitter",
 	"cfg-lspconfig",
 	"cfg-telescope",
-	"cfg-gitgutter",
+	"cfg-gitsigns",
 	"cfg-emmet",
 	"cfg-indent-blankline",
 	"cfg-formatting",
