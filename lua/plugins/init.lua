@@ -81,7 +81,7 @@ return require("packer").startup(function()
 	use({ "nvim-lualine/lualine.nvim" })
 
 	-- comments plugins
-	use({ "terrortylor/nvim-comment" }) -- maybe I don't need this but ...
+	use({ "numToStr/Comment.nvim" })
 
 	-- dashboard
 	use({ "glepnir/dashboard-nvim" })
