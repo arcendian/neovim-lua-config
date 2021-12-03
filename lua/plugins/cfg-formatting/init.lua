@@ -112,8 +112,3 @@ vim.api.nvim_exec(
 ]],
 	true
 )
-
--- remaps (in case format on save is disabled)
-local opts = { noremap = true, silent = true }
-vim.api.nvim_set_keymap("n", "<leader>bf", "<cmd>Format<CR>", opts)
-vim.api.nvim_set_keymap("n", "<leader>bw", "<cmd>FormatWrite<CR>", opts)

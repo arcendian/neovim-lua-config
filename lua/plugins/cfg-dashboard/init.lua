@@ -29,19 +29,6 @@ vim.g.dashboard_custom_section = {
 	h = { description = { "" }, command = "" },
 }
 
-vim.api.nvim_set_keymap(
-	"n",
-	"<leader>sn",
-	'<cmd>lua require("plugins.cfg-custom.telescope").search_nvimrc()<CR>',
-	{ noremap = true, silent = true }
-)
-vim.api.nvim_set_keymap(
-	"n",
-	"<leader>sd",
-	'<cmd>lua require("plugins.cfg-custom.telescope").search_dotfiles()<CR>',
-	{ noremap = true, silent = true }
-)
-
 vim.g.dashboard_custom_header = {
 	[[         ___           ]],
 	[[     . -^   `--,       ]],
