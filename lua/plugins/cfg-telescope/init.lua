@@ -2,9 +2,20 @@ local tele = require("telescope")
 
 tele.setup({
 	defaults = {
+		vimgrep_arguments = {
+			"rg",
+			"--hidden",
+			"--color=never",
+			"--no-heading",
+			"--with-filename",
+			"--line-number",
+			"--column",
+			"--smart-case",
+		},
 		file_ignore_patterns = {
 			"node_modules",
 			"__pycache__",
+			".git",
 			"%.png",
 			"%.jpg",
 			"%.svg",
@@ -19,6 +30,11 @@ tele.setup({
 			"%.webm",
 			"%.wav",
 			"%.ttf",
+		},
+	},
+	pickers = {
+		find_files = {
+			hidden = true,
 		},
 	},
 	extensions = {
