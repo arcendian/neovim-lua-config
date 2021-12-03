@@ -116,3 +116,43 @@ vim.api.nvim_set_keymap("n", "<leader>bw", "<cmd>FormatWrite<CR>", opts)
 -- buf_set_keymap("n", "]d", "<cmd>lua vim.lsp.diagnostic.goto_next()<CR>", opts)
 -- buf_set_keymap("n", "<space>q", "<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>", opts)
 -- buf_set_keymap("n", "<space>f", "<cmd>lua vim.lsp.buf.formatting()<CR>", opts)
+
+-- ======================== CFG-COMMENT ==================================== --
+
+-- == Basic mapping == --
+-- These mappings are enabled by default. (config: mappings.basic)
+
+-- Normal mode
+-- `gcc` - Toggles the current line using linewise comment
+-- `gbc` - Toggles the current line using blockwise comment
+-- `[count]gcc` - Toggles the number of line given as a prefix-count
+-- `gc[count]{motion}` - (Op-pending) Toggles the region using linewise comment
+-- `gb[count]{motion}` - (Op-pending) Toggles the region using linewise comment
+
+-- Visual mode
+-- `gco` - Insert comment to the next line and enters INSERT mode
+-- `gcO` - Insert comment to the previous line and enters INSERT mode
+-- `gcA` - Insert comment to end of the current line and enters INSERT mode
+
+-- == Extra mappings == --
+-- These mappings are enabled by default. (config: mappings.extra)
+
+-- Normal mode
+-- `gco` - Insert comment to the next line and enters INSERT mode
+-- `gcO` - Insert comment to the previous line and enters INSERT mode
+-- `gcA` - Insert comment to end of the current line and enters INSERT mode
+
+-- == Extended mappings == --
+-- These mappings are disabled by default. (config: mappings.extended)
+--
+-- Normal mode
+-- `g>[count]{motion}` - (Op-pending) Comments the region using linewise comment
+-- `g>c` - Comments the current line using linewise comment
+-- `g>b` - Comments the current line using blockwise comment
+-- `g<[count]{motion}` - (Op-pending) Uncomments the region using linewise comment
+-- `g<c` - Uncomments the current line using linewise comment
+-- `g<b`- Uncomments the current line using blockwise comment
+
+-- Visual mode
+-- `g>` - Comments the region using single line
+-- `g<` - Unomments the region using single line
