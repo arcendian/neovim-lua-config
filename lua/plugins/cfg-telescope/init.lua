@@ -43,3 +43,11 @@ vim.api.nvim_set_keymap("n", "<leader>fg", "<cmd>Telescope live_grep<CR>", opts)
 vim.api.nvim_set_keymap("n", "<leader>fb", "<cmd>Telescope buffers<CR>", opts)
 vim.api.nvim_set_keymap("n", "<leader>fh", "<cmd>Telescope help_tags<CR>", opts)
 vim.api.nvim_set_keymap("n", "<leader>fo", "<cmd>Telescope oldfiles<CR>", opts)
+
+-- zoxide keybindings
+vim.api.nvim_set_keymap(
+	"n",
+	"<leader>cd",
+	":lua require'telescope'.extensions.zoxide.list{}<CR>",
+	{ noremap = true, silent = true }
+)
