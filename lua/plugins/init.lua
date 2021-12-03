@@ -18,6 +18,10 @@ return require("packer").startup(function()
 	-- Packer can manage itself
 	use({ "wbthomason/packer.nvim" })
 
+	-- Pre-requisites
+	use({ "nvim-lua/plenary.nvim" })
+	use({ "nvim-lua/popup.nvim" })
+
 	-- lsp configurations
 	use({ "neovim/nvim-lspconfig" })
 	use({ "hrsh7th/cmp-nvim-lsp" })
@@ -34,11 +38,11 @@ return require("packer").startup(function()
 	use({ "rafamadriz/friendly-snippets" })
 
 	-- telescope - fuzzy finder and more
-	use({
-		"nvim-telescope/telescope.nvim",
-		requires = { { "nvim-lua/plenary.nvim" } },
-	})
+	use({ "nvim-telescope/telescope.nvim" })
+
+	-- telescope extensions
 	use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" })
+	use({ "jvgrootveld/telescope-zoxide" })
 
 	-- auto-pairing brackets
 	use({ "windwp/nvim-autopairs" })
@@ -61,7 +65,7 @@ return require("packer").startup(function()
 
 	-- git stuff
 	use({ "tpope/vim-fugitive" })
-	use({ "airblade/vim-gitgutter" })
+	use({ "lewis6991/gitsigns.nvim" })
 
 	-- ARM assembly syntax hightlighting
 	use({ "ARM9/arm-syntax-vim" })
@@ -74,10 +78,7 @@ return require("packer").startup(function()
 	use({ "rmehri01/onenord.nvim" })
 
 	-- fancy statusline
-	use({
-		"nvim-lualine/lualine.nvim",
-		requires = { "kyazdani42/nvim-web-devicons", opt = true },
-	})
+	use({ "nvim-lualine/lualine.nvim" })
 
 	-- comments plugins
 	use({ "terrortylor/nvim-comment" }) -- maybe I don't need this but ...
@@ -95,7 +96,7 @@ return require("packer").startup(function()
 	use({ "kyazdani42/nvim-web-devicons" })
 
 	-- file-explorer (netrw is nice but this looks nicer)
-	use({ "kyazdani42/nvim-tree.lua", requires = "kyazdani42/nvim-web-devicons" })
+	use({ "kyazdani42/nvim-tree.lua" })
 
 	-- ======================= WRITING ================================== --
 	--  plugins for writing
