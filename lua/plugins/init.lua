@@ -106,7 +106,10 @@ return require("packer").startup(function()
 
 	-- installing orgmode nvim plugins so I can view org files in vim with
 	-- syntax highlighting in case Doom Emacs breaks on me.
-	use({ "nvim-orgmode/orgmode" })
-	use({ "akinsho/org-bullets.nvim" })
+	-- uninstalling orgmode for now;
+	-- waiting for #86(https://github.com/nvim-orgmode/orgmode/issues/86)
+	-- to be resolved.
+	-- use({ "nvim-orgmode/orgmode" })
+	-- use({ "akinsho/org-bullets.nvim" })
 	use({ "lukas-reineke/headlines.nvim" })
 end)
