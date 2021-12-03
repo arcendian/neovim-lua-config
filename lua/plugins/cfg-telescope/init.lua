@@ -1,4 +1,6 @@
-require("telescope").setup({
+local tele = require("telescope")
+
+tele.setup({
 	defaults = {
 		file_ignore_patterns = {
 			"node_modules",
@@ -29,7 +31,10 @@ require("telescope").setup({
 	},
 })
 
-require("telescope").load_extension("fzf")
+-- load extensions
+tele.load_extension("fzf")
+tele.load_extension("zoxide")
+
 local opts = { noremap = true, silent = true }
 
 -- keybindings for builtin functions
