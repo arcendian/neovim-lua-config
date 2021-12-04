@@ -20,11 +20,11 @@ vim.g.dashboard_custom_section = {
 	},
 	f = {
 		description = { "  Edit Config          SPC s n" },
-		command = '<cmd>lua require("plugins.cfg-custom/telescope").search_nvimrc()<CR>',
+		command = '<cmd>lua require("cfg.custom.telescope").search_nvimrc()<CR>',
 	},
 	g = {
 		description = { "  Edit Dotfiles        SPC s d" },
-		command = '<cmd>lua require("plugins.cfg-custom/telescope").search_dotfiles()<CR>',
+		command = '<cmd>lua require("cfg.custom.telescope").search_dotfiles()<CR>',
 	},
 	h = { description = { "" }, command = "" },
 }

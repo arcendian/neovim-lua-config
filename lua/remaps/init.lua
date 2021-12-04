@@ -100,8 +100,8 @@ map("n", "<leader>fnf", "<cmd>Telescope filetypes<CR>", opts)
 map("n", "<leader>cd", "<cmd>lua require'telescope'.extensions.zoxide.list{}<CR>", opts)
 
 -- ========================== CFG-DASHBOARD ================================ --
-map("n", "<leader>sn", '<cmd>lua require("plugins.cfg-custom.telescope").search_nvimrc()<CR>', opts)
-map("n", "<leader>sd", '<cmd>lua require("plugins.cfg-custom.telescope").search_dotfiles()<CR>', opts)
+map("n", "<leader>sn", '<cmd>lua require("cfg.custom.telescope").search_nvimrc()<CR>', opts)
+map("n", "<leader>sd", '<cmd>lua require("cfg.custom.telescope").search_dotfiles()<CR>', opts)
 
 -- ======================== CFG-MD-PREVIEW ================================= --
 map("n", "<leader>md", "<cmd>MarkdownPreview<CR>", opts)
