@@ -32,6 +32,7 @@ local cfg_plugins = {
 	"cfg-indent-blankline",
 	"cfg-formatting",
 	"cfg-vimwiki",
+	"cfg-hex-colors",
 }
 
 for _, plugin in ipairs(cfg_plugins) do
