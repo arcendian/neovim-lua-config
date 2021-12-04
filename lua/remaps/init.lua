@@ -75,6 +75,7 @@ map("n", "<leader>fg", "<cmd>Telescope live_grep<CR>", opts)
 map("n", "<leader>fb", "<cmd>Telescope buffers<CR>", opts)
 map("n", "<leader>fh", "<cmd>Telescope help_tags<CR>", opts)
 map("n", "<leader>fo", "<cmd>Telescope oldfiles<CR>", opts)
+map("n", "<leader>fs", "<cmd>Telescope grep_string<CR>", opts)
 
 -- zoxide keybindings
 map("n", "<leader>cd", "<cmd>lua require'telescope'.extensions.zoxide.list{}<CR>", opts)
