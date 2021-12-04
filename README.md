@@ -34,7 +34,6 @@ Thank you plugin creators for a mostly hassle free neovim setup.
 │  │  ├── 📂cfg-custom
 │  │  ├── 📂cfg-dashboard
 │  │  ├── 📂cfg-devicons
-│  │  ├── 📂cfg-emmet
 │  │  ├── 📂cfg-file-explorer
 │  │  ├── 📂cfg-formatting
 │  │  ├── 📂cfg-gitsigns
