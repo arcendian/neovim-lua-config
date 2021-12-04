@@ -34,6 +34,7 @@ return require("packer").startup(function()
 	-- snippets
 	use({ "hrsh7th/vim-vsnip" })
 	use({ "hrsh7th/vim-vsnip-integ" })
+	use({ "hrsh7th/cmp-vsnip" })
 	use({ "rafamadriz/friendly-snippets" })
 
 	-- telescope - fuzzy finder and more
