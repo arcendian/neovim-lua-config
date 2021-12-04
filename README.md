@@ -38,6 +38,7 @@ Thank you plugin creators for a mostly hassle free neovim setup.
 │  │  ├── 📂cfg-file-explorer
 │  │  ├── 📂cfg-formatting
 │  │  ├── 📂cfg-gitsigns
+│  │  ├── 📂cfg-hex-colors
 │  │  ├── 📂cfg-indent-blankline
 │  │  ├── 📂cfg-lspconfig
 │  │  ├── 📂cfg-md-preview
