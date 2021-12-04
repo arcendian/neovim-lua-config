@@ -63,6 +63,12 @@ local formatterConfig = {
 			return { exe = "latexindent", stdin = true }
 		end,
 	},
+
+	haskell = {
+		function()
+			return { exe = "ormolu", stdin = true }
+		end,
+	},
 }
 
 local prettierConfig = function()
@@ -107,7 +113,7 @@ vim.api.nvim_exec(
 	  autocmd BufWritePost *.js,*.rs,*.lua,*.c,*.cpp FormatWrite
 	  autocmd BufWritePost *.md,*.tex,*.latex,*.h,*.hpp FormatWrite
 	  autocmd BufWritePost *.py,*.toml,*.yaml,*.yml FormatWrite
-	  autocmd BufWritePost *.html,*.css,*.ino FormatWrite
+	  autocmd BufWritePost *.html,*.css,*.ino,*.hs FormatWrite
 	augroup END
 ]],
 	true
