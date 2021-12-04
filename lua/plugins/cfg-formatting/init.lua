@@ -93,6 +93,7 @@ local commonFT = {
 	"typescriptreact",
 	"markdown",
 	"markdown.mdx",
+	"vimwiki",
 	"json",
 	"yaml",
 	"toml",
