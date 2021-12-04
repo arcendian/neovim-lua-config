@@ -11,7 +11,7 @@ require("plugins")
 require("settings")
 require("remaps")
 
-local prefix = "cfg."
+local cfg = "cfg"
 local cfg_plugins = {
 	"theme",
 	"statusline",
@@ -35,5 +35,5 @@ local cfg_plugins = {
 }
 
 for _, plugin in ipairs(cfg_plugins) do
-	require(prefix .. plugin)
+	require(cfg .. "." .. plugin)
 end
