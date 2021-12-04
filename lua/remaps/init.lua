@@ -1,57 +1,57 @@
--- ====== WHICH-KEY ====== --
+-- ====== which-key ====== --
 require("which-key").setup({})
 
 local map = vim.api.nvim_set_keymap
 local opts = { noremap = true, silent = true }
 
--- set Space key as Leader key
-map("n", "<Space>", "<NOP>", opts)
+-- set space key as leader key
+map("n", "<space>", "<nop>", opts)
 vim.g.mapleader = " "
 
 -- toggle highlighting when searching in buffer
-map("n", "<Leader>nh", "<cmd>set hlsearch!<CR>", opts)
+map("n", "<leader>nh", "<cmd>set hlsearch!<cr>", opts)
 
--- Remap resizing splits to simple keybindings to avoid using command mode
-map("n", "<C-Right>", "<cmd>vertical resize +3<CR>", opts)
-map("n", "<C-Left>", "<cmd>vertical resize -3<CR>", opts)
-map("n", "<C-Up>", "<cmd>resize +3<CR>", opts)
-map("n", "<C-Down>", "<cmd>resize -3<CR>", opts)
+-- remap resizing splits to simple keybindings to avoid using command mode
+map("n", "<c-right>", "<cmd>vertical resize +3<cr>", opts)
+map("n", "<c-left>", "<cmd>vertical resize -3<cr>", opts)
+map("n", "<c-up>", "<cmd>resize +3<cr>", opts)
+map("n", "<c-down>", "<cmd>resize -3<cr>", opts)
 
--- greatest remap ever according to the Primeagen
+-- greatest remap ever according to the primeagen
 -- send the visually highlighted text to the
 -- void register which is just like /dev/null
 map("v", "<leader>p", '"_d', opts)
 
 vim.cmd([[
-	" NOTE: You can use other key to expand snippet.
-    " Expand
-    imap <expr> <C-s>   vsnip#expandable()  ? '<Plug>(vsnip-expand)'         : '<C-s>'
-    smap <expr> <C-s>   vsnip#expandable()  ? '<Plug>(vsnip-expand)'         : '<C-s>'
-    
-    " Expand or jump
-    imap <expr> <C-m>   vsnip#available(1)  ? '<Plug>(vsnip-expand-or-jump)' : '<C-m>'
-    smap <expr> <C-m>   vsnip#available(1)  ? '<Plug>(vsnip-expand-or-jump)' : '<C-m>'
-    
-    " Jump forward or backward
-    imap <expr> <Tab>   vsnip#jumpable(1)   ? '<Plug>(vsnip-jump-next)'      : '<Tab>'
-    smap <expr> <Tab>   vsnip#jumpable(1)   ? '<Plug>(vsnip-jump-next)'      : '<Tab>'
-    imap <expr> <S-Tab> vsnip#jumpable(-1)  ? '<Plug>(vsnip-jump-prev)'      : '<S-Tab>'
-    smap <expr> <S-Tab> vsnip#jumpable(-1)  ? '<Plug>(vsnip-jump-prev)'      : '<S-Tab>'
-    
+	" note: you can use other key to expand snippet.
+    " expand
+    " imap <expr> <c-s>   vsnip#expandable()  ? '<plug>(vsnip-expand)'         : '<c-s>'
+    " smap <expr> <c-s>   vsnip#expandable()  ? '<plug>(vsnip-expand)'         : '<c-s>'
+
+    " expand or jump
+    " imap <expr> <c-m>   vsnip#available(1)  ? '<plug>(vsnip-expand-or-jump)' : '<c-m>'
+    " smap <expr> <c-m>   vsnip#available(1)  ? '<plug>(vsnip-expand-or-jump)' : '<c-m>'
+
+    " jump forward or backward
+    " imap <expr> <tab>   vsnip#jumpable(1)   ? '<plug>(vsnip-jump-next)'      : '<tab>'
+    " smap <expr> <Tab>   vsnip#jumpable(1)   ? '<Plug>(vsnip-jump-next)'      : '<Tab>'
+    " imap <expr> <S-Tab> vsnip#jumpable(-1)  ? '<Plug>(vsnip-jump-prev)'      : '<S-Tab>'
+    " smap <expr> <S-Tab> vsnip#jumpable(-1)  ? '<Plug>(vsnip-jump-prev)'      : '<S-Tab>'
+
     " Select or cut text to use as $TM_SELECTED_TEXT in the next snippet.
     " See https://github.com/hrsh7th/vim-vsnip/pull/50
     " nmap        s   <Plug>(vsnip-select-text)
     " xmap        s   <Plug>(vsnip-select-text)
     " nmap        S   <Plug>(vsnip-cut-text)
     " xmap        S   <Plug>(vsnip-cut-text)
-    
+
     " If you want to use snippet for multiple filetypes, you can `g:vsnip_filetypes` for it.
     let g:vsnip_filetypes = {}
     let g:vsnip_filetypes.javascriptreact = ['javascript']
     let g:vsnip_filetypes.typescriptreact = ['typescript']
 ]])
 
--- =-========================== CFG-WRITING ================================ --
+-- ============================ CFG-WRITING ================================ --
 -- Toggle spell checking on and off
 map("n", "<Leader>wc", "<cmd>set spell!<CR>", opts)
 
