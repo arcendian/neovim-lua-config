@@ -50,9 +50,6 @@ return require("packer").startup(function()
 	-- keybindings
 	use({ "folke/which-key.nvim" })
 
-	-- essential web dev tool I just want to try out
-	use({ "mattn/emmet-vim" })
-
 	-- autoformatting -- trying out this plugin for now
 	use({ "mhartington/formatter.nvim" })
 
