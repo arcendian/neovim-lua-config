@@ -28,7 +28,6 @@ local cfg_plugins = {
 	"cfg-lspconfig",
 	"cfg-telescope",
 	"cfg-gitsigns",
-	"cfg-emmet",
 	"cfg-indent-blankline",
 	"cfg-formatting",
 	"cfg-vimwiki",
