@@ -16,40 +16,38 @@ This is my work-in-progress neovim setup configured in/migrated to Lua. It looks
 
 ## File structure
 
-This is the current structure of my neovim directory (eliding non-config files). The configuration for the plugins installed is in the `plugins`
-folder under `lua` with their respective `cfg-` directories containing init files. Most of the plugins are _plug and play_ and the configurations
-copied from their wikis (Also, some of the plugins I may not really need but it's nice to try them out).
-Thank you plugin creators for a mostly hassle free neovim setup.
+This is the current structure of my neovim directory (eliding non-config files). The configuration for the plugins installed is in the `cfg` directory under `lua` with their respective `<plugin>/init.lua`. Most of the plugins are _plug and play_ and the configurations copied from their wikis.
 
 ```text
-📂  $HOME/.config/nvim
-├── 📂 after
-│  └── 📂 ftplugin
+📂$HOME/.config/nvim
+├── 📂after
+│ └── 📂ftplugin
 ├── 🌑 init.lua
-├── 📂 lua
-│  ├── 📂 plugins
-│  │  ├── 📂cfg-autopairs
-│  │  ├── 📂cfg-comment
-│  │  ├── 📂cfg-completion
-│  │  ├── 📂cfg-custom
-│  │  ├── 📂cfg-dashboard
-│  │  ├── 📂cfg-devicons
-│  │  ├── 📂cfg-file-explorer
-│  │  ├── 📂cfg-formatting
-│  │  ├── 📂cfg-gitsigns
-│  │  ├── 📂cfg-hex-colors
-│  │  ├── 📂cfg-indent-blankline
-│  │  ├── 📂cfg-lspconfig
-│  │  ├── 📂cfg-md-preview
-│  │  ├── 📂cfg-statusline
-│  │  ├── 📂cfg-telescope
-│  │  ├── 📂cfg-terminal
-│  │  ├── 📂cfg-theme
-│  │  ├── 📂cfg-tree-sitter
-│  │  ├── 📂cfg-vimwiki
-│  │  ├── 📂cfg-writing
-│  ├── 📂remaps
-│  └── 📂settings
+├── 📂lua
+│ ├── 📂cfg
+│ │ ├── 📂autopairs
+│ │ ├── 📂comment
+│ │ ├── 📂completion
+│ │ ├── 📂custom
+│ │ ├── 📂dashboard
+│ │ ├── 📂devicons
+│ │ ├── 📂filetree
+│ │ ├── 📂formatting
+│ │ ├── 📂gitsigns
+│ │ ├── 📂hex-colors
+│ │ ├── 📂indent-blankline
+│ │ ├── 📂lspconfig
+│ │ ├── 📂md-preview
+│ │ ├── 📂statusline
+│ │ ├── 📂telescope
+│ │ ├── 📂terminal
+│ │ ├── 📂theme
+│ │ ├── 📂tree-sitter
+│ │ ├── 📂vimwiki
+│ │ └── 📂writing
+│ ├── 📂plugins
+│ ├── 📂remaps
+│ └── 📂settings
 ```
 
 ## TODO:
@@ -58,5 +56,5 @@ Thank you plugin creators for a mostly hassle free neovim setup.
 - [ ] Explore telescope builtin functions.
 - [ ] Explore tree-sitter capabilities.
 - [ ] Explore packer.nvim features.
-- [ ] Add more custom functions in `cfg-custom`
+- [ ] Add more custom functions in `cfg/custom`
 - [ ] Add dictionary for my own made up words. LOL!
