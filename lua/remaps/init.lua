@@ -70,12 +70,31 @@ map("n", "<leader>nf", "<cmd>NvimTreeFindFile<CR>", opts)
 
 -- ========================= CFG-TELESCOPE ================================= --
 -- keybindings for builtin functions
+-- assorted pickers
 map("n", "<leader>ff", "<cmd>Telescope find_files<CR>", opts)
 map("n", "<leader>fg", "<cmd>Telescope live_grep<CR>", opts)
 map("n", "<leader>fb", "<cmd>Telescope buffers<CR>", opts)
 map("n", "<leader>fh", "<cmd>Telescope help_tags<CR>", opts)
 map("n", "<leader>fo", "<cmd>Telescope oldfiles<CR>", opts)
 map("n", "<leader>fs", "<cmd>Telescope grep_string<CR>", opts)
+map("n", "<leader>fc", "<cmd>Telescope command<CR>", opts)
+map("n", "<leader>fm", "<cmd>Telescope man_pages<CR>", opts)
+map("n", "<leader>fv", "<cmd>Telescope vim_options<CR>", opts)
+
+-- git stuff
+map("n", "<leader>fic", "<cmd>Telescope git_commits<CR>", opts)
+map("n", "<leader>fib", "<cmd>Telescope git_bcommits<CR>", opts)
+map("n", "<leader>fil", "<cmd>Telescope git_branches<CR>", opts)
+map("n", "<leader>fis", "<cmd>Telescope git_status<CR>", opts)
+map("n", "<leader>fit", "<cmd>Telescope git_stash<CR>", opts)
+
+-- vim stuff
+map("n", "<leader>ftc", "<cmd>Telescope command_history<CR>", opts)
+map("n", "<leader>fts", "<cmd>Telescope search_history<CR>", opts)
+map("n", "<leader>fnr", "<cmd>Telescope registers<CR>", opts)
+map("n", "<leader>fnm", "<cmd>Telescope marks<CR>", opts)
+map("n", "<leader>fnk", "<cmd>Telescope keymaps<CR>", opts)
+map("n", "<leader>fnf", "<cmd>Telescope filetypes<CR>", opts)
 
 -- zoxide keybindings
 map("n", "<leader>cd", "<cmd>lua require'telescope'.extensions.zoxide.list{}<CR>", opts)
@@ -85,14 +104,19 @@ map("n", "<leader>sn", '<cmd>lua require("plugins.cfg-custom.telescope").search_
 map("n", "<leader>sd", '<cmd>lua require("plugins.cfg-custom.telescope").search_dotfiles()<CR>', opts)
 
 -- ======================== CFG-MD-PREVIEW ================================= --
-vim.api.nvim_set_keymap("n", "<leader>md", "<cmd>MarkdownPreview<CR>", opts)
-vim.api.nvim_set_keymap("n", "<leader>ms", "<cmd>MarkdownPreviewStop<CR>", opts)
-vim.api.nvim_set_keymap("n", "<leader>mt", "<cmd>MarkdownPreviewToggle<CR>", opts)
+map("n", "<leader>md", "<cmd>MarkdownPreview<CR>", opts)
+map("n", "<leader>ms", "<cmd>MarkdownPreviewStop<CR>", opts)
+map("n", "<leader>mt", "<cmd>MarkdownPreviewToggle<CR>", opts)
 
 -- ======================== CFG-FORMATTING ================================= --
 -- remaps (in case format on save is disabled)
-vim.api.nvim_set_keymap("n", "<leader>bf", "<cmd>Format<CR>", opts)
-vim.api.nvim_set_keymap("n", "<leader>bw", "<cmd>FormatWrite<CR>", opts)
+map("n", "<leader>bf", "<cmd>Format<CR>", opts)
+map("n", "<leader>bw", "<cmd>FormatWrite<CR>", opts)
+
+-- ======================== CFG-HEX-COLORS ================================= --
+map("n", "<leader>xt", "<cmd>HexokinaseToggle<CR>", opts)
+map("n", "<leader>xn", "<cmd>HexokinaseTurnOn<CR>", opts)
+map("n", "<leader>xf", "<cmd>HexokinaseTurOff<CR>", opts)
 
 -- ====================== CFG-LSPCONFIG ==================================== --
 -- NOTE: the following remaps are commented out and include only in this file
