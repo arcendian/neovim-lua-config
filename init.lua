@@ -11,8 +11,8 @@ require("plugins")
 require("settings")
 require("remaps")
 
-local cfg = "cfg"
-local cfg_plugins = {
+local cgf_dir = "cfg"
+local configs = {
 	"theme",
 	"statusline",
 	"terminal",
@@ -32,8 +32,9 @@ local cfg_plugins = {
 	"formatting",
 	"vimwiki",
 	"hex-colors",
+	"autocmds",
 }
 
-for _, plugin in ipairs(cfg_plugins) do
-	require(cfg .. "." .. plugin)
+for _, config in ipairs(configs) do
+	require(cgf_dir .. "." .. config)
 end
