@@ -23,6 +23,7 @@ require("nvim-treesitter.configs").setup({
 		"nix",
 		"org",
 		"python",
+		"ruby",
 		"rust",
 		"toml",
 		"vim",
