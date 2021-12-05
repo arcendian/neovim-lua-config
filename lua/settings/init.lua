@@ -1,4 +1,3 @@
--- settings
 local Type = { GLOBAL_OPTION = "o", WINDOW_OPTION = "wo", BUFFER_OPTION = "bo" }
 
 local add_options = function(option_type, options)
@@ -81,5 +80,6 @@ vim.g.wildignore = {
 	"*.class",
 	"*.ccls-cache",
 }
+vim.g.mapleader = " "
 
 return Settings

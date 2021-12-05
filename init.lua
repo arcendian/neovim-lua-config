@@ -33,6 +33,7 @@ local configs = {
 	"vimwiki",
 	"hex-colors",
 	"autocmds",
+	"which-key",
 }
 
 for _, config in ipairs(configs) do
