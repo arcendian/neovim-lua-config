@@ -16,6 +16,7 @@ tele.setup({
 			"node_modules",
 			"__pycache__",
 			".git",
+			"assets",
 			"%.png",
 			"%.jpg",
 			"%.svg",
