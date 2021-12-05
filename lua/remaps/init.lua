@@ -1,6 +1,3 @@
--- ====== which-key ====== --
-require("which-key").setup({})
-
 local map = vim.api.nvim_set_keymap
 local opts = { noremap = true, silent = true }
 
@@ -152,3 +149,6 @@ map("n", "<leader>xf", "<cmd>HexokinaseTurOff<CR>", opts)
 -- Visual mode
 -- `g>` - Comments the region using single line
 -- `g<` - Unomments the region using single line
+
+-- ====== WHICH-KEY ====== --
+require("which-key").setup({})
