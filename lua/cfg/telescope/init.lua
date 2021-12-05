@@ -1,6 +1,6 @@
-local tele = require("telescope")
+local telescope = require("telescope")
 
-tele.setup({
+telescope.setup({
 	defaults = {
 		vimgrep_arguments = {
 			"rg",
@@ -15,6 +15,7 @@ tele.setup({
 		file_ignore_patterns = {
 			"node_modules",
 			"__pycache__",
+			".cache",
 			".git",
 			"assets",
 			"%.png",
@@ -48,6 +49,6 @@ tele.setup({
 	},
 })
 
--- load extensions
-tele.load_extension("fzf")
-tele.load_extension("zoxide")
+telescope.load_extension("fzf")
+telescope.load_extension("zoxide")
+telescope.load_extension("repo")

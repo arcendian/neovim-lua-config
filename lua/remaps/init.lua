@@ -74,8 +74,9 @@ M.map("n", "<leader>fnm", "<cmd>Telescope marks<CR>")
 M.map("n", "<leader>fnk", "<cmd>Telescope keymaps<CR>")
 M.map("n", "<leader>fnf", "<cmd>Telescope filetypes<CR>")
 
--- zoxide keybindings
+-- extensions
 M.map("n", "<leader>cd", "<cmd>lua require'telescope'.extensions.zoxide.list{}<CR>")
+M.map("n", "<leader>cg", "<cmd>lua require'telescope'.extensions.repo.list{}<CR>")
 
 -- =========================== CFG-CUSTOM ================================== --
 M.map("n", "<leader>sn", '<cmd>lua require("cfg.custom.telescope").search_nvimrc()<CR>')

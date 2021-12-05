@@ -43,6 +43,7 @@ return require("packer").startup(function()
 	-- telescope extensions
 	use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" })
 	use({ "jvgrootveld/telescope-zoxide" })
+	use("cljoly/telescope-repo.nvim")
 
 	-- auto-pairing brackets
 	use({ "windwp/nvim-autopairs" })
