@@ -45,7 +45,6 @@ Settings.g({
 	completeopt = "menu,menuone,noselect,noinsert",
 	swapfile = false,
 	backup = false,
-	--[[ undodir = "~/.local/share/undodir/nvim", ]]
 	undofile = true,
 	termguicolors = true,
 	showmode = false,
