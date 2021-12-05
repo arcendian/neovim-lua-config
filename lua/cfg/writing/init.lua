@@ -1,4 +1,6 @@
-vim.opt.spelllang = "en"
+-- ======================== HEADLINES ====================================== --
+-- horizontal highlights for text filetypes, like markdown, rmd,
+-- vimwiki and orgmode
 require("headlines").setup()
 
 -- ======================= ZEN MODE ======================================== --
@@ -16,12 +18,15 @@ require("zen-mode").setup({
 	},
 	plugins = { options = { enabled = true, ruler = false, showcmd = false } },
 	on_open = function(win)
-		vim.opt.colorcolumn = "0"
-		vim.opt.wrap = true
+		vim.opt_local.colorcolumn = "0"
+		vim.opt_local.wrap = true
+		vim.opt_local.spell = true
+		vim.opt_local.spelllang = "en"
 	end,
 	on_close = function()
-		vim.opt.colorcolumn = "80"
-		vim.opt.wrap = false
+		vim.opt_local.colorcolumn = "80"
+		vim.opt_local.wrap = false
+		vim.opt_local.spell = false
 	end,
 })
 
