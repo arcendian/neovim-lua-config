@@ -51,6 +51,7 @@ map("n", "<leader>fs", "<cmd>Telescope grep_string<CR>", opts)
 map("n", "<leader>fc", "<cmd>Telescope command<CR>", opts)
 map("n", "<leader>fm", "<cmd>Telescope man_pages<CR>", opts)
 map("n", "<leader>fv", "<cmd>Telescope vim_options<CR>", opts)
+map("n", "<leader>fp", "<cmd>Telescope planets<CR>", opts)
 
 -- git stuff
 map("n", "<leader>fic", "<cmd>Telescope git_commits<CR>", opts)
