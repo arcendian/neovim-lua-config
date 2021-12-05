@@ -22,35 +22,6 @@ map("n", "<c-down>", "<cmd>resize -3<cr>", opts)
 -- void register which is just like /dev/null
 map("v", "<leader>p", '"_d', opts)
 
-vim.cmd([[
-	" note: you can use other key to expand snippet.
-    " expand
-    " imap <expr> <c-s>   vsnip#expandable()  ? '<plug>(vsnip-expand)'         : '<c-s>'
-    " smap <expr> <c-s>   vsnip#expandable()  ? '<plug>(vsnip-expand)'         : '<c-s>'
-
-    " expand or jump
-    " imap <expr> <c-m>   vsnip#available(1)  ? '<plug>(vsnip-expand-or-jump)' : '<c-m>'
-    " smap <expr> <c-m>   vsnip#available(1)  ? '<plug>(vsnip-expand-or-jump)' : '<c-m>'
-
-    " jump forward or backward
-    " imap <expr> <tab>   vsnip#jumpable(1)   ? '<plug>(vsnip-jump-next)'      : '<tab>'
-    " smap <expr> <Tab>   vsnip#jumpable(1)   ? '<Plug>(vsnip-jump-next)'      : '<Tab>'
-    " imap <expr> <S-Tab> vsnip#jumpable(-1)  ? '<Plug>(vsnip-jump-prev)'      : '<S-Tab>'
-    " smap <expr> <S-Tab> vsnip#jumpable(-1)  ? '<Plug>(vsnip-jump-prev)'      : '<S-Tab>'
-
-    " Select or cut text to use as $TM_SELECTED_TEXT in the next snippet.
-    " See https://github.com/hrsh7th/vim-vsnip/pull/50
-    " nmap        s   <Plug>(vsnip-select-text)
-    " xmap        s   <Plug>(vsnip-select-text)
-    " nmap        S   <Plug>(vsnip-cut-text)
-    " xmap        S   <Plug>(vsnip-cut-text)
-
-    " If you want to use snippet for multiple filetypes, you can `g:vsnip_filetypes` for it.
-    let g:vsnip_filetypes = {}
-    let g:vsnip_filetypes.javascriptreact = ['javascript']
-    let g:vsnip_filetypes.typescriptreact = ['typescript']
-]])
-
 -- ============================ CFG-WRITING ================================ --
 -- Toggle spell checking on and off
 map("n", "<Leader>wc", "<cmd>set spell!<CR>", opts)
