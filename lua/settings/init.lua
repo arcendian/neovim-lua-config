@@ -60,7 +60,6 @@ Settings.g({
 	diffopt = "internal,filler,closeoff,algorithm:patience,iwhiteall",
 	splitbelow = true,
 	linebreak = true,
-	--[[ indentexpr = "nvim_treesitter#indent()", ]]
 })
 
 Settings.b({
@@ -73,7 +72,6 @@ Settings.w({
 	relativenumber = true,
 	signcolumn = "yes",
 	linebreak = true,
-	--[[ indentexpr = "nvim_treesitter#indent()", ]]
 })
 
 vim.g.wildignore = {
