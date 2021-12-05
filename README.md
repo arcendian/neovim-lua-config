@@ -77,6 +77,7 @@ This is the structure of my neovim directory (eliding non-config files). The con
 │ │ ├── 📂theme
 │ │ ├── 📂tree-sitter
 │ │ ├── 📂vimwiki
+│ │ ├── 📂which-key
 │ │ └── 📂writing
 │ ├── 📂plugins
 │ ├── 📂remaps
