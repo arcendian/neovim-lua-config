@@ -2,12 +2,43 @@
 
 <!-- vim-markdown-toc GFM -->
 
+* [Dependencies](#dependencies)
 * [How it looks](#how-it-looks)
 * [File structure](#file-structure)
 * [Credits](#credits)
 * [Todo](#todo)
 
 <!-- vim-markdown-toc -->
+
+## Dependencies
+
+The following are the dependencies for this configuration to work:
+
+- **utilities**
+  - [ripgrep](https://github.com/BurntSushi/ripgrep)
+  - [fd](https://github.com/sharkdp/fd)
+- **formatters**
+  - [black](https://github.com/psf/black)
+  - [clang-format](https://clang.llvm.org/docs/ClangFormat.html)
+  - [latexindent](https://github.com/cmhughes/latexindent.pl)
+  - [ormolu](https://github.com/tweag/ormolu)
+  - [prettier](https://prettier.io/)
+  - [rustfmt](https://github.com/rust-lang/rustfmt)
+  - [shfmt](https://github.com/mvdan/sh)
+  - [stylua](https://github.com/JohnnyMorganz/StyLua)
+- **language servers**
+  - [arduino language server](https://github.com/arduino/arduino-language-server)
+  - [bashls](https://github.com/mads-hartmann/bash-language-server)
+  - [clangd](https://clangd.llvm.org/installation.html)
+  - [cssls](https://github.com/hrsh7th/vscode-langservers-extracted)
+  - [hls](https://github.com/haskell/haskell-language-server)
+  - [html](https://github.com/hrsh7th/vscode-langservers-extracted)
+  - [pyright](https://github.com/microsoft/pyright)
+  - [rust-analyzer](https://github.com/rust-analyzer/rust-analyzer)
+  - [sumneko lua](https://github.com/sumneko/lua-language-server)
+  - [texlab](https://github.com/latex-lsp/texlab)
+  - [tsserver](https://github.com/theia-ide/typescript-language-server)
+  - [vimls](https://github.com/iamcco/vim-language-server)
 
 ## How it looks
 
