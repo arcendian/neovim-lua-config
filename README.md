@@ -4,7 +4,8 @@
 
 * [How it looks](#how-it-looks)
 * [File structure](#file-structure)
-* [TODO:](#todo)
+* [Credits](#credits)
+* [Todo](#todo)
 
 <!-- vim-markdown-toc -->
 
@@ -16,7 +17,7 @@ This is my work-in-progress neovim setup configured in/migrated to Lua. It looks
 
 ## File structure
 
-This is the current structure of my neovim directory (eliding non-config files). The configuration for the plugins installed is in the `cfg` directory under `lua` with their respective `<plugin>/init.lua`. Most of the plugins are _plug and play_ and the configurations copied from their wikis.
+This is the structure of my neovim directory (eliding non-config files). The configuration for the plugins installed is in the `cfg` directory under `lua` with their respective `<plugin>/init.lua` files. Most of the plugins are _plug and play_ and the configurations copied from their wikis.
 
 ```text
 📂$HOME/.config/nvim
@@ -25,6 +26,7 @@ This is the current structure of my neovim directory (eliding non-config files).
 ├── 🌑 init.lua
 ├── 📂lua
 │ ├── 📂cfg
+│ │ ├── 📂autocmds
 │ │ ├── 📂autopairs
 │ │ ├── 📂comment
 │ │ ├── 📂completion
@@ -50,10 +52,22 @@ This is the current structure of my neovim directory (eliding non-config files).
 │ └── 📂settings
 ```
 
-## TODO:
+## Credits
+
+It is thanks to this people's well-written dotfiles and documentations that I was able to write this configuration:
+
+- [changemewtf](https://github.com/mcantor/no_plugins), especially his talk [How to Do 90% of What Plugins Do (With Just Vim)](https://www.youtube.com/watch?v=XA2WjJbmmoM&t=372s)
+- [mhartington](https://github.com/mhartington)
+- [The Primeagen](https://github.com/ThePrimeagen)
+- [tjdevries](https://github.com/tjdevries)
+- [nanotee (nvim lua guide)](https://github.com/nanotee/nvim-lua-guide)
+- [Distrotube](https://gitlab.com/dwt1/)
+- and many more others I can't remember
+
+## Todo
 
 - [ ] Explore more vim/neovim builtin stuff.
-- [ ] Explore telescope builtin functions.
+- [x] Explore telescope builtin functions.
 - [ ] Explore tree-sitter capabilities.
 - [ ] Explore packer.nvim features.
 - [ ] Add more custom functions in `cfg/custom`
