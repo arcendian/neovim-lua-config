@@ -105,17 +105,3 @@ for _, ft in ipairs(commonFT) do
 end
 
 formatter.setup({ logging = false, filetype = formatterConfig })
-
--- format on save
-vim.api.nvim_exec(
-	[[
-	augroup FormatAutogroup
-	  autocmd!
-	  autocmd BufWritePost *.js,*.rs,*.lua,*.c,*.cpp FormatWrite
-	  autocmd BufWritePost *.md,*.tex,*.latex,*.h,*.hpp FormatWrite
-	  autocmd BufWritePost *.py,*.toml,*.yaml,*.yml FormatWrite
-	  autocmd BufWritePost *.html,*.css,*.ino,*.hs FormatWrite
-	augroup END
-]],
-	true
-)
