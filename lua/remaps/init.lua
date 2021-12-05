@@ -1,8 +1,11 @@
+-- ====== WHICH-KEY ====== --
+require("which-key").setup({})
+
 local map = vim.api.nvim_set_keymap
 local opts = { noremap = true, silent = true }
 
 -- set space key as leader key
-map("n", "<space>", "<nop>", opts)
+-- map("n", "<space>", "<nop>", opts)
 vim.g.mapleader = " "
 
 -- toggle highlighting when searching in buffer
@@ -149,6 +152,3 @@ map("n", "<leader>xf", "<cmd>HexokinaseTurOff<CR>", opts)
 -- Visual mode
 -- `g>` - Comments the region using single line
 -- `g<` - Unomments the region using single line
-
--- ====== WHICH-KEY ====== --
-require("which-key").setup({})
