@@ -1,1 +1,1 @@
-vim.opt_local.colorcolumn = "0"
+vim.bo.colorcolumn = "0"
