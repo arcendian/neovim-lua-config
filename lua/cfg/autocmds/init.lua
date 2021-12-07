@@ -8,7 +8,7 @@ end
 function M.exec(augrp)
 	local begin_augroup = "augroup FormatAutogroup\nautocmd!"
 	local end_augroup = "augroup END"
-	local augroup = string.format("%s\n%s\n%s", begin_augroup, augrp, end_augroup)
+	local augroup = string.format("%s\nautocmd %s\n%s", begin_augroup, augrp, end_augroup)
 	vim.api.nvim_exec(augroup, true)
 end
 
@@ -18,9 +18,11 @@ local ft_arm = "*.s,*.S"
 local set_nasm = "set ft=nasm"
 local set_arm = 'set ft=arm " arm=arm6/7'
 
+-- assembly files
 M.autocmd(on_newfile, ft_nasm, set_nasm)
 M.autocmd(on_newfile, ft_arm, set_arm)
 
+-- formatting
 local on_save = "BufWritePost "
 local format = " FormatWrite"
 local filetypes = {
@@ -48,6 +50,6 @@ local function for_each(ftTable)
 	return ft_string
 end
 
-M.exec("autocmd " .. on_save .. for_each(filetypes) .. format)
+M.exec(on_save .. for_each(filetypes) .. format)
 
 return M
