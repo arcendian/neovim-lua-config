@@ -54,7 +54,6 @@ Settings.g({
 	mouse = "a",
 	clipboard = "unnamedplus",
 	redrawtime = 500,
-	virtualedit = "onemore",
 	diffopt = "internal,filler,closeoff,algorithm:patience,iwhiteall",
 	splitbelow = true,
 	linebreak = true,
