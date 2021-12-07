@@ -1,5 +1,3 @@
-local colors = require("onenord.colors")
-
 require("onenord").setup({
 	borders = true,
 	italics = {
@@ -10,7 +8,6 @@ require("onenord").setup({
 		variables = false,
 	},
 	custom_highlights = {
-		TSNamespace = { fg = colors.cyan },
 		TSType = { fg = "#8fbcbb" },
 	},
 })
