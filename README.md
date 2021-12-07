@@ -43,13 +43,17 @@ dependencies:
 
 ## How it looks
 
-This is my work-in-progress neovim setup configured in/migrated to Lua. It looks like this (with some sample codes from the textbook):
+This is my work-in-progress neovim setup configured in/migrated to Lua. It
+looks like this (with some sample codes from the textbook):
 
 ![Neovim-config Screenshot](./assets/screenshots/neovim-screenshot-2021-11-28_17-25.png)
 
 ## File structure
 
-This is the structure of my neovim directory (eliding non-config files). The configuration for the plugins installed is in the `cfg` directory under `lua` with their respective `<plugin>/init.lua` files. Most of the plugins are _plug and play_ and the configurations copied from their wikis.
+This is the structure of my neovim directory (eliding non-config files). The
+configuration for the plugins installed is in the `cfg` directory under `lua`
+with their respective `<plugin>/init.lua` files. Most of the plugins are _plug
+and play_ and the configurations copied from their wikis.
 
 ```text
 📂$HOME/.config/nvim
@@ -87,9 +91,12 @@ This is the structure of my neovim directory (eliding non-config files). The con
 
 ## Credits
 
-It is thanks to this people's well-written dotfiles and documentations that I was able to write this configuration:
+It is thanks to this people's well-written dotfiles and documentations that I
+was able to write this configuration:
 
-- [changemewtf](https://github.com/mcantor/no_plugins), especially his talk [How to Do 90% of What Plugins Do (With Just Vim)](https://www.youtube.com/watch?v=XA2WjJbmmoM&t=372s)
+- [changemewtf](https://github.com/mcantor/no_plugins), especially his talk
+  [How to Do 90% of What Plugins Do (With Just
+  Vim)](https://www.youtube.com/watch?v=XA2WjJbmmoM&t=372s)
 - [mhartington](https://github.com/mhartington)
 - [The Primeagen](https://github.com/ThePrimeagen)
 - [tjdevries](https://github.com/tjdevries)
