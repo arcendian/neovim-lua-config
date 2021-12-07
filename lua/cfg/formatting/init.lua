@@ -69,6 +69,12 @@ local formatterConfig = {
 			return { exe = "ormolu", stdin = true }
 		end,
 	},
+
+	toml = {
+		function()
+			return { exe = "taplo", args = { "fmt -" }, stdin = true }
+		end,
+	},
 }
 
 local prettierConfig = function()
@@ -96,7 +102,6 @@ local commonFT = {
 	"vimwiki",
 	"json",
 	"yaml",
-	"toml",
 }
 
 -- set prettier as formatter for common filetypes above
