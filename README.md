@@ -12,7 +12,8 @@
 
 ## Dependencies
 
-The following are the dependencies for this configuration to work:
+This configuration requires **Neovim >= v0.5.0** along with the following
+dependencies:
 
 - **utilities**
   - [ripgrep](https://github.com/BurntSushi/ripgrep)
