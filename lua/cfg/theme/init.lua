@@ -9,7 +9,6 @@ require("onenord").setup({
 		functions = true,
 		variables = false,
 	},
-	disable = { background = false, cursorline = false, eob_lines = true },
 	custom_highlights = {
 		TSNamespace = { fg = colors.cyan },
 		TSType = { fg = "#8fbcbb" },
