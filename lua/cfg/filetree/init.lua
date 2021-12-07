@@ -22,4 +22,11 @@ vim.g.nvim_tree_icons = {
 	},
 }
 
-require("nvim-tree").setup({ auto_close = true })
+require("nvim-tree").setup({
+	auto_close = true,
+	filters = {
+		custom = {
+			".git",
+		},
+	},
+})
