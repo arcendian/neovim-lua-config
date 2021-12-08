@@ -8,6 +8,13 @@ require("onenord").setup({
 		variables = false,
 	},
 	custom_highlights = {
+		TSNamespace = { fg = "#ebdbb2" },
 		TSType = { fg = "#8fbcbb" },
+	},
+	custom_styles = {
+		LspDiagnosticsUnderlineError = "undercurl",
+		LspDiagnosticsUnderlineWarning = "undercurl",
+		LspDiagnosticsUnderlineInformation = "undercurl",
+		LspDiagnosticsUnderlineHint = "undercurl",
 	},
 })
