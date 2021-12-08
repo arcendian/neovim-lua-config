@@ -52,7 +52,6 @@ Settings.g({
 	smartcase = true,
 	list = true,
 	mouse = "a",
-	clipboard = "unnamedplus",
 	redrawtime = 500,
 	diffopt = "internal,filler,closeoff,algorithm:patience,iwhiteall",
 	splitbelow = true,
