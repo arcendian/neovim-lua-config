@@ -8,7 +8,7 @@ require("onenord").setup({
 		variables = false,
 	},
 	custom_highlights = {
-		TSNamespace = { fg = "#ebdbb2" },
+		TSNamespace = { fg = "#5e81ac" },
 		TSType = { fg = "#8fbcbb" },
 	},
 	custom_styles = {
