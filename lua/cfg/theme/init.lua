@@ -17,4 +17,7 @@ require("onenord").setup({
 		LspDiagnosticsUnderlineInformation = "undercurl",
 		LspDiagnosticsUnderlineHint = "undercurl",
 	},
+	disable = {
+		background = true,
+	},
 })
