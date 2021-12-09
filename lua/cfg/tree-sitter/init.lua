@@ -8,6 +8,7 @@ require("nvim-treesitter.configs").setup({
 		"commonlisp",
 		"cpp",
 		"css",
+		"fennel",
 		"fortran",
 		"go",
 		"haskell",
