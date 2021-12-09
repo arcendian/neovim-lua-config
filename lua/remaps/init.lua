@@ -98,7 +98,7 @@ M.map("n", "<leader>xn", "<cmd>HexokinaseTurnOn<CR>")
 M.map("n", "<leader>xf", "<cmd>HexokinaseTurOff<CR>")
 
 -- ========================== CFG-TERMINAL ================================= --
-M.map("n", "<A-i>", '<CMD>lua require("FTerm").toggle()<CR>')
-M.map("t", "<A-i>", '<C-\\><C-n><CMD>lua require("FTerm").toggle()<CR>')
+M.map("n", "<A-i>", '<cmd>lua require("FTerm").toggle()<CR>')
+M.map("t", "<A-i>", '<C-\\><C-n><cmd>lua require("FTerm").toggle()<CR>')
 
 return M
