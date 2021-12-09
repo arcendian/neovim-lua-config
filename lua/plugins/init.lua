@@ -55,7 +55,7 @@ return require("packer").startup(function()
 	use({ "mhartington/formatter.nvim" })
 
 	-- plugin for easier use of builtin terminal
-	use({ "akinsho/toggleterm.nvim" })
+	use({ "numToStr/FTerm.nvim" })
 
 	-- markdown preview in browser
 	use({ "iamcco/markdown-preview.nvim", run = "cd app && yarn install" })
