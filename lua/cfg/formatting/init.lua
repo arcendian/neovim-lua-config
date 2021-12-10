@@ -25,7 +25,7 @@ local formatterConfig = {
 				exe = "clang-format",
 				args = { "--assume-filename", vim.api.nvim_buf_get_name(0) },
 				stdin = true,
-				cwd = vim.fn.expand("%:p:h"), -- Run clang-format in cwd of the file.
+				cwd = vim.fn.expand("%:p:h"),
 			}
 		end,
 	},
@@ -36,7 +36,7 @@ local formatterConfig = {
 				exe = "clang-format",
 				args = { "--assume-filename", vim.api.nvim_buf_get_name(0) },
 				stdin = true,
-				cwd = vim.fn.expand("%:p:h"), -- Run clang-format in cwd of the file.
+				cwd = vim.fn.expand("%:p:h"),
 			}
 		end,
 	},
@@ -47,7 +47,7 @@ local formatterConfig = {
 				exe = "clang-format",
 				args = { "--assume-filename", vim.api.nvim_buf_get_name(0) },
 				stdin = true,
-				cwd = vim.fn.expand("%:p:h"), -- Run clang-format in cwd of the file.
+				cwd = vim.fn.expand("%:p:h"),
 			}
 		end,
 	},
@@ -73,6 +73,16 @@ local formatterConfig = {
 	toml = {
 		function()
 			return { exe = "taplo", args = { "fmt -" }, stdin = true }
+		end,
+	},
+
+	fennel = {
+		function()
+			return {
+				exe = "fnlfmt",
+				args = { vim.api.nvim_buf_get_name(0) },
+				stdin = true,
+			}
 		end,
 	},
 }
