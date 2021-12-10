@@ -21,6 +21,7 @@ dependencies:
 - **formatters**
   - [black](https://github.com/psf/black)
   - [clang-format](https://clang.llvm.org/docs/ClangFormat.html)
+  - [fnlfmt](https://git.sr.ht/~technomancy/fnlfmt)
   - [latexindent](https://github.com/cmhughes/latexindent.pl)
   - [ormolu](https://github.com/tweag/ormolu)
   - [prettier](https://prettier.io/)
