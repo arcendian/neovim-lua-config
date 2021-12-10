@@ -60,19 +60,19 @@ M.map("n", "<leader>fv", "<cmd>Telescope vim_options<CR>")
 M.map("n", "<leader>fp", "<cmd>Telescope planets<CR>")
 
 -- git stuff
-M.map("n", "<leader>fic", "<cmd>Telescope git_commits<CR>")
-M.map("n", "<leader>fib", "<cmd>Telescope git_bcommits<CR>")
-M.map("n", "<leader>fil", "<cmd>Telescope git_branches<CR>")
-M.map("n", "<leader>fis", "<cmd>Telescope git_status<CR>")
-M.map("n", "<leader>fit", "<cmd>Telescope git_stash<CR>")
+M.map("n", "<leader>gc", "<cmd>Telescope git_commits<CR>")
+M.map("n", "<leader>gb", "<cmd>Telescope git_bcommits<CR>")
+M.map("n", "<leader>gl", "<cmd>Telescope git_branches<CR>")
+M.map("n", "<leader>gs", "<cmd>Telescope git_status<CR>")
+M.map("n", "<leader>gt", "<cmd>Telescope git_stash<CR>")
 
 -- vim stuff
-M.map("n", "<leader>ftc", "<cmd>Telescope command_history<CR>")
-M.map("n", "<leader>fts", "<cmd>Telescope search_history<CR>")
-M.map("n", "<leader>fnr", "<cmd>Telescope registers<CR>")
-M.map("n", "<leader>fnm", "<cmd>Telescope marks<CR>")
-M.map("n", "<leader>fnk", "<cmd>Telescope keymaps<CR>")
-M.map("n", "<leader>fnf", "<cmd>Telescope filetypes<CR>")
+M.map("n", "<leader>tc", "<cmd>Telescope command_history<CR>")
+M.map("n", "<leader>ts", "<cmd>Telescope search_history<CR>")
+M.map("n", "<leader>tr", "<cmd>Telescope registers<CR>")
+M.map("n", "<leader>tm", "<cmd>Telescope marks<CR>")
+M.map("n", "<leader>tk", "<cmd>Telescope keymaps<CR>")
+M.map("n", "<leader>tf", "<cmd>Telescope filetypes<CR>")
 
 -- extensions
 M.map("n", "<leader>cd", "<cmd>lua require'telescope'.extensions.zoxide.list{}<CR>")
