@@ -24,7 +24,7 @@ local formatterConfig = {
 			return {
 				exe = "clang-format",
 				args = {
-					"--style='{BasedOnStyle: webkit, IndentWidth: 2}' --assume-filename",
+					"--style='{BasedOnStyle: mozilla, IndentWidth: 2}' --assume-filename",
 					vim.api.nvim_buf_get_name(0),
 				},
 				stdin = true,
@@ -38,7 +38,7 @@ local formatterConfig = {
 			return {
 				exe = "clang-format",
 				args = {
-					"--style='{BasedOnStyle: webkit, IndentWidth: 2}' --assume-filename",
+					"--style='{BasedOnStyle: mozilla, IndentWidth: 2}' --assume-filename",
 					vim.api.nvim_buf_get_name(0),
 				},
 				stdin = true,
