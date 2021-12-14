@@ -45,6 +45,7 @@ local filetypes = {
 	"*.ino",
 	"*.hs",
 	"*.fnl",
+	"*.go",
 }
 local function for_each(ftTable)
 	local ft_string = table.concat(ftTable, ",")
