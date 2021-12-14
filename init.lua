@@ -28,7 +28,6 @@ local configs = {
 	"lspconfig",
 	"telescope",
 	"gitsigns",
-	"indent-blankline",
 	"formatting",
 	"vimwiki",
 	"hex-colors",

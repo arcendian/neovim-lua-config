@@ -85,7 +85,7 @@ return require("packer").startup(function()
 	use({ "glepnir/dashboard-nvim" })
 
 	-- add indentation guides to all lines (including empty lines).
-	use({ "lukas-reineke/indent-blankline.nvim" })
+	--[[ use({ "lukas-reineke/indent-blankline.nvim" }) ]]
 
 	-- colors for hex color values
 	use({ "rrethy/vim-hexokinase", run = "make hexokinase" })
