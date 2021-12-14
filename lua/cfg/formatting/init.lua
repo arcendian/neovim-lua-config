@@ -23,7 +23,10 @@ local formatterConfig = {
 		function()
 			return {
 				exe = "clang-format",
-				args = { "--assume-filename", vim.api.nvim_buf_get_name(0) },
+				args = {
+					"--style='{BasedOnStyle: webkit, IndentWidth: 2}' --assume-filename",
+					vim.api.nvim_buf_get_name(0),
+				},
 				stdin = true,
 				cwd = vim.fn.expand("%:p:h"),
 			}
@@ -34,7 +37,10 @@ local formatterConfig = {
 		function()
 			return {
 				exe = "clang-format",
-				args = { "--assume-filename", vim.api.nvim_buf_get_name(0) },
+				args = {
+					"--style='{BasedOnStyle: webkit, IndentWidth: 2}' --assume-filename",
+					vim.api.nvim_buf_get_name(0),
+				},
 				stdin = true,
 				cwd = vim.fn.expand("%:p:h"),
 			}
