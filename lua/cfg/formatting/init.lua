@@ -24,7 +24,7 @@ local formatterConfig = {
 			return {
 				exe = "clang-format",
 				args = {
-					"-style='{BasedOnStyle: mozilla, IndentWidth: 2, SpacesInAngles: true, SpacesInParentheses: true, SpaceInEmptyParentheses: true, SpacesInSquareBrackets: true}' --assume-filename",
+					"-style='{BasedOnStyle: webkit, IndentWidth: 2, ColumnLimit: 80, AccessModifierOffset: -2}' --assume-filename",
 					vim.api.nvim_buf_get_name(0),
 				},
 				stdin = true,
@@ -38,7 +38,7 @@ local formatterConfig = {
 			return {
 				exe = "clang-format",
 				args = {
-					"-style='{BasedOnStyle: mozilla, IndentWidth: 2, SpacesInAngles: true, SpacesInParentheses: true, SpaceInEmptyParentheses: true, SpacesInSquareBrackets: true}' --assume-filename",
+					"-style='{BasedOnStyle: webkit, IndentWidth: 2, ColumnLimit: 80}' --assume-filename",
 					vim.api.nvim_buf_get_name(0),
 				},
 				stdin = true,
