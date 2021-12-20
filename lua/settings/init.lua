@@ -35,6 +35,7 @@ Settings.g({
 	smartindent = true,
 	wrap = false,
 	incsearch = true,
+	hlsearch = false,
 	exrc = true,
 	scrolloff = 8,
 	sidescrolloff = 8,
