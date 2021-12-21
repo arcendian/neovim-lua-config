@@ -95,13 +95,16 @@ and play_ and the configurations copied from their wikis.
 It is thanks to this people's well-written dotfiles and documentations that I
 was able to write this configuration:
 
-- [changemewtf](https://github.com/mcantor/no_plugins), especially his talk
+- [changemewtf](https://github.com/mcantor/no_plugins); especially his talk
   [How to Do 90% of What Plugins Do (With Just
   Vim)](https://www.youtube.com/watch?v=XA2WjJbmmoM&t=372s)
 - [mhartington](https://github.com/mhartington)
 - [The Primeagen](https://github.com/ThePrimeagen)
 - [tjdevries](https://github.com/tjdevries)
 - [nanotee (nvim lua guide)](https://github.com/nanotee/nvim-lua-guide)
+- [chris@machine](https://github.com/ChristianChiarulli); especially his
+  [blogs](https://www.chrisatmachine.com/) and [Youtube
+  videos](https://www.youtube.com/channel/UCS97tchJDq17Qms3cux8wcA).
 - [Distrotube](https://gitlab.com/dwt1/)
 - and many more others I can't remember
 
