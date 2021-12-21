@@ -102,6 +102,17 @@ local formatterConfig = {
 		end,
 	},
 
+	java = {
+		function()
+			return {
+				exe = "clang-format",
+				args = { "--assume-filename", vim.api.nvim_buf_get_name(0) },
+				stdin = true,
+				cwd = vim.fn.expand("%:p:h"),
+			}
+		end,
+	},
+
 	zig = {
 		function()
 			return {
@@ -129,7 +140,6 @@ local commonFT = {
 	"css",
 	"scss",
 	"html",
-	"java",
 	"javascript",
 	"typescript",
 	"typescriptreact",
