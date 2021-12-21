@@ -47,7 +47,7 @@ dependencies:
 This is my work-in-progress neovim setup configured in/migrated to Lua. It
 looks like this (with some sample codes from the textbook):
 
-![Neovim-config Screenshot](./assets/screenshots/neovim-screenshot-2021-11-28_17-25.png)
+![Neovim-config Screenshot](./assets/screenshots/neovim-2021-12-21_21-26.png)
 
 ## File structure
 
