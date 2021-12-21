@@ -3,7 +3,6 @@
 <!-- vim-markdown-toc GFM -->
 
 * [Dependencies](#dependencies)
-* [How it looks](#how-it-looks)
 * [File structure](#file-structure)
 * [Credits](#credits)
 * [Todo](#todo)
@@ -41,13 +40,6 @@ dependencies:
   - [texlab](https://github.com/latex-lsp/texlab)
   - [tsserver](https://github.com/theia-ide/typescript-language-server)
   - [vimls](https://github.com/iamcco/vim-language-server)
-
-## How it looks
-
-This is my work-in-progress neovim setup configured in/migrated to Lua. It
-looks like this (with some sample codes from the textbook):
-
-![Neovim-config Screenshot](./assets/screenshots/neovim-2021-12-21_21-26.png)
 
 ## File structure
 
