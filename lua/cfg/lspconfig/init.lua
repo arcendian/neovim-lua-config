@@ -54,6 +54,7 @@ local servers = {
 	"arduino_language_server",
 	"sumneko_lua",
 	"taplo",
+	"zls",
 }
 local cmp_capabilities = require("cmp_nvim_lsp").update_capabilities(vim.lsp.protocol.make_client_capabilities())
 

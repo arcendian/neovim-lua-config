@@ -101,6 +101,16 @@ local formatterConfig = {
 			}
 		end,
 	},
+
+	zig = {
+		function()
+			return {
+				exe = "zig fmt",
+				args = { "--stdin" },
+				stdin = true,
+			}
+		end,
+	},
 }
 
 local prettierConfig = function()
