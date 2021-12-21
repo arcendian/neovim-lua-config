@@ -33,7 +33,7 @@ Settings.g({
 	updatetime = 100,
 	autoindent = true,
 	smartindent = true,
-	wrap = false,
+	wrap = true,
 	incsearch = true,
 	hlsearch = false,
 	exrc = true,
