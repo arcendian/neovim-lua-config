@@ -1,4 +1,9 @@
-require("onenord").setup({
+local status_ok, theme = pcall(require, "onenord")
+if not status_ok then
+	return
+end
+
+theme.setup({
 	theme = "dark",
 	borders = true,
 	styles = {
