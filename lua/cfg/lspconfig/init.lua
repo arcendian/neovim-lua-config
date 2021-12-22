@@ -1,5 +1,8 @@
 -- ===================== LSP config ======================================== --
-local nvim_lsp = require("lspconfig")
+local status_ok, nvim_lsp = pcall(require, "lspconfig")
+if not status_ok then
+	return
+end
 
 -- Use an on_attach function to only map the following keys
 -- after the language server attaches to the current buffer
@@ -57,11 +60,11 @@ local servers = {
 	"zls",
 }
 local cmp_capabilities = require("cmp_nvim_lsp").update_capabilities(vim.lsp.protocol.make_client_capabilities())
+local lsp_opts = { on_attach = on_attach, capabilities = cmp_capabilities }
 
 for _, lsp in ipairs(servers) do
 	if lsp == "arduino_language_server" then
-		nvim_lsp[lsp].setup({
-			on_attach = on_attach,
+		local arduino_opts = {
 			cmd = {
 				"arduino-language-server",
 				"-cli-config",
@@ -70,15 +73,15 @@ for _, lsp in ipairs(servers) do
 			flags = {
 				debounce_text_changes = 150,
 			},
-			capabilities = cmp_capabilities,
-		})
-	elseif lsp == "sumneko_lua" then
+		}
+		lsp_opts = vim.tbl_deep_extend("force", arduino_opts, lsp_opts)
+	end
+
+	if lsp == "sumneko_lua" then
 		local runtime_path = vim.split(package.path, ";")
 		table.insert(runtime_path, "lua/?.lua")
 		table.insert(runtime_path, "lua/?/init.lua")
-
-		nvim_lsp[lsp].setup({
-			on_attach = on_attach,
+		local sumneko_opts = {
 			cmd = { "lua-language-server" },
 			settings = {
 				Lua = {
@@ -98,14 +101,11 @@ for _, lsp in ipairs(servers) do
 			flags = {
 				debounce_text_changes = 150,
 			},
-			capabilities = cmp_capabilities,
-		})
-	else
-		nvim_lsp[lsp].setup({
-			on_attach = on_attach,
-			capabilities = cmp_capabilities,
-		})
+		}
+		lsp_opts = vim.tbl_deep_extend("force", sumneko_opts, lsp_opts)
 	end
+
+	nvim_lsp[lsp].setup({ lsp_opts })
 end
 
 -- =================== LSP diagnostics customization ======================= --
