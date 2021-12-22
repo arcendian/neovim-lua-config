@@ -43,7 +43,7 @@ treesitter_cfg.setup({
 		max_file_lines = nil, -- Do not enable for files with more than n lines, int
 		-- disable = { "jsx", "cpp" }, list of languages you want to disable the plugin for
 		colors = {
-			"#e06c75",
+			"#eceff4",
 			"#d19a66",
 			"#ebcb8b",
 			"#b988d0",
