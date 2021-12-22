@@ -37,19 +37,4 @@ treesitter_cfg.setup({
 		"zig",
 	},
 	highlight = { enable = true, additional_vim_regex_highlighting = false },
-	rainbow = {
-		enable = true,
-		extended_mode = true, -- Also highlight non-bracket delimiters like html tags, boolean or table: lang -> boolean
-		max_file_lines = nil, -- Do not enable for files with more than n lines, int
-		-- disable = { "jsx", "cpp" }, list of languages you want to disable the plugin for
-		colors = {
-			"#eceff4",
-			"#d19a66",
-			"#ebcb8b",
-			"#b988d0",
-			"#a3b38c",
-			"#88c0d0",
-		},
-		-- termcolors = {} -- table of colour name strings
-	},
 })
