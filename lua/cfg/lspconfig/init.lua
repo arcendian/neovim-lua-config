@@ -70,13 +70,11 @@ for _, lsp in ipairs(servers) do
 				"-cli-config",
 				"/home/mice/.arduino15/arduino-cli.yaml",
 			},
-			flags = {
-				debounce_text_changes = 150,
-			},
 		}
-		lsp_opts = vim.tbl_deep_extend("force", arduino_opts, lsp_opts)
+		lsp_opts = vim.tbl_deep_extend("force", lsp_opts, arduino_opts)
 	end
 
+	-- TODO: figure out why lua lsp loads so slow
 	if lsp == "sumneko_lua" then
 		local runtime_path = vim.split(package.path, ";")
 		table.insert(runtime_path, "lua/?.lua")
@@ -98,14 +96,11 @@ for _, lsp in ipairs(servers) do
 					telemetry = { enable = false },
 				},
 			},
-			flags = {
-				debounce_text_changes = 150,
-			},
 		}
-		lsp_opts = vim.tbl_deep_extend("force", sumneko_opts, lsp_opts)
+		lsp_opts = vim.tbl_deep_extend("force", lsp_opts, sumneko_opts)
 	end
 
-	nvim_lsp[lsp].setup({ lsp_opts })
+	nvim_lsp[lsp].setup(lsp_opts)
 end
 
 -- =================== LSP diagnostics customization ======================= --
