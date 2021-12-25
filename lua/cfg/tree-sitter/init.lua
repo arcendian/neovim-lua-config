@@ -26,6 +26,7 @@ treesitter_cfg.setup({
 		"latex",
 		"llvm",
 		"lua",
+		"markdown",
 		"nix",
 		"org",
 		"python",
