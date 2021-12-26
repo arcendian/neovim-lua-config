@@ -66,6 +66,7 @@ and play_ and the configurations copied from their wikis.
 │ │ ├── 📂formatting
 │ │ ├── 📂gitsigns
 │ │ ├── 📂hex-colors
+│ │ ├── 📂indent-blankline
 │ │ ├── 📂lspconfig
 │ │ ├── 📂md-preview
 │ │ ├── 📂statusline
