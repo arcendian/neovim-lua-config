@@ -80,8 +80,5 @@ vim.g.wildignore = {
 	"*.ccls-cache",
 }
 vim.g.mapleader = " "
-vim.cmd([[
-	set listchars=tab:▸\ ,trail:·,precedes:←,extends:→,nbsp:·,eol:↴
-]])
 
 return Settings
