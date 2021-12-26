@@ -27,7 +27,7 @@ local formatterConfig = {
 			return {
 				exe = "clang-format",
 				args = {
-					"-style='{BasedOnStyle: webkit, IndentWidth: 4, ColumnLimit: 80, AccessModifierOffset: -4}' --assume-filename",
+					"-style='{BasedOnStyle: webkit, IndentWidth: 4, TabWidth: 4, ColumnLimit: 80, UseTab: ForContinuationAndIndentation}' --assume-filename",
 					vim.api.nvim_buf_get_name(0),
 				},
 				stdin = true,
@@ -41,7 +41,7 @@ local formatterConfig = {
 			return {
 				exe = "clang-format",
 				args = {
-					"-style='{BasedOnStyle: webkit, IndentWidth: 4, ColumnLimit: 80}' --assume-filename",
+					"-style='{BasedOnStyle: webkit, IndentWidth: 4, TabWidth: 4, ColumnLimit: 80, UseTab: ForContinuationAndIndentation}' --assume-filename",
 					vim.api.nvim_buf_get_name(0),
 				},
 				stdin = true,
@@ -54,7 +54,10 @@ local formatterConfig = {
 		function()
 			return {
 				exe = "clang-format",
-				args = { "--assume-filename", vim.api.nvim_buf_get_name(0) },
+				args = {
+					"-style='{BasedOnStyle: webkit, IndentWidth: 4, TabWidth: 4, ColumnLimit: 80, UseTab: ForContinuationAndIndentation}' --assume-filename",
+					vim.api.nvim_buf_get_name(0),
+				},
 				stdin = true,
 				cwd = vim.fn.expand("%:p:h"),
 			}
@@ -110,7 +113,7 @@ local formatterConfig = {
 			return {
 				exe = "clang-format",
 				args = {
-					"-style='{BasedOnStyle: webkit, IndentWidth: 4, ColumnLimit: 80}' --assume-filename",
+					"-style='{BasedOnStyle: webkit, IndentWidth: 4, TabWidth: 4, ColumnLimit: 80, UseTab: ForContinuationAndIndentation}' --assume-filename",
 					vim.api.nvim_buf_get_name(0),
 				},
 				stdin = true,
