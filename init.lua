@@ -23,7 +23,6 @@ local configs = {
 	"dashboard",
 	"filetree",
 	"devicons",
-	"indent-blankline",
 	"comment",
 	"tree-sitter",
 	"lspconfig",
