@@ -95,6 +95,9 @@ return packer.startup(function()
 	-- dashboard
 	use({ "glepnir/dashboard-nvim" })
 
+	-- indentation guides to all lines (including empty lines).
+	use({ "lukas-reineke/indent-blankline.nvim" })
+
 	-- colors for hex color values
 	use({ "rrethy/vim-hexokinase", run = "make hexokinase" })
 
