@@ -81,7 +81,7 @@ vim.g.wildignore = {
 }
 vim.g.mapleader = " "
 vim.cmd([[
-	set list listchars=tab:▸\ ,trail:·,precedes:←,extends:→,nbsp:·,eol:↴
+	set listchars=tab:▸\ ,trail:·,precedes:←,extends:→,nbsp:·,eol:↴
 ]])
 
 return Settings
