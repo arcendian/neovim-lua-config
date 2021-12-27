@@ -4,7 +4,7 @@ if not status_ok then
 end
 
 vim.g.indent_blankline_max_indent_increase = 1
-vim.g.indent_blankline_filetype_exclude = { "help", "dashboard" }
+vim.g.indent_blankline_filetype_exclude = { "help", "dashboard", "packer" }
 vim.g.indent_blankline_buftype_exclude = { "terminal" }
 vim.g.indent_blankline_bufname_exclude = { "*.md" }
 
