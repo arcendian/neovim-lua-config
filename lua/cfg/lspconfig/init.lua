@@ -14,6 +14,13 @@ local on_attach = function(client, bufnr)
 		vim.api.nvim_buf_set_option(bufnr, ...)
 	end
 
+	require("lsp_signature").on_attach({
+		bind = true, -- This is mandatory, otherwise border config won't get registered.
+		handler_opts = {
+			border = "rounded",
+		},
+	}, bufnr)
+
 	-- Enable completion triggered by <c-x><c-o>
 	buf_set_option("omnifunc", "v:lua.vim.lsp.omnifunc")
 
@@ -57,7 +64,6 @@ local servers = {
 	"arduino_language_server",
 	"sumneko_lua",
 	-- "taplo",
-	"zls",
 }
 local cmp_capabilities = require("cmp_nvim_lsp").update_capabilities(vim.lsp.protocol.make_client_capabilities())
 local lsp_opts = { on_attach = on_attach, capabilities = cmp_capabilities }
@@ -88,7 +94,7 @@ for _, lsp in ipairs(servers) do
 						path = runtime_path,
 					},
 					diagnostics = {
-						globals = { "vim" },
+						globals = { "vim", "use" },
 					},
 					workspace = {
 						library = vim.api.nvim_get_runtime_file("", true),
@@ -116,6 +122,3 @@ for type, icon in pairs(signs) do
 	local hl = "DiagnosticSign" .. type
 	vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
 end
-
--- ================= LSP signature plugin setup ============================ --
-require("lsp_signature").setup({ hint_prefix = "💡 " })
