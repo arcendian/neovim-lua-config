@@ -16,4 +16,7 @@ theme.setup({
 		TSNamespace = { fg = "#5e81ac" },
 		TSType = { fg = "#8fbcbb" },
 	},
+	disable = {
+		background = true,
+	},
 })
