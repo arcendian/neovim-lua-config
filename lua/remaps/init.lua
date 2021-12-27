@@ -12,10 +12,10 @@ end
 M.map("n", "<leader>nh", "<cmd>set hlsearch!<cr>")
 
 -- buffer navigation
-M.map("n", "<C-h>", "<C-w>h")
-M.map("n", "<C-j>", "<C-w>j")
-M.map("n", "<C-k>", "<C-w>k")
-M.map("n", "<C-l>", "<C-w>l")
+-- M.map("n", "<C-h>", "<C-w>h")
+-- M.map("n", "<C-j>", "<C-w>j")
+-- M.map("n", "<C-k>", "<C-w>k")
+-- M.map("n", "<C-l>", "<C-w>l")
 
 -- remap resizing splits to simple keybindings to avoid using command mode
 M.map("n", "<c-right>", "<cmd>vertical resize +3<cr>")
