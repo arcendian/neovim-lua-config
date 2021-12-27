@@ -22,7 +22,6 @@ local configs = {
 	"writing",
 	"dashboard",
 	"filetree",
-	"indent-blankline",
 	"devicons",
 	"comment",
 	"tree-sitter",

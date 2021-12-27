@@ -57,6 +57,7 @@ Settings.g({
 	diffopt = "internal,filler,closeoff,algorithm:patience,iwhiteall",
 	splitbelow = true,
 	linebreak = true,
+	showbreak = "↪ ",
 })
 
 Settings.b({
@@ -80,5 +81,7 @@ vim.g.wildignore = {
 	"*.ccls-cache",
 }
 vim.g.mapleader = " "
+vim.cmd([[ set listchars=tab:»\ ,extends:›,precedes:‹,nbsp:·,trail:· ]])
+vim.cmd([[ set showbreak="↪\ " ]])
 
 return Settings
