@@ -13,7 +13,7 @@ theme.setup({
 		diagnostics = "undercurl",
 	},
 	custom_highlights = {
-		TSNamespace = { fg = "#5e81ac" },
+		-- TSNamespace = { fg = "#eb9b8b" },
 		TSType = { fg = "#8fbcbb" },
 	},
 	disable = {
