@@ -81,7 +81,7 @@ vim.g.wildignore = {
 	"*.ccls-cache",
 }
 vim.g.mapleader = " "
-vim.opt.listchars:append("eol:↴")
+-- vim.opt.listchars:append("eol:↴")
 vim.opt.listchars:append("trail:·")
 vim.opt.listchars:append("precedes:←")
 vim.opt.listchars:append("extends:→")
