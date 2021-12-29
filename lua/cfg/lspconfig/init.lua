@@ -61,6 +61,7 @@ local servers = {
 	"texlab",
 	"vimls",
 	"hls",
+	"gopls",
 	"arduino_language_server",
 	"sumneko_lua",
 	-- "taplo",
@@ -98,6 +99,8 @@ for _, lsp in ipairs(servers) do
 					},
 					workspace = {
 						library = vim.api.nvim_get_runtime_file("", true),
+						maxPreload = 10000,
+						preloadFileSize = 10000,
 					},
 					telemetry = { enable = false },
 				},
