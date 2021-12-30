@@ -107,7 +107,10 @@ return packer.startup(function()
 	use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
 
 	-- tree-sitter extensions
-	use({ "p00f/nvim-ts-rainbow" })
+	use({
+		"p00f/nvim-ts-rainbow",
+		requires = "nvim-treesitter/nvim-treesitter",
+	})
 
 	-- colorscheme
 	use({ "rmehri01/onenord.nvim" })
