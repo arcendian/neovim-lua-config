@@ -113,7 +113,7 @@ local formatterConfig = {
 			return {
 				exe = "clang-format",
 				args = {
-					"-style='{BasedOnStyle: webkit, IndentWidth: 4, ColumnLimit: 80,  AlignAfterOpenBracket: Align}' --assume-filename",
+					"-style='{BasedOnStyle: chromium, IndentWidth: 4, ColumnLimit: 80,  AlignAfterOpenBracket: Align}' --assume-filename",
 					vim.api.nvim_buf_get_name(0),
 				},
 				stdin = true,
