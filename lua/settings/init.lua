@@ -81,6 +81,11 @@ vim.g.wildignore = {
 	"*.ccls-cache",
 }
 vim.g.mapleader = " "
+vim.cmd([[
+	ab myname Michael Espeña
+	ab myemail michaelespena.public@gmail.com
+]])
+
 -- vim.opt.listchars:append("eol:↴")
 vim.opt.listchars:append("trail:·")
 vim.opt.listchars:append("precedes:←")
