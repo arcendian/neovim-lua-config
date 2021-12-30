@@ -3,6 +3,7 @@
 <!-- vim-markdown-toc GFM -->
 
 * [Dependencies](#dependencies)
+* [How it looks](#how-it-looks)
 * [File structure](#file-structure)
 * [Credits](#credits)
 * [Todo](#todo)
@@ -40,6 +41,14 @@ dependencies:
   - [texlab](https://github.com/latex-lsp/texlab)
   - [tsserver](https://github.com/theia-ide/typescript-language-server)
   - [vimls](https://github.com/iamcco/vim-language-server)
+
+## How it looks
+
+I'm currently using the [onenord](https://github.com/rmehri01/onenord.nvim)
+theme. Here's how neovim looks with my config with some sample code from a
+[tutorial](https://rust-unofficial.github.io/too-many-lists/):
+
+![neovim-screenshot](./.assets/neovim-sample-screenshot-2021-12-30.png)
 
 ## File structure
 
