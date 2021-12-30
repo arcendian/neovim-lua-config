@@ -45,10 +45,4 @@ neogit.setup({
 			folded = true,
 		},
 	},
-	mappings = {
-		status = {
-			["B"] = "BranchPopup",
-			["s"] = "",
-		},
-	},
 })
