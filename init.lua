@@ -34,6 +34,8 @@ local configs = {
 	"autocmds",
 	"which-key",
 	"headlines",
+	"neogit",
+	"diffview",
 }
 
 for _, config in ipairs(configs) do
