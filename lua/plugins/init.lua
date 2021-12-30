@@ -49,12 +49,25 @@ return packer.startup(function()
 	use({ "rafamadriz/friendly-snippets" })
 
 	-- telescope - fuzzy finder and more
-	use({ "nvim-telescope/telescope.nvim" })
+	use({
+		"nvim-telescope/telescope.nvim",
+		requires = { "nvim-lua/plenary.nvim" },
+	})
 
 	-- telescope extensions
-	use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" })
-	use({ "jvgrootveld/telescope-zoxide" })
-	use("cljoly/telescope-repo.nvim")
+	use({
+		"nvim-telescope/telescope-fzf-native.nvim",
+		requires = { "nvim-telescope/telescope.nvim" },
+		run = "make",
+	})
+	use({
+		"jvgrootveld/telescope-zoxide",
+		requires = { "nvim-telescope/telescope.nvim" },
+	})
+	use({
+		"cljoly/telescope-repo.nvim",
+		requires = { "nvim-telescope/telescope.nvim" },
+	})
 
 	-- auto-pairing brackets
 	use({ "windwp/nvim-autopairs" })
@@ -73,7 +86,17 @@ return packer.startup(function()
 	use({ "mzlogin/vim-markdown-toc" })
 
 	-- git stuff
-	use({ "tpope/vim-fugitive" })
+	use({
+		"TimUntersberger/neogit",
+		requires = {
+			"nvim-lua/plenary.nvim",
+			"sindrets/diffview.nvim",
+		},
+	})
+	use({
+		"sindrets/diffview.nvim",
+		requires = "nvim-lua/plenary.nvim",
+	})
 	use({ "lewis6991/gitsigns.nvim" })
 
 	-- ARM assembly syntax hightlighting
@@ -90,7 +113,13 @@ return packer.startup(function()
 	use({ "rmehri01/onenord.nvim" })
 
 	-- fancy statusline
-	use({ "nvim-lualine/lualine.nvim" })
+	use({
+		"nvim-lualine/lualine.nvim",
+		requires = {
+			"kyazdani42/nvim-web-devicons",
+			opt = true,
+		},
+	})
 
 	-- comments plugins
 	use({ "numToStr/Comment.nvim" })
@@ -105,7 +134,10 @@ return packer.startup(function()
 	use({ "kyazdani42/nvim-web-devicons" })
 
 	-- file-explorer (netrw is nice but this looks nicer)
-	use({ "kyazdani42/nvim-tree.lua" })
+	use({
+		"kyazdani42/nvim-tree.lua",
+		requires = { "kyazdani42/nvim-web-devicons" },
+	})
 
 	-- ======================= WRITING ================================== --
 	--  plugins for writing
