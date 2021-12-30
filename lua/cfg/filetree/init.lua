@@ -1,3 +1,8 @@
+local status_ok, nvim_tree = pcall(require, "nvim-tree")
+if not status_ok then
+	return
+end
+
 vim.g.nvim_tree_icons = {
 	default = "",
 	symlink = "",
@@ -22,7 +27,7 @@ vim.g.nvim_tree_icons = {
 	},
 }
 
-require("nvim-tree").setup({
+nvim_tree.setup({
 	auto_close = true,
 	filters = {
 		custom = {
