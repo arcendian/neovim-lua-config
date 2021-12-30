@@ -1,4 +1,7 @@
-local npairs = require("nvim-autopairs")
+local status_ok, npairs = pcall(require, "nvim-autopairs")
+if not status_ok then
+	return
+end
 
 npairs.setup({
 	check_ts = true,
@@ -8,6 +11,7 @@ npairs.setup({
 	},
 	map_cr = true,
 	fast_wrap = {},
+	enable_check_bracket_line = false,
 })
 
 -- Insert `(` after select function or method item
