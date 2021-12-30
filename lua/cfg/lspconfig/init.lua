@@ -62,6 +62,8 @@ local servers = {
 	"vimls",
 	"hls",
 	"gopls",
+	"zls",
+	"clojure_lsp",
 	"arduino_language_server",
 	"sumneko_lua",
 	-- "taplo",
