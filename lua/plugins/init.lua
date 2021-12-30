@@ -83,6 +83,9 @@ return packer.startup(function()
 	-- better syntax highlighting with tree-sitter and more
 	use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
 
+	-- tree-sitter extensions
+	use({ "p00f/nvim-ts-rainbow" })
+
 	-- colorscheme
 	use({ "rmehri01/onenord.nvim" })
 

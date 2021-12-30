@@ -38,4 +38,17 @@ treesitter_cfg.setup({
 		"zig",
 	},
 	highlight = { enable = true, additional_vim_regex_highlighting = false },
+	rainbow = {
+		enable = true,
+		extended_mode = true,
+		max_file_lines = nil,
+		colors = {
+			"#e5e9f0",
+			"#81a1c1",
+			"#ebcb8b",
+			"#bf616a",
+			"#b48ead",
+			"#a3be8c",
+		},
+	},
 })
