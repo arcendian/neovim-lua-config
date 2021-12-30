@@ -19,7 +19,7 @@ telescope.setup({
 			"node_modules",
 			"__pycache__",
 			".cache",
-			".git",
+			"%.git",
 			"assets",
 			"%.png",
 			"%.jpg",
