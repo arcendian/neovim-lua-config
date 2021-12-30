@@ -71,6 +71,7 @@ and play_ and the configurations copied from their wikis.
 │ │ ├── 📂custom
 │ │ ├── 📂dashboard
 │ │ ├── 📂devicons
+│ │ ├── 📂diffview
 │ │ ├── 📂filetree
 │ │ ├── 📂formatting
 │ │ ├── 📂gitsigns
@@ -78,6 +79,7 @@ and play_ and the configurations copied from their wikis.
 │ │ ├── 📂hex-colors
 │ │ ├── 📂lspconfig
 │ │ ├── 📂md-preview
+│ │ ├── 📂neogit
 │ │ ├── 📂statusline
 │ │ ├── 📂telescope
 │ │ ├── 📂terminal
