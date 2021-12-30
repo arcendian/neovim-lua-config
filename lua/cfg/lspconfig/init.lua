@@ -60,7 +60,7 @@ local servers = {
 	"bashls",
 	"texlab",
 	"vimls",
-	"hls",
+	-- "hls",
 	"gopls",
 	"zls",
 	"clojure_lsp",
