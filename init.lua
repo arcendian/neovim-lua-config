@@ -33,6 +33,7 @@ local configs = {
 	"hex-colors",
 	"autocmds",
 	"which-key",
+	"headlines",
 }
 
 for _, config in ipairs(configs) do
