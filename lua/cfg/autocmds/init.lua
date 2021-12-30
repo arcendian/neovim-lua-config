@@ -48,6 +48,7 @@ local filetypes = {
 	"*.go",
 	"*.zig",
 	"*.java",
+	"*.ts",
 }
 local function for_each(ftTable)
 	local ft_string = table.concat(ftTable, ",")
