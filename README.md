@@ -7,6 +7,8 @@
 * [File structure](#file-structure)
 * [Credits](#credits)
 * [Todo](#todo)
+	* [Important](#important)
+	* [Miscellaneous](#miscellaneous)
 
 <!-- vim-markdown-toc -->
 
@@ -112,6 +114,13 @@ was able to write this configuration:
 - and many more others I can't remember
 
 ## Todo
+
+### Important
+
+- [ ] Maybe uninstall nvim-tree in favor of telescope-file-browser extension?
+      (or maybe they solve different problems?)
+
+### Miscellaneous
 
 - [ ] Explore more vim/neovim builtin stuff.
 - [x] Explore telescope builtin functions.
