@@ -58,6 +58,8 @@ M.map("n", "<leader>fc", "<cmd>Telescope command<CR>")
 M.map("n", "<leader>fm", "<cmd>Telescope man_pages<CR>")
 M.map("n", "<leader>fv", "<cmd>Telescope vim_options<CR>")
 M.map("n", "<leader>fp", "<cmd>Telescope planets<CR>")
+M.map("n", "<leader>ft", "<cmd>Telescope treesitter<CR>")
+M.map("n", "<leader>fr", "<cmd>Telescope reloader<CR>")
 
 -- git stuff
 M.map("n", "<leader>gc", "<cmd>Telescope git_commits<CR>")
@@ -73,10 +75,14 @@ M.map("n", "<leader>tr", "<cmd>Telescope registers<CR>")
 M.map("n", "<leader>tm", "<cmd>Telescope marks<CR>")
 M.map("n", "<leader>tk", "<cmd>Telescope keymaps<CR>")
 M.map("n", "<leader>tf", "<cmd>Telescope filetypes<CR>")
+M.map("n", "<leader>tj", "<cmd>Telescope jumplist<CR>")
+M.map("n", "<leader>tq", "<cmd>Telescope quickfix<CR>")
+M.map("n", "<leader>tl", "<cmd>Telescope loclist<CR>")
 
 -- extensions
 M.map("n", "<leader>cd", "<cmd>lua require'telescope'.extensions.zoxide.list{}<CR>")
 M.map("n", "<leader>cg", "<cmd>lua require'telescope'.extensions.repo.list{}<CR>")
+M.map("n", "<leader>fe", "<cmd>lua require 'telescope'.extensions.file_browser.file_browser()<CR>")
 
 -- =========================== CFG-CUSTOM ================================== --
 M.map("n", "<leader>sn", '<cmd>lua require("cfg.custom.telescope").search_nvimrc()<CR>')
