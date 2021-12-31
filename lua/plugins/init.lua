@@ -68,6 +68,10 @@ return packer.startup(function()
 		"cljoly/telescope-repo.nvim",
 		requires = { "nvim-telescope/telescope.nvim" },
 	})
+	use({
+		"nvim-telescope/telescope-file-browser.nvim",
+		requires = { "nvim-telescope/telescope.nvim" },
+	})
 
 	-- auto-pairing brackets
 	use({ "windwp/nvim-autopairs" })
