@@ -4,27 +4,33 @@ vim.g.dashboard_custom_footer = {
 }
 
 vim.g.dashboard_custom_section = {
-	a = { description = { "" }, command = "" },
-	b = { description = { "" }, command = "" },
-	c = {
+	a = {
+		description = { "  Explore files        SPC f e" },
+		command = "<cmd>lua require 'telescope'.extensions.file_browser.file_browser()<CR>",
+	},
+	b = {
 		description = { "  Find File            SPC f f" },
-		command = ":Telescope find_files<CR>",
+		command = "<cmd>Telescope find_files<CR>",
+	},
+	c = {
+		description = { "  Search Text          SPC f g" },
+		command = "<cmd>Telescope live_grep<CR>",
 	},
 	d = {
-		description = { "  Search Text          SPC f g" },
-		command = ":Telescope live_grep<CR>",
+		description = { "  Recent Files         SPC f o" },
+		command = "<cmd>Telescope oldfiles<CR>",
 	},
 	e = {
-		description = { "  Recent Files         SPC f o" },
-		command = ":Telescope oldfiles<CR>",
-	},
-	f = {
 		description = { "  Edit Config          SPC s n" },
 		command = '<cmd>lua require("cfg.custom.telescope").search_nvimrc()<CR>',
 	},
-	g = {
+	f = {
 		description = { "  Edit Dotfiles        SPC s d" },
 		command = '<cmd>lua require("cfg.custom.telescope").search_dotfiles()<CR>',
+	},
+	g = {
+		description = { "  Search help          SPC f h" },
+		command = "<cmd>Telescope help_tags<CR>",
 	},
 	h = { description = { "" }, command = "" },
 }
