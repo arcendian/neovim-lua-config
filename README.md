@@ -12,7 +12,7 @@
 
 ## Dependencies
 
-This configuration requires **Neovim >= v0.5.0** along with the following
+This configuration requires `NVIM v0.6.0` (or later version) along with the following
 dependencies:
 
 - **utilities**
