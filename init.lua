@@ -36,6 +36,8 @@ local configs = {
 	"headlines",
 	"neogit",
 	"diffview",
+	"notify",
+	"barbar",
 }
 
 for _, config in ipairs(configs) do

@@ -146,6 +146,15 @@ return packer.startup(function()
 		requires = { "kyazdani42/nvim-web-devicons" },
 	})
 
+	-- notifications plugin
+	use({ "rcarriga/nvim-notify" })
+
+	-- tabs
+	use({
+		"romgrk/barbar.nvim",
+		requires = { "kyazdani42/nvim-web-devicons" },
+	})
+
 	-- ======================= WRITING ================================== --
 	--  plugins for writing
 	use({ "folke/zen-mode.nvim" })
