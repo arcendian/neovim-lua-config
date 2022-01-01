@@ -68,6 +68,7 @@ and play_ and the configurations copied from their wikis.
 │ ├── 📂cfg
 │ │ ├── 📂autocmds
 │ │ ├── 📂autopairs
+│ │ ├── 📂barbar
 │ │ ├── 📂comment
 │ │ ├── 📂completion
 │ │ ├── 📂custom
@@ -82,6 +83,7 @@ and play_ and the configurations copied from their wikis.
 │ │ ├── 📂lspconfig
 │ │ ├── 📂md-preview
 │ │ ├── 📂neogit
+│ │ ├── 📂notify
 │ │ ├── 📂statusline
 │ │ ├── 📂telescope
 │ │ ├── 📂terminal
