@@ -87,7 +87,8 @@ M.map("n", "<leader>cn", "<cmd>lua require('telescope').extensions.notify.notify
 
 -- =========================== CFG-CUSTOM ================================== --
 M.map("n", "<leader>sn", '<cmd>lua require("cfg.custom.telescope").search_nvimrc()<CR>')
-M.map("n", "<leader>sd", '<cmd>lua require("cfg.custom.telescope").search_dotfiles()<CR>')
+M.map("n", "<leader>sd", '<cmd>lua rrquire("cfg.custom.telescope").search_dotfiles()<CR>')
+M.map("n", "<leader>sr", '<cmd>lua require("cfg.custom.terminal").run_python_script()<CR>')
 
 -- ======================== CFG-MD-PREVIEW ================================= --
 M.map("n", "<leader>md", "<cmd>MarkdownPreview<CR>")
