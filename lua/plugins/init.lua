@@ -115,6 +115,10 @@ return packer.startup(function()
 		"p00f/nvim-ts-rainbow",
 		requires = "nvim-treesitter/nvim-treesitter",
 	})
+	use({
+		"JoosepAlviste/nvim-ts-context-commentstring",
+		requires = "nvim-treesitter/nvim-treesitter",
+	})
 
 	-- colorscheme
 	use({ "rmehri01/onenord.nvim" })

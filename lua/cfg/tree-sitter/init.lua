@@ -19,4 +19,7 @@ treesitter_cfg.setup({
 			"#a3be8c",
 		},
 	},
+	context_commentstring = {
+		enable = true,
+	},
 })
