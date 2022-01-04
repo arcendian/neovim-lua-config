@@ -87,7 +87,7 @@ M.map("n", "<leader>cn", "<cmd>lua require('telescope').extensions.notify.notify
 
 -- =========================== CFG-CUSTOM ================================== --
 M.map("n", "<leader>sn", '<cmd>lua require("cfg.custom.telescope").search_nvimrc()<CR>')
-M.map("n", "<leader>sd", '<cmd>lua rrquire("cfg.custom.telescope").search_dotfiles()<CR>')
+M.map("n", "<leader>sd", '<cmd>lua require("cfg.custom.telescope").search_dotfiles()<CR>')
 M.map("n", "<leader>sr", '<cmd>lua require("cfg.custom.terminal").run_python_script()<CR>')
 
 -- ======================== CFG-MD-PREVIEW ================================= --
@@ -108,37 +108,5 @@ M.map("n", "<leader>xf", "<cmd>HexokinaseTurOff<CR>")
 -- ========================== CFG-TERMINAL ================================= --
 M.map("n", "<A-i>", '<cmd>lua require("FTerm").toggle()<CR>')
 M.map("t", "<A-i>", '<C-\\><C-n><cmd>lua require("FTerm").toggle()<CR>')
-
--- ========================== CFG-BARBAR =================================== --
-M.map("n", "<A-,>", ":BufferPrevious<CR>")
-M.map("n", "<A-.>", ":BufferNext<CR>")
--- Re-order to previous/next
-M.map("n", "<A-<>", ":BufferMovePrevious<CR>")
-M.map("n", "<A->>", " :BufferMoveNext<CR>")
--- Goto buffer in position...
-M.map("n", "<A-1>", ":BufferGoto 1<CR>")
-M.map("n", "<A-2>", ":BufferGoto 2<CR>")
-M.map("n", "<A-3>", ":BufferGoto 3<CR>")
-M.map("n", "<A-4>", ":BufferGoto 4<CR>")
-M.map("n", "<A-5>", ":BufferGoto 5<CR>")
-M.map("n", "<A-6>", ":BufferGoto 6<CR>")
-M.map("n", "<A-7>", ":BufferGoto 7<CR>")
-M.map("n", "<A-8>", ":BufferGoto 8<CR>")
-M.map("n", "<A-9>", ":BufferGoto 9<CR>")
-M.map("n", "<A-0>", ":BufferLast<CR>")
--- Close buffer
-M.map("n", "<A-c>", ":BufferClose<CR>")
--- Wipeout buffer
---                 :BufferWipeout<CR>
--- Close commands
---                 :BufferCloseAllButCurrent<CR>
---                 :BufferCloseBuffersLeft<CR>
---                 :BufferCloseBuffersRight<CR>
--- Magic buffer-picking mode
-M.map("n", "<C-p>", ":BufferPick<CR>")
--- Sort automatically by...
-M.map("n", "<Space>bb", ":BufferOrderByBufferNumber<CR>")
-M.map("n", "<Space>bd", ":BufferOrderByDirectory<CR>")
-M.map("n", "<Space>bl", ":BufferOrderByLanguage<CR>")
 
 return M
