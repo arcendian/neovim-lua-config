@@ -9,7 +9,7 @@ function M.map(mode, lhs, rhs, opts)
 end
 
 -- toggle highlighting when searching in buffer
-M.map("n", "<leader>nh", "<cmd>set hlsearch!<cr>")
+M.map("n", "<leader>vh", "<cmd>set hlsearch!<cr>")
 
 -- buffer navigation
 -- M.map("n", "<C-h>", "<C-w>h")
@@ -26,7 +26,7 @@ M.map("n", "<c-down>", "<cmd>resize -3<cr>")
 -- greatest remap ever according to the primeagen
 -- send the visually highlighted text to the
 -- void register which is just like /dev/null
-M.map("v", "<leader>p", '"_d')
+M.map("v", "<leader>vp", '"_d')
 
 -- ============================ CFG-WRITING ================================ --
 -- Toggle spell checking on and off
