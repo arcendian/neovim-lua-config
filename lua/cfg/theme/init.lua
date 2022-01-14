@@ -15,5 +15,4 @@ theme.setup({
 	custom_highlights = {
 		TSType = { fg = "#8fbcbb" },
 	},
-	fade_nc = true,
 })
