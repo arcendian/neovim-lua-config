@@ -46,11 +46,11 @@ dependencies:
 
 ## How it looks
 
-I'm currently using the [onenord](https://github.com/rmehri01/onenord.nvim)
-theme. Here's how neovim looks with my config with some sample code from a
-[tutorial](https://rust-unofficial.github.io/too-many-lists/):
+I'm currently using the [onedark](https://github.com/navarasu/onedark.nvim)
+theme. Here's how neovim looks with my config with some sample code from the
+[Rust book](https://doc.rust-lang.org/book/ch12-00-an-io-project.html):
 
-![neovim-screenshot](./.assets/neovim-sample-screenshot-2021-12-30.png)
+![neovim-screenshot](./.assets/neovim-screenshot-sample-2022-01-15_21-42.png)
 
 ## File structure
 
