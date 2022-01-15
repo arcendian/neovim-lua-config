@@ -11,12 +11,12 @@ treesitter_cfg.setup({
 		extended_mode = true,
 		max_file_lines = nil,
 		colors = {
-			"#88c0d0",
-			"#81a1c1",
-			"#ebcb8b",
-			"#bf616a",
-			"#b48ead",
-			"#a3be8c",
+			"#61afef",
+			"#56b6c2",
+			"#e5c07b",
+			"#e06c75",
+			"#c678dd",
+			"#98c879",
 		},
 	},
 	context_commentstring = {

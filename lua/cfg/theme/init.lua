@@ -1,18 +1,16 @@
-local status_ok, theme = pcall(require, "onenord")
+local status_ok, theme = pcall(require, "onedark")
 if not status_ok then
 	return
 end
 
 theme.setup({
-	theme = "dark",
-	borders = true,
-	styles = {
-		comments = "italic",
+	code_style = {
 		keywords = "italic",
 		functions = "italic",
-		diagnostics = "undercurl",
 	},
-	custom_highlights = {
-		TSType = { fg = "#8fbcbb" },
+	highlights = {
+		MatchParen = { fg = "$yellow" },
 	},
+	toggle_style_key = "<leader>cs",
 })
+theme.load()
