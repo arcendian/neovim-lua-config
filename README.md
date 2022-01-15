@@ -55,15 +55,15 @@ theme. Here's how neovim looks with my config with some sample code from the
 ## File structure
 
 This is the structure of my neovim directory (eliding non-config files). The
-configuration for the plugins installed is in the `cfg` directory under `lua`
+configuration for the installed plugins is in the `cfg` directory under `lua`
 with their respective `<plugin>/init.lua` files. Most of the plugins are _plug
 and play_ and the configurations copied from their wikis.
 
 ```text
 📂$HOME/.config/nvim
+├── 🌑 init.lua
 ├── 📂after
 │ └── 📂ftplugin
-├── 🌑 init.lua
 ├── 📂lua
 │ ├── 📂cfg
 │ │ ├── 📂autocmds
