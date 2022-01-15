@@ -17,12 +17,12 @@ Settings.g = function(options)
 	add_options(Type.GLOBAL_OPTION, options)
 end
 
-Settings.w = function(options)
-	add_options(Type.WINDOW_OPTION, options)
-end
-
 Settings.b = function(options)
 	add_options(Type.BUFFER_OPTION, options)
+end
+
+Settings.w = function(options)
+	add_options(Type.WINDOW_OPTION, options)
 end
 
 Settings.g({
@@ -70,6 +70,8 @@ Settings.w({
 	relativenumber = true,
 	signcolumn = "yes",
 	linebreak = true,
+	-- foldmethod = "expr",
+	-- foldexpr = "nvim_treesitter#foldexpr()",
 })
 
 vim.g.wildignore = {
