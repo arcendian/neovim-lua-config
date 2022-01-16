@@ -27,7 +27,7 @@ local formatterConfig = {
 			return {
 				exe = "clang-format",
 				args = {
-					"-style='{BasedOnStyle: google, IndentWidth: 4, AccessModifierOffset: -4, BreakBeforeBraces: Linux, AllowShortFunctionsOnASingleLine: None}' --assume-filename",
+					"-style='{BasedOnStyle: gnu, IndentWidth: 4, AccessModifierOffset: -4, BreakBeforeBraces: Linux, AlwaysBreakAfterDefinitionReturnType: None, AlwaysBreakAfterReturnType: None}' --assume-filename",
 					vim.api.nvim_buf_get_name(0),
 				},
 				stdin = true,
@@ -41,7 +41,7 @@ local formatterConfig = {
 			return {
 				exe = "clang-format",
 				args = {
-					"-style='{BasedOnStyle: google, IndentWidth: 4, AccessModifierOffset: -4, BreakBeforeBraces: Linux, AllowShortFunctionsOnASingleLine: None}' --assume-filename",
+					"-style='{BasedOnStyle: gnu, IndentWidth: 4, AccessModifierOffset: -4, BreakBeforeBraces: Linux, AlwaysBreakAfterDefinitionReturnType: None, AlwaysBreakAfterReturnType: None}' --assume-filename",
 					vim.api.nvim_buf_get_name(0),
 				},
 				stdin = true,
