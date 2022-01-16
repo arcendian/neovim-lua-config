@@ -10,6 +10,7 @@ theme.setup({
 	},
 	highlights = {
 		MatchParen = { fg = "$yellow" },
+		TSNamespace = { fg = "#a9a1e1" },
 	},
 	toggle_style_key = "<leader>cs",
 })
