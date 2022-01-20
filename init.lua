@@ -33,7 +33,6 @@ local configs = {
 	"hex-colors",
 	"autocmds",
 	"which-key",
-	"headlines",
 	"neogit",
 	"diffview",
 	"notify",

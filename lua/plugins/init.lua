@@ -158,8 +158,4 @@ return packer.startup(function()
 	use({ "folke/zen-mode.nvim" })
 	use({ "folke/twilight.nvim" })
 	use({ "vimwiki/vimwiki" })
-
-	-- horizontal highlights for text filetypes, like markdown, rmd,
-	-- vimwiki and orgmode
-	use({ "lukas-reineke/headlines.nvim" })
 end)
