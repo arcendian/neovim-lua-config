@@ -134,6 +134,12 @@ for _, lsp in ipairs(servers) do
 end
 
 -- =================== LSP diagnostics customization ======================= --
+local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }
+
+for type, icon in pairs(signs) do
+	local hl = "DiagnosticSign" .. type
+	vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
+end
 
 local config = {
 	-- disable virtual text
@@ -170,10 +176,3 @@ vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.s
 -- 		prefix = "●", -- Could be '●', '▎', 'x'
 -- 	},
 -- })
-
-local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }
-
-for type, icon in pairs(signs) do
-	local hl = "DiagnosticSign" .. type
-	vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
-end
