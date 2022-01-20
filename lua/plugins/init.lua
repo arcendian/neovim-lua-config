@@ -121,7 +121,7 @@ return packer.startup(function()
 	})
 
 	-- colorscheme
-	use({ "navarasu/onedark.nvim" })
+	use({ "catppuccin/nvim" })
 
 	-- fancy statusline
 	use({
