@@ -29,7 +29,7 @@ Settings.g({
 	tabstop = 4,
 	softtabstop = 4,
 	shiftwidth = 4,
-	expandtab = false,
+	expandtab = true,
 	updatetime = 100,
 	autoindent = true,
 	smartindent = true,
@@ -89,7 +89,7 @@ vim.cmd([[
 ]])
 
 -- vim.opt.listchars:append("eol:↴")
--- vim.opt.listchars:append("tab:» ")
+vim.opt.listchars:append("tab:» ")
 vim.opt.listchars:append("trail:·")
 vim.opt.listchars:append("precedes:←")
 vim.opt.listchars:append("extends:→")
