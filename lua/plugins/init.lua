@@ -121,7 +121,7 @@ return packer.startup(function()
 	})
 
 	-- colorscheme
-	use({ "catppuccin/nvim" })
+	use({ "rmehri01/onenord.nvim" })
 
 	-- fancy statusline
 	use({
