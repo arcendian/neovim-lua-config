@@ -1,7 +1,23 @@
-vim.g.substrata_italic_comments = true
-vim.g.substrata_italic_functions = true
-vim.g.substrata_italic_keywords = true
-vim.g.substrata_italic_boolean = true
-vim.g.substrata_transparent = true
+local status_ok, theme = pcall(require, "onenord")
+if not status_ok then
+	return
+end
 
-vim.cmd([[colorscheme substrata]])
+theme.setup({
+	theme = nil,
+	borders = true,
+	fade_nc = false,
+	styles = {
+		comments = "italic",
+		strings = "NONE",
+		keywords = "italic",
+		functions = "NONE",
+		variables = "NONE",
+		diagnostics = "undercurl",
+	},
+	disable = {
+		background = true,
+		cursorline = false,
+		eob_lines = true,
+	},
+})
