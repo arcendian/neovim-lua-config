@@ -122,6 +122,7 @@ return packer.startup(function()
 
 	-- colorscheme
 	use({ "rmehri01/onenord.nvim" })
+	use({ "kvrohit/substrata.nvim" })
 
 	-- fancy statusline
 	use({
