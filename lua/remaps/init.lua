@@ -27,7 +27,7 @@ M.map("n", "<c-down>", "<cmd>resize -3<cr>")
 -- send the visually highlighted text to the
 -- void register which is just like /dev/null
 M.map("v", "<leader>vp", '"_d')
-M.map("n", "<leader>vs", "vf{%")
+M.map("n", "<leader>vs", "Vf{%")
 
 -- ============================ CFG-WRITING ================================ --
 -- Toggle spell checking on and off
