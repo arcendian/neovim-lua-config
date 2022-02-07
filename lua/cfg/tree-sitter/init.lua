@@ -14,10 +14,10 @@ treesitter_cfg.setup({
 		colors = {
 			"#BF616A",
 			"#A3BE8C",
+			"#88C0D0",
 			"#EBCB8B",
 			"#81A1C1",
 			"#B988B0",
-			"#88C0D0",
 			"#E5E9F0",
 		},
 	},
