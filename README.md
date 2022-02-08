@@ -50,7 +50,7 @@ I'm currently using the [onenord](https://github.com/rmehri01/onenord")
 theme. Here's how neovim looks with my config with some sample code from the
 [Rust book](https://doc.rust-lang.org/book/ch12-00-an-io-project.html):
 
-![neovim-screenshot](./.assets/neovim-sample-screenshot-2022-01-31_10-45.png)
+![neovim-screenshot](./.assets/neovim-sample-screenshot-2022-02-08_13-20.png)
 
 ## File structure
 
