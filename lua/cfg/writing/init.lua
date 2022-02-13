@@ -1,8 +1,32 @@
 -- ======================= ZEN MODE ======================================== --
-local status_ok, zen_mode = pcall(require, "zen-mode")
-if not status_ok then
+local zen_loaded, zen_mode = pcall(require, "zen-mode")
+if not zen_loaded then
 	return
 end
+
+local twilight_loaded, twilight = pcall(require, "twilight")
+if not twilight_loaded then
+	return
+end
+
+twilight.setup({
+	{
+		dimming = {
+			alpha = 0.25,
+			-- color = { "Normal", "#435c5e" },
+			inactive = true,
+		},
+		context = 10,
+		treesitter = true,
+		expand = {
+			"function",
+			"method",
+			"table",
+			"if_statement",
+		},
+		exclude = {}, -- exclude these filetypes
+	},
+})
 
 zen_mode.setup({
 	window = {
