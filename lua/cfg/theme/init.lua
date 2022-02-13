@@ -16,7 +16,7 @@ theme.setup({
 		diagnostics = "undercurl",
 	},
 	disable = {
-		background = true,
+		background = false,
 		cursorline = false,
 		eob_lines = true,
 	},
