@@ -79,7 +79,7 @@ local servers = {
 	"bashls",
 	"texlab",
 	"vimls",
-	-- "hls",
+	"hls",
 	"gopls",
 	"zls",
 	"clojure_lsp",
@@ -143,7 +143,7 @@ end
 
 local config = {
 	-- disable virtual text
-	virtual_text = true,
+	virtual_text = false,
 	-- show signs
 	signs = {
 		active = signs,
