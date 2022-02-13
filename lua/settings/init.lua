@@ -41,7 +41,7 @@ Settings.g({
 	sidescrolloff = 8,
 	hidden = true,
 	cursorline = true,
-	colorcolumn = "0",
+	colorcolumn = "80",
 	completeopt = "menu,menuone,noselect,noinsert",
 	swapfile = false,
 	backup = false,
