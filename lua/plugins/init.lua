@@ -43,10 +43,8 @@ return packer.startup(function()
 	use({ "ray-x/lsp_signature.nvim" })
 
 	-- snippets
-	use({ "hrsh7th/vim-vsnip" })
-	use({ "hrsh7th/vim-vsnip-integ" })
-	use({ "hrsh7th/cmp-vsnip" })
-	use({ "rafamadriz/friendly-snippets" })
+	use({ "L3MON4D3/LuaSnip" })
+	use({ "saadparwaiz1/cmp_luasnip" })
 
 	-- telescope - fuzzy finder and more
 	use({
