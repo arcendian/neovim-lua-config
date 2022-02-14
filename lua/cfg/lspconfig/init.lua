@@ -85,6 +85,7 @@ local servers = {
 	"clojure_lsp",
 	"arduino_language_server",
 	"sumneko_lua",
+	"awk_ls",
 	-- "taplo",
 }
 local cmp_capabilities = require("cmp_nvim_lsp").update_capabilities(vim.lsp.protocol.make_client_capabilities())
