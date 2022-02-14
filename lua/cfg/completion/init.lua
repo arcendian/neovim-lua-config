@@ -81,11 +81,13 @@ cmp.setup({
 	},
 	sources = {
 		{ name = "nvim_lsp" },
-		{ name = "tree-sitter" },
 		{ name = "luasnip" },
 		{ name = "buffer" },
 		{ name = "path" },
 		{ name = "cmdline" },
+		{ name = "rg" },
+		{ name = "nvim_lua" },
+		{ name = "latex_symbols" },
 	},
 	formatting = {
 		format = function(entry, vim_item)

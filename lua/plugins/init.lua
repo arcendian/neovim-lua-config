@@ -35,12 +35,20 @@ return packer.startup(function()
 
 	-- lsp configurations
 	use({ "neovim/nvim-lspconfig" })
+	use({ "hrsh7th/nvim-cmp" })
+	use({ "ray-x/lsp_signature.nvim" })
+
+	-- completion sources
 	use({ "hrsh7th/cmp-nvim-lsp" })
 	use({ "hrsh7th/cmp-buffer" })
 	use({ "hrsh7th/cmp-path" })
 	use({ "hrsh7th/cmp-cmdline" })
-	use({ "hrsh7th/nvim-cmp" })
-	use({ "ray-x/lsp_signature.nvim" })
+	use({ "hrsh7th/cmp-nvim-lua" })
+	use({ "lukas-reineke/cmp-rg" })
+	use({ "kdheepak/cmp-latex-symbols" })
+
+	-- sorting completion suggestions
+	use({ "lukas-reineke/cmp-under-comparator" })
 
 	-- snippets
 	use({ "L3MON4D3/LuaSnip" })
