@@ -26,7 +26,7 @@ ls.snippets = {
 	},
 
 	lua = {
-		ls.parser.parse_snippet("lf", "local $1 = function($2)\n  $0\nend"),
+		ls.parser.parse_snippet("lf", "local ${1:myFunction} = function(${2:args})\n  $0\nend"),
 		ls.parser.parse_snippet("mf", "$1.$2 = function($3)\n  $0\nend"),
 	},
 
