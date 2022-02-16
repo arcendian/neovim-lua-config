@@ -110,4 +110,7 @@ M.map("n", "<leader>xf", "<cmd>HexokinaseTurOff<CR>")
 M.map("n", "<A-i>", '<cmd>lua require("FTerm").toggle()<CR>')
 M.map("t", "<A-i>", '<C-\\><C-n><cmd>lua require("FTerm").toggle()<CR>')
 
+M.map("n", "<leader><leader>i", "<cmd>source ~/.config/nvim/init.lua<CR>")
+M.map("n", "<leader><leader>s", "<cmd>source ~/.config/nvim/lua/cfg/snippets/init.lua<CR>")
+
 return M

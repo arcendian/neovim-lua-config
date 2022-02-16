@@ -109,6 +109,17 @@ which_key.register({
 				"<cmd>lua vim.lsp.buf.formatting()<CR>",
 				"buffer formatting?",
 			},
+
+			["<leader>"] = {
+				i = {
+					"<cmd>souce ~/.config/nvim/init.lua<CR>",
+					"reload neovim",
+				},
+				s = {
+					"<cmd>souce ~/.config/nvim/lua/cfg/snippets/init.lua<CR>",
+					"reload snippets",
+				},
+			},
 		},
 		s = {
 			name = "custom stuff",
