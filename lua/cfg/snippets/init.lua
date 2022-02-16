@@ -35,6 +35,14 @@ ls.snippets = {
 	},
 
 	tex = {
-		ls.parser.parse_snippet("begin", "\begin{$1}\n$0\n\\end{document}"),
+		ls.parser.parse_snippet("begin", "\\begin{${1:env}}\n$0\n\\end{${1:env}}"),
+	},
+
+	c = {
+		ls.parser.parse_snippet("struct", "struct ${1:myStruct} {\n\t$0\n};"),
+	},
+
+	cpp = {
+		ls.parser.parse_snippet("class", "class ${1:myClass} {\n\t$0\n};"),
 	},
 }
