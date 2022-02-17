@@ -33,7 +33,7 @@ Settings.g({
 	updatetime = 100,
 	autoindent = true,
 	smartindent = true,
-	wrap = false,
+	wrap = true,
 	incsearch = true,
 	hlsearch = false,
 	exrc = true,
@@ -84,7 +84,7 @@ vim.g.wildignore = {
 }
 vim.g.mapleader = " "
 
-vim.opt.listchars:append("eol:↴")
+-- vim.opt.listchars:append("eol:↴")
 vim.opt.listchars:append("tab:» ")
 vim.opt.listchars:append("trail:·")
 vim.opt.listchars:append("precedes:←")
