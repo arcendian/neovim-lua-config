@@ -27,7 +27,7 @@ local formatterConfig = {
 			return {
 				exe = "clang-format",
 				args = {
-					"-style='{BasedOnStyle: chromium, IndentWidth: 4, AccessModifierOffset: -4}' --assume-filename",
+					"-style='{BasedOnStyle: chromium, IndentWidth: 4, AllowShortFunctionsOnASingleLine: None, AccessModifierOffset: -4}' --assume-filename",
 					vim.api.nvim_buf_get_name(0),
 				},
 				stdin = true,
@@ -41,7 +41,7 @@ local formatterConfig = {
 			return {
 				exe = "clang-format",
 				args = {
-					"-style='{BasedOnStyle: chromium, IndentWidth: 4, AccessModifierOffset: -4}' --assume-filename",
+					"-style='{BasedOnStyle: chromium, IndentWidth: 4, AllowShortFunctionsOnASingleLine: None, AccessModifierOffset: -4}' --assume-filename",
 					vim.api.nvim_buf_get_name(0),
 				},
 				stdin = true,
@@ -55,7 +55,7 @@ local formatterConfig = {
 			return {
 				exe = "clang-format",
 				args = {
-					"-style='{BasedOnStyle: chromium, IndentWidth: 4, AccessModifierOffset: -4}' --assume-filename",
+					"-style='{BasedOnStyle: chromium, IndentWidth: 4, AllowShortFunctionsOnASingleLine: None, AccessModifierOffset: -4}' --assume-filename",
 					vim.api.nvim_buf_get_name(0),
 				},
 				stdin = true,
@@ -113,7 +113,7 @@ local formatterConfig = {
 			return {
 				exe = "clang-format",
 				args = {
-					"-style='{BasedOnStyle: chromium, IndentWidth: 4, AccessModifierOffset: -4}' --assume-filename",
+					"-style='{BasedOnStyle: chromium, IndentWidth: 4, AllowShortFunctionsOnASingleLine: None, AccessModifierOffset: -4}' --assume-filename",
 					vim.api.nvim_buf_get_name(0),
 				},
 				stdin = true,
