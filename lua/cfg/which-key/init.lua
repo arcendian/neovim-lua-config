@@ -112,12 +112,20 @@ which_key.register({
 
 			["<leader>"] = {
 				i = {
-					"<cmd>souce ~/.config/nvim/init.lua<CR>",
+					"<cmd>source ~/.config/nvim/init.lua<CR>",
 					"reload neovim",
 				},
 				s = {
-					"<cmd>souce ~/.config/nvim/lua/cfg/snippets/init.lua<CR>",
+					"<cmd>source ~/.config/nvim/lua/cfg/snippets/init.lua<CR>",
 					"reload snippets",
+				},
+				f = {
+					"<cmd>source %<CR>",
+					"source current file",
+				},
+				w = {
+					"<cmd>set wrap!<CR>",
+					"set wrap",
 				},
 			},
 		},

@@ -112,5 +112,8 @@ M.map("t", "<A-i>", '<C-\\><C-n><cmd>lua require("FTerm").toggle()<CR>')
 
 M.map("n", "<leader><leader>i", "<cmd>source ~/.config/nvim/init.lua<CR>")
 M.map("n", "<leader><leader>s", "<cmd>source ~/.config/nvim/lua/cfg/snippets/init.lua<CR>")
+M.map("n", "<leader><leader>f", "<cmd>source %<CR>")
+
+M.map("n", "<leader><leader>w", "<cmd>set wrap!<CR>")
 
 return M
