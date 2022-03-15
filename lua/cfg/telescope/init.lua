@@ -35,6 +35,10 @@ telescope.setup({
 			"%.webm",
 			"%.wav",
 			"%.ttf",
+			"%.aux",
+			"%.log",
+			"%.toc",
+			"%.out",
 		},
 	},
 	pickers = {
