@@ -5,21 +5,21 @@ if not status_ok then
 end
 
 -- highlight instances of the string under the cursor?
--- local function lsp_highlight_document(client)
--- 	-- Set autocommands conditional on server_capabilities
--- 	if client.resolved_capabilities.document_highlight then
--- 		vim.api.nvim_exec(
--- 			[[
---       augroup lsp_document_highlight
---         autocmd! * <buffer>
---         autocmd CursorHold <buffer> lua vim.lsp.buf.document_highlight()
---         autocmd CursorMoved <buffer> lua vim.lsp.buf.clear_references()
---       augroup END
---     ]],
--- 			false
--- 		)
--- 	end
--- end
+local function lsp_highlight_document(client)
+	-- Set autocommands conditional on server_capabilities
+	if client.resolved_capabilities.document_highlight then
+		vim.api.nvim_exec(
+			[[
+      augroup lsp_document_highlight
+        autocmd! * <buffer>
+        autocmd CursorHold <buffer> lua vim.lsp.buf.document_highlight()
+        autocmd CursorMoved <buffer> lua vim.lsp.buf.clear_references()
+      augroup END
+    ]],
+			false
+		)
+	end
+end
 
 -- Use an on_attach function to only map the following keys
 -- after the language server attaches to the current buffer
@@ -33,12 +33,13 @@ local on_attach = function(client, bufnr)
 
 	require("lsp_signature").on_attach({
 		bind = true, -- This is mandatory, otherwise border config won't get registered.
+		hint_enable = false,
 		handler_opts = {
 			border = "rounded",
 		},
 	}, bufnr)
 
-	-- lsp_highlight_document(client)
+	lsp_highlight_document(client)
 
 	-- Enable completion triggered by <c-x><c-o>
 	buf_set_option("omnifunc", "v:lua.vim.lsp.omnifunc")
