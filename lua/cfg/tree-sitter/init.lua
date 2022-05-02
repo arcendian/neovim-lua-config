@@ -4,7 +4,7 @@ if not status_ok then
 end
 
 treesitter_cfg.setup({
-	ensure_installed = "maintained",
+	-- ensure_installed = "maintained",
 	highlight = { enable = true, additional_vim_regex_highlighting = false },
 	rainbow = {
 		enable = true,
