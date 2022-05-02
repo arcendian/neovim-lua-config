@@ -94,16 +94,16 @@ local cmp_capabilities = require("cmp_nvim_lsp").update_capabilities(vim.lsp.pro
 local lsp_opts = { on_attach = on_attach, capabilities = cmp_capabilities }
 
 for _, lsp in ipairs(servers) do
-	if lsp == "arduino_language_server" then
-		local arduino_opts = {
-			cmd = {
-				"arduino-language-server",
-				"-cli-config",
-				"/home/mice/.arduino15/arduino-cli.yaml",
-			},
-		}
-		lsp_opts = vim.tbl_deep_extend("force", lsp_opts, arduino_opts)
-	end
+	-- if lsp == "arduino_language_server" then
+	-- 	local arduino_opts = {
+	-- 		cmd = {
+	-- 			"arduino-language-server",
+	-- 			"-cli-config",
+	-- 			"/home/mice/.arduino15/arduino-cli.yaml",
+	-- 		},
+	-- 	}
+	-- 	lsp_opts = vim.tbl_deep_extend("force", lsp_opts, arduino_opts)
+	-- end
 
 	-- TODO: figure out why lua lsp loads so slow
 	if lsp == "sumneko_lua" then
