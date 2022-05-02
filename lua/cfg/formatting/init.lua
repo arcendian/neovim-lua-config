@@ -88,15 +88,15 @@ local formatterConfig = {
 		end,
 	},
 
-	fennel = {
-		function()
-			return {
-				exe = "fnlfmt",
-				args = { vim.api.nvim_buf_get_name(0) },
-				stdin = true,
-			}
-		end,
-	},
+	-- fennel = {
+	-- 	function()
+	-- 		return {
+	-- 			exe = "fnlfmt",
+	-- 			args = { vim.api.nvim_buf_get_name(0) },
+	-- 			stdin = true,
+	-- 		}
+	-- 	end,
+	-- },
 
 	go = {
 		function()
