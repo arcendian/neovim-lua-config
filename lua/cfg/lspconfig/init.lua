@@ -70,6 +70,7 @@ end
 -- Use a loop to conveniently call 'setup' on multiple servers and
 -- map buffer local keybindings when the language server attaches
 local servers = {
+	-- "jdtls",
 	"pyright",
 	"rust_analyzer",
 	-- "tsserver",
@@ -85,7 +86,7 @@ local servers = {
 	-- "zls",
 	-- "clojure_lsp",
 	-- "awk_ls",
-	-- "julials",
+	"julials",
 	-- "arduino_language_server",
 	"sumneko_lua",
 	-- "taplo",
