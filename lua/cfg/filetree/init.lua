@@ -28,7 +28,6 @@ vim.g.nvim_tree_icons = {
 }
 
 nvim_tree.setup({
-	auto_close = true,
 	filters = {
 		custom = {
 			".git",
