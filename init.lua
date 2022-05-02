@@ -5,7 +5,7 @@
 --    █    █  █ █   █      █           █      █    █  █▄▄█
 --  ▄▄█▄▄  █   ██ ▄▄█▄▄    █      █    █▄▄▄▄▄ ▀▄▄▄▄▀ █    █
 --
---  Michael Espeña (https://gitlab.com/paperbackwriter/neovim-lua-config)
+--  Michael Espeña (https://gitlab.com/arcendian/neovim-lua-config)
 --
 require("plugins")
 require("settings")
