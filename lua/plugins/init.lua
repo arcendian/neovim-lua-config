@@ -37,6 +37,7 @@ return packer.startup(function()
 	use({ "neovim/nvim-lspconfig" })
 	use({ "hrsh7th/nvim-cmp" })
 	use({ "ray-x/lsp_signature.nvim" })
+	use({ "mfussenegger/nvim-jdtls" })
 
 	-- completion sources
 	use({ "hrsh7th/cmp-nvim-lsp" })
