@@ -93,8 +93,8 @@ return packer.startup(function()
 	use({ "numToStr/FTerm.nvim" })
 
 	-- markdown preview in browser
-	use({ "iamcco/markdown-preview.nvim", run = "cd app && yarn install" })
-	use({ "mzlogin/vim-markdown-toc" })
+	-- use({ "iamcco/markdown-preview.nvim", run = "cd app && yarn install" })
+	-- use({ "mzlogin/vim-markdown-toc" })
 
 	-- git stuff
 	use({

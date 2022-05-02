@@ -18,7 +18,6 @@ local configs = {
 	"terminal",
 	"autopairs",
 	"completion",
-	"md-preview",
 	"writing",
 	"dashboard",
 	"filetree",
