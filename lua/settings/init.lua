@@ -58,6 +58,7 @@ Settings.g({
 	splitbelow = true,
 	linebreak = true,
 	showbreak = "↪ ",
+	laststatus = 3,
 })
 
 Settings.b({
