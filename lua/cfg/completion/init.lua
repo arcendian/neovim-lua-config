@@ -87,7 +87,7 @@ cmp.setup({
 		{ name = "cmdline" },
 		{ name = "rg" },
 		{ name = "nvim_lua" },
-		{ name = "latex_symbols" },
+		-- { name = "latex_symbols" },
 	},
 	formatting = {
 		format = function(entry, vim_item)

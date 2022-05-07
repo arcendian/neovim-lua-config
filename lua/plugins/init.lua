@@ -46,7 +46,6 @@ return packer.startup(function()
 	use({ "hrsh7th/cmp-cmdline" })
 	use({ "hrsh7th/cmp-nvim-lua" })
 	use({ "lukas-reineke/cmp-rg" })
-	use({ "kdheepak/cmp-latex-symbols" })
 
 	-- sorting completion suggestions
 	use({ "lukas-reineke/cmp-under-comparator" })
