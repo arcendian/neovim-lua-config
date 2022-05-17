@@ -1,30 +1,9 @@
 local M = {}
 
-function M.autocmd(event, triggers, operations)
-	local cmd = string.format("autocmd %s %s %s", event, triggers, operations)
-	vim.cmd(cmd)
+function M.autocmd(event, filetype, operations, augroup)
+	vim.api.nvim_create_autocmd(event, { command = operations, pattern = filetype, group = augroup })
 end
 
-function M.exec(augrp)
-	local begin_augroup = "augroup FormatAutogroup\nautocmd!"
-	local end_augroup = "augroup END"
-	local augroup = string.format("%s\nautocmd %s\n%s", begin_augroup, augrp, end_augroup)
-	vim.api.nvim_exec(augroup, true)
-end
-
-local on_newfile = "BufNew,BufRead"
-local ft_nasm = "*.asm"
-local ft_arm = "*.s,*.S"
-local set_nasm = "set ft=nasm"
-local set_arm = 'set ft=arm " arm=arm6/7'
-
--- assembly files
-M.autocmd(on_newfile, ft_nasm, set_nasm)
-M.autocmd(on_newfile, ft_arm, set_arm)
-
--- formatting
-local on_save = "BufWritePost "
-local format = " FormatWrite"
 local filetypes = {
 	"*.js",
 	"*.rs",
@@ -49,12 +28,17 @@ local filetypes = {
 	"*.zig",
 	"*.java",
 	"*.ts",
+	"*.sh",
 }
-local function for_each(ftTable)
-	local ft_string = table.concat(ftTable, ",")
-	return ft_string
+
+local format_on_save_group = vim.api.nvim_create_augroup("FormatOnSave", { clear = true })
+local assembly_files_group = vim.api.nvim_create_augroup("AssemblyFiles", { clear = true })
+
+for _, filetype in ipairs(filetypes) do
+	M.autocmd({ "BufWritePost" }, filetype, "FormatWrite", format_on_save_group)
 end
 
-M.exec(on_save .. for_each(filetypes) .. format)
+M.autocmd({ "BufNew", "BufRead" }, "*.asm", "set ft=nasm", assembly_files_group)
+M.autocmd({ "BufNew", "BufRead" }, "*.s, *.S", 'set ft=arm " arm=arm6/7', assembly_files_group)
 
 return M
