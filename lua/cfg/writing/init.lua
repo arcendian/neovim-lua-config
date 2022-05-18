@@ -1,15 +1,5 @@
 -- ======================= ZEN MODE ======================================== --
-local zen_loaded, zen_mode = pcall(require, "zen-mode")
-if not zen_loaded then
-	return
-end
-
-local twilight_loaded, twilight = pcall(require, "twilight")
-if not twilight_loaded then
-	return
-end
-
-twilight.setup({
+require("twilight").setup({
 	{
 		dimming = {
 			alpha = 0.25,
@@ -24,11 +14,10 @@ twilight.setup({
 			"table",
 			"if_statement",
 		},
-		exclude = {}, -- exclude these filetypes
 	},
 })
 
-zen_mode.setup({
+require("zen-mode").setup({
 	window = {
 		options = {
 			signcolumn = "no",

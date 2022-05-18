@@ -1,9 +1,4 @@
-local status_ok, ls = pcall(require, "luasnip")
-if not status_ok then
-	return
-end
-
--- local types = require("luasnip.util.types")
+local ls = require("luasnip")
 
 require("luasnip.loaders.from_vscode").load()
 

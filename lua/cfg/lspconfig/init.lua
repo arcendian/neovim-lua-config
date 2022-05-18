@@ -1,8 +1,5 @@
 -- ===================== LSP config ======================================== --
-local status_ok, nvim_lsp = pcall(require, "lspconfig")
-if not status_ok then
-	return
-end
+local nvim_lsp = require("lspconfig")
 
 -- highlight instances of the string under the cursor?
 -- local function lsp_highlight_document(client)
@@ -30,14 +27,6 @@ local on_attach = function(client, bufnr)
 	local function buf_set_option(...)
 		vim.api.nvim_buf_set_option(bufnr, ...)
 	end
-
-	require("lsp_signature").on_attach({
-		bind = true, -- This is mandatory, otherwise border config won't get registered.
-		hint_enable = false,
-		handler_opts = {
-			border = "rounded",
-		},
-	}, bufnr)
 
 	-- lsp_highlight_document(client)
 
