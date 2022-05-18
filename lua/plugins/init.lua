@@ -33,8 +33,6 @@ return packer.startup(function()
 	-- lsp configurations
 	use({ "neovim/nvim-lspconfig" })
 	use({ "hrsh7th/nvim-cmp" })
-	use({ "ray-x/lsp_signature.nvim" })
-	use({ "mfussenegger/nvim-jdtls" })
 
 	-- completion sources
 	use({ "hrsh7th/cmp-nvim-lsp" })
@@ -79,6 +77,8 @@ return packer.startup(function()
 
 	-- auto-pairing brackets
 	use({ "windwp/nvim-autopairs" })
+	use({ "windwp/nvim-ts-autotag" })
+	use({ "RRethy/nvim-treesitter-endwise" })
 
 	-- keybindings
 	use({ "folke/which-key.nvim" })
@@ -88,10 +88,6 @@ return packer.startup(function()
 
 	-- plugin for easier use of builtin terminal
 	use({ "numToStr/FTerm.nvim" })
-
-	-- markdown preview in browser
-	-- use({ "iamcco/markdown-preview.nvim", run = "cd app && yarn install" })
-	-- use({ "mzlogin/vim-markdown-toc" })
 
 	-- git stuff
 	use({
@@ -109,6 +105,9 @@ return packer.startup(function()
 
 	-- ARM assembly syntax hightlighting
 	use({ "ARM9/arm-syntax-vim" })
+
+	-- julia programming support
+	use({ "JuliaEditorSupport/julia-vim" })
 
 	-- ========================== UI ====================================== --
 	-- better syntax highlighting with tree-sitter and more
