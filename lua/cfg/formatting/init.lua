@@ -1,9 +1,26 @@
-local status_ok, formatter = pcall(require, "formatter")
-if not status_ok then
-	return
+local formatter = require("formatter")
+
+local function myclangformat()
+	local myclangstyle = "'{BasedOnStyle: Chromium, IndentWidth: 4, AccessModifierOffset: -4}' "
+	return function()
+		return {
+			exe = "clang-format",
+			args = {
+				"-style=" .. myclangstyle .. "--assume-filename",
+				vim.api.nvim_buf_get_name(0),
+			},
+			stdin = true,
+			cwd = vim.fn.expand("%:p:h"),
+		}
+	end
 end
 
 local formatterConfig = {
+	arduino = { myclangformat() },
+	c = { myclangformat() },
+	cpp = { myclangformat() },
+	java = { myclangformat() },
+
 	rust = {
 		function()
 			return { exe = "rustfmt", args = { "--emit=stdout" }, stdin = true }
@@ -19,48 +36,6 @@ local formatterConfig = {
 	lua = {
 		function()
 			return { exe = "stylua", args = { "-" }, stdin = true }
-		end,
-	},
-
-	cpp = {
-		function()
-			return {
-				exe = "clang-format",
-				args = {
-					"-style='{BasedOnStyle: chromium, IndentWidth: 4, AllowShortFunctionsOnASingleLine: None, AccessModifierOffset: -4}' --assume-filename",
-					vim.api.nvim_buf_get_name(0),
-				},
-				stdin = true,
-				cwd = vim.fn.expand("%:p:h"),
-			}
-		end,
-	},
-
-	c = {
-		function()
-			return {
-				exe = "clang-format",
-				args = {
-					"-style='{BasedOnStyle: chromium, IndentWidth: 4, AllowShortFunctionsOnASingleLine: None, AccessModifierOffset: -4}' --assume-filename",
-					vim.api.nvim_buf_get_name(0),
-				},
-				stdin = true,
-				cwd = vim.fn.expand("%:p:h"),
-			}
-		end,
-	},
-
-	arduino = {
-		function()
-			return {
-				exe = "clang-format",
-				args = {
-					"-style='{BasedOnStyle: chromium, IndentWidth: 4, AllowShortFunctionsOnASingleLine: None, AccessModifierOffset: -4}' --assume-filename",
-					vim.api.nvim_buf_get_name(0),
-				},
-				stdin = true,
-				cwd = vim.fn.expand("%:p:h"),
-			}
 		end,
 	},
 
@@ -88,45 +63,11 @@ local formatterConfig = {
 		end,
 	},
 
-	-- fennel = {
-	-- 	function()
-	-- 		return {
-	-- 			exe = "fnlfmt",
-	-- 			args = { vim.api.nvim_buf_get_name(0) },
-	-- 			stdin = true,
-	-- 		}
-	-- 	end,
-	-- },
-
 	go = {
 		function()
 			return {
 				exe = "gofmt",
 				args = { vim.api.nvim_buf_get_name(0) },
-				stdin = true,
-			}
-		end,
-	},
-
-	java = {
-		function()
-			return {
-				exe = "clang-format",
-				args = {
-					"-style='{BasedOnStyle: chromium, IndentWidth: 4, AllowShortFunctionsOnASingleLine: None, AccessModifierOffset: -4}' --assume-filename",
-					vim.api.nvim_buf_get_name(0),
-				},
-				stdin = true,
-				cwd = vim.fn.expand("%:p:h"),
-			}
-		end,
-	},
-
-	zig = {
-		function()
-			return {
-				exe = "zig fmt",
-				args = { "--stdin" },
 				stdin = true,
 			}
 		end,
