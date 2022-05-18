@@ -18,7 +18,16 @@ require("nvim-treesitter.configs").setup({
 			"#E5E9F0",
 		},
 	},
+
 	context_commentstring = {
+		enable = true,
+	},
+
+	autotag = {
+		enable = true,
+	},
+
+	endwise = {
 		enable = true,
 	},
 })
