@@ -18,6 +18,6 @@ require("onenord").setup({
 		eob_lines = true,
 	},
 	custom_highlights = {
-		TSType = { fg = "#8fbcbb" },
+		TSType = { fg = colors.light_green },
 	},
 })
