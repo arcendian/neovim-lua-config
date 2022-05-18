@@ -59,14 +59,14 @@ end
 -- Use a loop to conveniently call 'setup' on multiple servers and
 -- map buffer local keybindings when the language server attaches
 local servers = {
-	-- "jdtls",
+	-- "emmet_ls",
 	"pyright",
 	"rust_analyzer",
-	-- "tsserver",
+	"tsserver",
 	"clangd",
 	-- "vimls",
-	-- "cssls",
-	-- "html",
+	"cssls",
+	"html",
 	"bashls",
 	"texlab",
 	"vimls",
@@ -76,7 +76,7 @@ local servers = {
 	-- "clojure_lsp",
 	-- "awk_ls",
 	"julials",
-	-- "arduino_language_server",
+	"arduino_language_server",
 	"sumneko_lua",
 	-- "taplo",
 }
@@ -84,16 +84,16 @@ local cmp_capabilities = require("cmp_nvim_lsp").update_capabilities(vim.lsp.pro
 local lsp_opts = { on_attach = on_attach, capabilities = cmp_capabilities }
 
 for _, lsp in ipairs(servers) do
-	-- if lsp == "arduino_language_server" then
-	-- 	local arduino_opts = {
-	-- 		cmd = {
-	-- 			"arduino-language-server",
-	-- 			"-cli-config",
-	-- 			"/home/mice/.arduino15/arduino-cli.yaml",
-	-- 		},
-	-- 	}
-	-- 	lsp_opts = vim.tbl_deep_extend("force", lsp_opts, arduino_opts)
-	-- end
+	if lsp == "arduino_language_server" then
+		local arduino_opts = {
+			cmd = {
+				"arduino-language-server",
+				"-cli-config",
+				"/home/mice/.arduino15/arduino-cli.yaml",
+			},
+		}
+		lsp_opts = vim.tbl_deep_extend("force", lsp_opts, arduino_opts)
+	end
 
 	-- TODO: figure out why lua lsp loads so slow
 	if lsp == "sumneko_lua" then
