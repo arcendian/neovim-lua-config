@@ -113,6 +113,7 @@ was able to write this configuration:
   [blogs](https://www.chrisatmachine.com/) and [Youtube
   videos](https://www.youtube.com/channel/UCS97tchJDq17Qms3cux8wcA).
 - [Distrotube](https://gitlab.com/dwt1/)
+- [numToStr](https://github.com/numToStr)
 - and many more others I can't remember
 
 ## Todo
