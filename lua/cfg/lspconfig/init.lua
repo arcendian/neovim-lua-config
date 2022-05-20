@@ -1,23 +1,6 @@
 -- ===================== LSP config ======================================== --
 local nvim_lsp = require("lspconfig")
 
--- highlight instances of the string under the cursor?
--- local function lsp_highlight_document(client)
--- 	-- Set autocommands conditional on server_capabilities
--- 	if client.server_capabilities.document_highlight then
--- 		vim.api.nvim_exec(
--- 			[[
---       augroup lsp_document_highlight
---         autocmd! * <buffer>
---         autocmd CursorHold <buffer> lua vim.lsp.buf.document_highlight()
---         autocmd CursorMoved <buffer> lua vim.lsp.buf.clear_references()
---       augroup END
---     ]],
--- 			false
--- 		)
--- 	end
--- end
-
 -- Use an on_attach function to only map the following keys
 -- after the language server attaches to the current buffer
 local on_attach = function(client, bufnr)
@@ -27,8 +10,6 @@ local on_attach = function(client, bufnr)
 	local function buf_set_option(...)
 		vim.api.nvim_buf_set_option(bufnr, ...)
 	end
-
-	-- lsp_highlight_document(client)
 
 	-- Enable completion triggered by <c-x><c-o>
 	buf_set_option("omnifunc", "v:lua.vim.lsp.omnifunc")
@@ -75,7 +56,7 @@ local servers = {
 	-- "zls",
 	-- "clojure_lsp",
 	-- "awk_ls",
-	"julials",
+	-- "julials",
 	"arduino_language_server",
 	"sumneko_lua",
 	-- "taplo",
@@ -163,9 +144,3 @@ vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
 vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, {
 	border = "rounded",
 })
-
--- vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
--- 	virtual_text = {
--- 		prefix = "●", -- Could be '●', '▎', 'x'
--- 	},
--- })
