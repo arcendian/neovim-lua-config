@@ -1,23 +1,14 @@
 local colors = require("onenord.colors").load()
 
 require("onenord").setup({
-	theme = nil,
-	borders = true,
-	fade_nc = false,
-	styles = {
-		comments = "italic",
-		strings = "NONE",
-		keywords = "italic",
-		functions = "NONE",
-		variables = "NONE",
-		diagnostics = "undercurl",
-	},
-	disable = {
-		background = false,
-		cursorline = false,
-		eob_lines = true,
-	},
-	custom_highlights = {
-		TSType = { fg = colors.light_green },
-	},
+  styles = {
+    keywords = "italic",
+    comments = "italic",
+  },
+  disable = {
+    background = true,
+  },
+  custom_highlights = {
+    TSType = { fg = colors.cyan },
+  },
 })

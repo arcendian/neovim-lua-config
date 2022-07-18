@@ -1,11 +1,11 @@
 local M = {}
 
 function M.map(mode, lhs, rhs, opts)
-	local options = { noremap = true, silent = true }
-	if opts then
-		options = vim.tbl_extend("force", options, opts)
-	end
-	vim.api.nvim_set_keymap(mode, lhs, rhs, options)
+  local options = { noremap = true, silent = true }
+  if opts then
+    options = vim.tbl_extend("force", options, opts)
+  end
+  vim.api.nvim_set_keymap(mode, lhs, rhs, options)
 end
 
 -- toggle highlighting when searching in buffer
@@ -100,6 +100,9 @@ M.map("n", "<leader>mt", "<cmd>MarkdownPreviewToggle<CR>")
 -- remaps (in case format on save is disabled)
 M.map("n", "<leader>bf", "<cmd>Format<CR>")
 M.map("n", "<leader>bw", "<cmd>FormatWrite<CR>")
+
+-- temporary solution for julia files
+M.map("n", "<leader>bj", "<cmd>lua vim.lsp.buf.formatting()<CR>")
 
 -- ======================== CFG-HEX-COLORS ================================= --
 M.map("n", "<leader>xt", "<cmd>HexokinaseToggle<CR>")
